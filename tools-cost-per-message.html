@@ -1,0 +1,68 @@
+<!doctype html><html lang="th"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>เครื่องมือคิดต้นทุนต่อแชท (ฟรี) — Statlix</title>
+<meta name="description" content="คำนวณต้นทุนต่อแชทและต่อออเดอร์จากงบโฆษณาของคุณ ฟรี ไม่ต้องสมัคร">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<nav class="nav"><div class="wrap">
+ <a class="logo" href="index.html"><img src="Statlix_LOGO_Usage-02.png" alt="STATLIX"></a>
+ <div class="navlinks"><a href="features.html">ทำไม Statlix</a><a href="pricing.html">ราคา</a><a href="resources.html" class="active">เครื่องมือฟรี</a><a href="blog.html">บล็อก</a></div>
+ <div class="navcta"><a class="btn btn-ghost" href="contact.html">ติดต่อ</a><a class="btn btn-primary" href="early-access.html">ลองใช้ก่อนใคร</a></div>
+</div></nav>
+
+<header class="pageheader"><div class="wrap">
+ <div class="breadcrumb"><a href="index.html">หน้าแรก</a> › เครื่องมือฟรี › คิดต้นทุนต่อแชท</div>
+ <h1 class="h1">เครื่องมือคิด “ต้นทุนต่อแชท”</h1>
+ <p class="sub" style="margin-top:16px">กรอกงบของคุณ แล้วดูเลยว่าได้คนทักกี่คน ปิดได้กี่ออเดอร์ ต้นทุนต่อแชท–ต่อออเดอร์เท่าไหร่ — รู้ก่อนเสียเงินจริง</p>
+ 
+</div></header><section class="sec" style="padding-top:48px"><div class="wrap"><div class="formwrap">
+ <div class="formcard" id="calcform">
+  <div class="field"><label>งบโฆษณา/วัน</label><input id="bud" type="number" value="150" min="0" inputmode="numeric"><span style="font-size:13px;color:var(--muted)">บาท</span></div><div class="field"><label>จำนวนวันที่ยิง</label><input id="day" type="number" value="7" min="0" inputmode="numeric"><span style="font-size:13px;color:var(--muted)">วัน</span></div><div class="field"><label>ต้นทุนต่อแชทที่คาด</label><input id="cpm" type="number" value="25" min="0" inputmode="numeric"><span style="font-size:13px;color:var(--muted)">บาท/แชท</span></div><div class="field"><label>อัตราปิดการขาย</label><input id="cls" type="number" value="20" min="0" inputmode="numeric"><span style="font-size:13px;color:var(--muted)">%</span></div>
+  <div style="font-size:12.5px;color:var(--grey);margin-top:6px">* ค่าเริ่มต้นเป็นค่าประมาณของร้านเล็กทั่วไป ปรับได้ตามจริง</div>
+ </div>
+ <div>
+  <div class="formcard" style="background:var(--dark);color:#fff;border:0">
+   <div class="ey" style="color:#FF9C84">ผลลัพธ์โดยประมาณ</div>
+   <div id="band" style="font-weight:700;font-size:18px;margin:8px 0 18px">—</div>
+   <div class="stats" style="grid-template-columns:1fr 1fr">
+    <div class="stat" style="background:#1F1E1C;border-color:#2A2A28"><div class="n" id="o_total" style="color:#fff">฿0</div><div class="l" style="color:#A1A09F">งบรวมทั้งหมด</div></div>
+    <div class="stat" style="background:#1F1E1C;border-color:#2A2A28"><div class="n" id="o_msgs" style="color:#fff">0 คน</div><div class="l" style="color:#A1A09F">คนทักโดยประมาณ</div></div>
+    <div class="stat" style="background:#1F1E1C;border-color:#2A2A28"><div class="n" id="o_ord" style="color:#fff">0</div><div class="l" style="color:#A1A09F">ออเดอร์โดยประมาณ</div></div>
+    <div class="stat" style="background:#1F1E1C;border-color:#2A2A28"><div class="n" id="o_cpo" style="color:#FF9C84">—</div><div class="l" style="color:#A1A09F">ต้นทุน/ออเดอร์</div></div>
+   </div>
+   <a class="btn btn-primary" href="early-access.html" style="margin-top:20px;width:100%;justify-content:center">อยากได้ต้นทุนต่อแชทถูกลง? ลองใช้ Statlix </a>
+  </div>
+  <div style="font-size:13px;color:var(--muted);margin-top:14px">อยากเก็บไว้คิดทุกเดือน? <a href="resources.html" style="color:var(--prim);font-weight:600">รับชีต Google ฟรี</a></div>
+ </div>
+</div></div></section><section class="sec" style="padding-top:0"><div class="wrap"><div class="final">
+ <h2>ตัวเลขสวยบนกระดาษ ≠ ตัวเลขจริง</h2>
+ <p>Statlix ช่วยให้ต้นทุนต่อแชทถูกลงจริง ด้วย AI ที่ปรับแอดให้ทุกวัน</p>
+ <a class="btn btn-primary btn-lg" href="early-access.html">ลองใช้ก่อนใคร </a>
+</div></div></section><script>
+function fmt(n){return Math.round(n).toLocaleString('th-TH');}
+function calc(){
+ var b=+document.getElementById('bud').value||0,d=+document.getElementById('day').value||0,
+     c=+document.getElementById('cpm').value||0,cl=+document.getElementById('cls').value||0;
+ var total=b*d, msgs=c>0?total/c:0, orders=msgs*cl/100, cpo=orders>0?total/orders:0;
+ document.getElementById('o_total').textContent='฿'+fmt(total);
+ document.getElementById('o_msgs').textContent=fmt(msgs)+' คน';
+ document.getElementById('o_ord').textContent=fmt(orders)+' ออเดอร์';
+ document.getElementById('o_cpo').textContent=orders>0?'฿'+fmt(cpo):'—';
+ var band=document.getElementById('band');
+ if(c<=20){band.textContent='ต้นทุนต่อแชทดีมาก 👍';band.style.color='#1F9D55';}
+ else if(c<=35){band.textContent='ต้นทุนต่อแชทพอใช้ได้';band.style.color='#F03C1F';}
+ else{band.textContent='ต้นทุนต่อแชทสูง — ควรปรับแอด/กลุ่มเป้าหมาย';band.style.color='#D32F12';}
+}
+document.addEventListener('input',function(e){if(e.target.closest('#calcform'))calc();});
+window.addEventListener('DOMContentLoaded',calc);
+</script>
+
+<footer><div class="wrap">
+ <div class="fcol" style="max-width:280px"><a class="logo" href="index.html"><img src="Statlix_LOGO_white.png" alt="STATLIX"></a><div style="margin-top:10px">ผู้ช่วยการตลาด AI สำหรับคนขายออนไลน์ไทย · ยิงแอดทักแชท ปิดการขาย</div></div>
+ <div class="fcol"><b>ผลิตภัณฑ์</b><a href="features.html">ทำไม Statlix</a><a href="pricing.html">ราคา</a><a href="demo.html">ดูเดโม</a><a href="early-access.html">ลองใช้ก่อนใคร</a></div>
+ <div class="fcol"><b>เครื่องมือฟรี</b><a href="tools-cost-per-message.html">คิดต้นทุนต่อแชท</a><a href="resources.html">ดาวน์โหลดฟรี</a><a href="course.html">คอร์สฟรี 7 วัน</a><a href="live.html">Live ถาม–ตอบ</a></div>
+ <div class="fcol"><b>เรียนรู้</b><a href="blog.html">บล็อก</a><a href="about.html">เกี่ยวกับเรา</a><a href="customers.html">เคสลูกค้า</a><a href="contact.html">ติดต่อ</a></div>
+ <div class="fcol"><b>ทางลัด</b><a href="#">เข้ากลุ่ม Facebook</a><a href="#">แอด LINE OA</a><a href="privacy.html">ความเป็นส่วนตัว</a><a href="terms.html">เงื่อนไขการใช้งาน</a></div>
+</div></footer>
+</body></html>
