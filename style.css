@@ -248,3 +248,36 @@ footer a{color:#9A9A98}footer a:hover{color:#fff}
  .lead{padding:32px}.lead .ebook{max-width:none}
  .final{padding:48px 28px}
 }
+
+/* === DARK-TECH HERO (polish to match new visual system) === */
+.hero{background:#0E0D0C;border-bottom:1px solid #26231F;padding:100px 0 88px}
+.hero::before{content:"";position:absolute;width:1180px;height:1180px;right:-360px;bottom:-460px;
+ border-radius:50%;background:radial-gradient(circle,rgba(240,60,31,.40) 0%,rgba(240,60,31,.13) 36%,transparent 66%);
+ filter:blur(6px);pointer-events:none;z-index:0;top:auto}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.045;
+ background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:76px 76px}
+.hero-grid{position:relative;z-index:2}
+.hero .ey{color:#F9B1A5}
+.hero h1{color:#fff}
+.hero h1 .g{color:#F9B1A5}
+.hero .sub{color:#C9C7C5}
+.hero .note{color:#9A9A98}
+.hero .note b{color:#fff}
+.hero .note .ico{color:#F66A4D}
+.hero .btn-ghost{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.20)}
+.hero .btn-ghost:hover{background:rgba(255,255,255,.12)}
+.hero .btn-primary{box-shadow:0 12px 40px rgba(240,60,31,.40)}
+/* product mock floats brighter on dark */
+.hero .mock{box-shadow:0 30px 80px -28px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.04)}
+
+/* === real images on cards (blog thumbs + ebook) === */
+.post .thumb{padding:0;height:172px;overflow:hidden}
+.post .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.ebookimg{width:300px;max-width:100%;border-radius:12px;box-shadow:var(--shadow-frame);display:block}
+
+/* dark bands get the same restrained glow as the hero (cohesive dark-tech system) */
+.community,.final,.not{position:relative;overflow:hidden}
+.community::before,.final::before,.not::before{content:"";position:absolute;width:720px;height:720px;
+ right:-200px;bottom:-300px;border-radius:50%;pointer-events:none;z-index:0;
+ background:radial-gradient(circle,rgba(240,60,31,.32),transparent 64%)}
+.community>*,.final>*,.not>*{position:relative;z-index:1}
