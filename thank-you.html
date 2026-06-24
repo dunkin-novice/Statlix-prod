@@ -18,9 +18,9 @@
  
 </div></header><section class="sec" style="padding-top:40px"><div class="wrap">
  <div class="cards3">
-  <div class="card"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg></div><h3>โหลดคู่มือยิงแอดทักแชท (ฟรี)</h3><p>คู่มือมือใหม่ 28 หน้า ตั้งแต่เปิดแอดแรกจนอ่านผลเป็น</p><div style="margin-top:14px"><a class="btn btn-primary" href="resources.html">ดาวน์โหลด </a></div></div>
-  <div class="card"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg></div><h3>เข้ากลุ่มคนขายที่ยิงแอดเอง</h3><p>ถาม–ตอบ แชร์ตัวเลขจริง กับคนขายที่ทำเหมือนกัน</p><div style="margin-top:14px"><a class="btn btn-ghost" href="#">เข้ากลุ่ม Facebook </a></div></div>
-  <div class="card"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg></div><h3>แอด LINE รับข่าวก่อนใคร</h3><p>อัปเดตวันเปิดตัว + เคล็ดลับยิงแอดส่งตรงถึง LINE</p><div style="margin-top:14px"><a class="btn btn-line" href="#">แอด LINE OA</a></div></div>
+  <div class="card"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg></div><h3>โหลดคู่มือยิงแอดทักแชท (ฟรี)</h3><p>คู่มือมือใหม่ 28 หน้า ตั้งแต่เปิดแอดแรกจนอ่านผลเป็น</p><div style="margin-top:14px"><a class="btn btn-primary" href="resources.html" data-cta="ty_download">ดาวน์โหลด </a></div></div>
+  <div class="card"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg></div><h3>เข้ากลุ่มคนขายที่ยิงแอดเอง</h3><p>ถาม–ตอบ แชร์ตัวเลขจริง กับคนขายที่ทำเหมือนกัน</p><div style="margin-top:14px"><a class="btn btn-ghost" href="#" data-cta="ty_fbgroup">เข้ากลุ่ม Facebook </a></div></div>
+  <div class="card"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg></div><h3>แอด LINE รับข่าวก่อนใคร</h3><p>อัปเดตวันเปิดตัว + เคล็ดลับยิงแอดส่งตรงถึง LINE</p><div style="margin-top:14px"><a class="btn btn-line" href="#" data-cta="ty_line">แอด LINE OA</a></div></div>
  </div>
 </div></section>
 
@@ -31,4 +31,19 @@
  <div class="fcol"><b>เรียนรู้</b><a href="blog.html">บล็อก</a><a href="about.html">เกี่ยวกับเรา</a><a href="customers.html">เคสลูกค้า</a><a href="contact.html">ติดต่อ</a></div>
  <div class="fcol"><b>ทางลัด</b><a href="#">เข้ากลุ่ม Facebook</a><a href="#">แอด LINE OA</a><a href="privacy.html">ความเป็นส่วนตัว</a><a href="terms.html">เงื่อนไขการใช้งาน</a></div>
 </div></footer>
+<script>
+/* thank-you: confirm the lead + track the LINE nurture step (the trackable flow's last leg) */
+window.dataLayer=window.dataLayer||[];
+function track(n,p){window.dataLayer.push(Object.assign({event:n,ts:Date.now()},p||{}));}
+var anon=localStorage.getItem('sx_anon')||'';
+var lead=new URLSearchParams(location.search).get('lead')||'';
+track('page_viewed',{path:location.pathname,anonymous_id:anon,lead_id:lead});
+track('lead_confirmed',{anonymous_id:anon,lead_id:lead});
+document.querySelectorAll('[data-cta]').forEach(function(el){el.addEventListener('click',function(){
+ var id=el.getAttribute('data-cta');
+ /* LINE add link should also carry ?ref=lead_id so the LINE webhook can match line_friend_added back to this lead */
+ if(id==='ty_line') track('line_add_clicked',{location:'thank_you',anonymous_id:anon,lead_id:lead});
+ else track('cta_clicked',{cta_id:id,anonymous_id:anon,lead_id:lead});
+});});
+</script>
 </body></html>

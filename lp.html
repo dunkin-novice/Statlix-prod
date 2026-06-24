@@ -23,32 +23,27 @@
  .lptrust{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;color:#9A9A98;font-size:13.5px}
  .lptrust b{color:#fff;font-weight:600}
  .lptrust .chip{border:1px solid rgba(255,255,255,.16);color:#D0D0CF;background:transparent}
- /* form card */
  .lpform{background:#fff;border-radius:18px;padding:28px;box-shadow:0 30px 80px -28px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05)}
  .lpform .kk{font-size:12.5px;font-weight:700;color:var(--brand);letter-spacing:.04em;text-transform:uppercase}
  .lpform h3{font-size:21px;font-weight:700;color:var(--ink);margin:6px 0 4px;letter-spacing:-.01em}
  .lpform .magnet{display:flex;gap:14px;align-items:center;margin:16px 0 18px;padding:14px;background:var(--subtle);border:1px solid var(--line);border-radius:12px}
- .lpform .magnet img{width:60px;border-radius:6px;box-shadow:var(--shadow-card);flex:none}
- .lpform .magnet ul{list-style:none;font-size:13.5px;color:var(--ink-2)}
+ .lpform .magnet img{width:58px;border-radius:6px;box-shadow:var(--shadow-card);flex:none}
+ .lpform .magnet ul{list-style:none;font-size:13px;color:var(--ink-2)}
  .lpform .magnet li{display:flex;gap:7px;margin:4px 0}.lpform .magnet li .ico{width:15px;height:15px;color:var(--brand);flex:none;margin-top:2px}
- .btn-line{background:#06C755;color:#fff;width:100%;justify-content:center;font-size:16px;padding:15px;font-weight:700}
- .btn-line:hover{background:#05b54e}
- .orline{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px;margin:14px 0}
- .orline::before,.orline::after{content:"";flex:1;height:1px;background:var(--line)}
- .emailrow{display:flex;gap:9px}
- .emailrow input{flex:1;min-width:0;border:1px solid var(--line);border-radius:8px;padding:13px 14px;font-size:15px;font-family:inherit;background:#fff}
- .emailrow input:focus{outline:0;border-color:var(--brand)}
+ .lpform label{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:6px}
+ .lpform input.fld{width:100%;border:1px solid var(--line);border-radius:9px;padding:14px 15px;font-size:16px;font-family:inherit;background:#fff}
+ .lpform input.fld:focus{outline:0;border-color:var(--brand)}
+ .lpform .submit{width:100%;justify-content:center;font-size:16px;padding:15px;margin-top:12px;font-weight:700}
  .micro{font-size:12px;color:var(--muted);margin-top:12px;display:flex;flex-wrap:wrap;gap:6px 14px}
  .micro span{display:inline-flex;align-items:center;gap:6px}.micro .ico{width:14px;height:14px;color:var(--brand)}
+ .linenote{font-size:12.5px;color:var(--muted);margin-top:10px;text-align:center}
  .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
- /* outcome funnel (native, fast) */
  .lpfunnel{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
  .fcell{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;text-align:center}
  .fcell .n{font-family:'Outfit';font-size:34px;font-weight:800;color:var(--brand);letter-spacing:-.02em;line-height:1}
  .fcell .l{font-size:14px;color:var(--ink);font-weight:600;margin-top:8px}
  .fcell .s{font-size:12.5px;color:var(--muted);margin-top:2px}
  .farrow{text-align:center;color:var(--muted);font-size:12.5px;margin-top:12px}
- /* fit / not-fit */
  .fit{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:34px}
  .fitcol{border:1px solid var(--line);border-radius:14px;padding:26px;background:#fff}
  .fitcol.no{background:var(--subtle)}
@@ -58,7 +53,7 @@
  .free3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
  .lpfoot{background:#0E0D0C;color:#8C8A88;text-align:center;font-size:13px;padding:30px 0}
  .lpfoot a{color:#A1A09F}
- @media(max-width:860px){.lpgrid,.lpfunnel,.fit,.free3{grid-template-columns:1fr}.lphero{padding:30px 0 44px}.lpgrid{gap:30px}}
+ @media(max-width:860px){.lpgrid,.lpfunnel,.fit,.free3,.steps{grid-template-columns:1fr}.lphero{padding:30px 0 44px}.lpgrid{gap:30px}}
 </style></head><body>
 
 <nav class="nav lpnav"><div class="wrap">
@@ -77,8 +72,8 @@
   </div>
  </div>
  <div>
-  <form class="lpform" onsubmit="if(this.company.value){return false} location.href='thank-you.html';return false">
-   <div class="kk">โหลดฟรี · ใช้ได้ทันที</div>
+  <form class="lpform" id="leadform" data-cta="lp_hero" novalidate>
+   <div class="kk">โหลดฟรี · ส่งลิงก์ให้ทันที</div>
    <h3>รับชุดเครื่องมือคิดต้นทุนต่อแชท</h3>
    <div class="magnet">
     <img src="ebook_cover_final.png" alt="คู่มือยิงแอดทักแชท">
@@ -88,15 +83,16 @@
      <li><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> คู่มือยิงแอดทักแชท 28 หน้า</li>
     </ul>
    </div>
+   <label for="contact">ส่งลิงก์ดาวน์โหลดไปที่</label>
+   <input class="fld" id="contact" name="contact" type="text" required placeholder="กรอกอีเมล หรือเบอร์โทร" autocomplete="email">
    <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
-   <a class="btn btn-line" href="thank-you.html"><svg class='ico' viewBox='0 0 24 24' style="width:18px;height:18px"><path d='M20 6 9 17l-5-5'/></svg> แอด LINE รับฟรีทันที</a>
-   <div class="orline">หรือรับทางอีเมล</div>
-   <div class="emailrow"><input type="email" name="email" required placeholder="กรอกอีเมลของคุณ"><button class="btn btn-primary" type="submit" style="padding:13px 18px">รับฟรี </button></div>
+   <button class="btn btn-primary submit" type="submit">รับชุดเครื่องมือฟรี </button>
    <div class="micro">
     <span><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> ไม่ต้องผูกบัตร</span>
     <span><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> ฟรี ไม่มีขายของ</span>
     <span><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> ไม่สแปม ยกเลิกได้</span>
    </div>
+   <div class="linenote">สะดวกคุยทาง LINE? แอดได้หลังกรอก (เป็นขั้นตอนสุดท้าย)</div>
   </form>
  </div>
 </div></header>
@@ -109,6 +105,15 @@
   <div class="fcell"><div class="n">7–10</div><div class="l">ออเดอร์</div><div class="s">ปิดได้ราว 1 ใน 5</div></div>
  </div>
  <div class="farrow">ตัวเลขประมาณการจากร้านเล็กทั่วไป — กรอกของร้านคุณเองได้ในเครื่องมือที่โหลดไป</div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+ <div class="center"><div class="ey">ง่ายมาก</div><h2 class="h2" style="margin-top:8px">รับยังไง — 3 ขั้น</h2></div>
+ <div class="steps" style="margin-top:36px">
+  <div class="step"><div class="nm">1</div><h3>กรอกอีเมลหรือเบอร์</h3><p>ใช้เวลา 10 วินาที ไม่ต้องสมัครสมาชิก ไม่ต้องผูกบัตร</p></div>
+  <div class="step"><div class="nm">2</div><h3>รับลิงก์ดาวน์โหลดทันที</h3><p>ชีตคิดต้นทุน + เครื่องมือคำนวณ + คู่มือ 28 หน้า ส่งให้เลย</p></div>
+  <div class="step"><div class="nm">3</div><h3>แอด LINE รับอัปเดต (ถ้าสะดวก)</h3><p>ไม่บังคับ — แอดไว้รับเคล็ดลับยิงแอด + วันเปิดตัวก่อนใคร</p></div>
+ </div>
 </div></section>
 
 <section class="sec" style="background:var(--soft);padding-top:64px"><div class="wrap">
@@ -145,10 +150,49 @@
 <section class="sec" style="padding-top:0"><div class="wrap"><div class="final">
  <h2>รู้ต้นทุนต่อแชทของร้านคุณ ใน 1 นาที</h2>
  <p>โหลดชุดเครื่องมือฟรี ไม่ต้องผูกบัตร ไม่มีขายของ — เริ่มจากตัวเลขจริงของร้านคุณ</p>
- <a class="btn btn-line" href="thank-you.html" style="max-width:300px;margin:0 auto"><svg class='ico' viewBox='0 0 24 24' style="width:18px;height:18px"><path d='M20 6 9 17l-5-5'/></svg> แอด LINE รับฟรีทันที</a>
+ <a class="btn btn-primary btn-lg" href="#leadform" data-cta="lp_final" style="max-width:320px;margin:0 auto;justify-content:center">รับชุดเครื่องมือฟรี </a>
 </div></div></section>
 
 <footer class="lpfoot"><div class="wrap">
  © 2569 Statlix · ผู้ช่วยการตลาด AI สำหรับคนขายไทย · <a href="privacy.html">ความเป็นส่วนตัว</a> · <a href="index.html">หน้าหลัก</a>
 </div></footer>
+
+<script>
+/* ===== Trackable lead flow (GA4/GTM dataLayer hooks) =====
+   Real impl: form submit should POST to a server endpoint (e.g. Supabase fn)
+   that fires lead_captured SERVER-SIDE + mirrors to GA4 + Meta CAPI (survives ad-blockers).
+   This client layer captures identity/attribution and pushes the events. */
+window.dataLayer = window.dataLayer || [];
+function track(name, props){ window.dataLayer.push(Object.assign({event:name, ts:Date.now()}, props||{})); }
+function uid(){ try{return ([1e7]+-1e3).replace(/[018]/g,c=>(c^crypto.getRandomValues(new Uint8Array(1))[0]&15>>c/4).toString(16));}catch(e){return 'a'+Math.abs(Math.random()).toString(36).slice(2)+Date.now().toString(36);} }
+function getParam(k){ return new URLSearchParams(location.search).get(k) || ''; }
+function utmObj(prefix){ var o={}; ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){ var v=getParam(k); if(v) o[prefix+k.slice(4)]=v; }); return o; }
+
+/* identity + first/last-touch attribution (persist across the warm-up) */
+var anon = localStorage.getItem('sx_anon'); if(!anon){ anon = uid(); localStorage.setItem('sx_anon', anon); }
+var utmLast = utmObj('utm_last_');
+var utmFirst = JSON.parse(localStorage.getItem('sx_utm_first')||'null');
+if(!utmFirst){ utmFirst = utmObj('utm_first_'); localStorage.setItem('sx_utm_first', JSON.stringify(utmFirst)); }
+
+track('page_viewed', Object.assign({path:location.pathname, anonymous_id:anon}, utmFirst, utmLast));
+
+var form = document.getElementById('leadform');
+var started = false;
+form.addEventListener('focusin', function(){ if(!started){ started=true; track('lead_form_started', {source:'lp', anonymous_id:anon}); } });
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  if(form.company.value){ return; }                 /* honeypot: silent drop bots */
+  var contact = form.contact.value.trim();
+  if(!contact){ form.contact.focus(); return; }
+  var type = contact.indexOf('@')>-1 ? 'email' : (/^[0-9+\-\s]{8,}$/.test(contact) ? 'phone' : 'other');
+  var lead_id = uid();
+  /* the trackable money event — carries identity + attribution + source */
+  track('lead_captured', Object.assign({source:'lp', contact_type:type, lead_id:lead_id, anonymous_id:anon}, utmFirst, utmLast));
+  /* TODO(dev): await POST /api/lead {contact, lead_id, anon, utm...} before redirect (server-side lead_captured + Meta CAPI) */
+  location.href = 'thank-you.html?lead=' + lead_id;
+});
+document.querySelectorAll('[data-cta]').forEach(function(el){
+  if(el.tagName==='A') el.addEventListener('click', function(){ track('cta_clicked', {cta_id: el.getAttribute('data-cta'), anonymous_id:anon}); });
+});
+</script>
 </body></html>
