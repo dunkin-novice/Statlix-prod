@@ -1,0 +1,154 @@
+<!doctype html><html lang="th"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Statlix — สรุปงาน: แบรนด์ · คอนเทนต์ · เว็บไซต์</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+ .scnav{position:sticky;top:0;z-index:50;background:rgba(14,13,12,.86);backdrop-filter:blur(12px);border-bottom:1px solid #26231F}
+ .scnav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+ .scnav .logo img{height:24px}.scnav .navlinks a{color:#C9C7C5}.scnav .navlinks a:hover{color:#fff}
+ .schero{background:#0E0D0C;position:relative;overflow:hidden;padding:72px 0 60px}
+ .schero::before{content:"";position:absolute;width:1100px;height:1100px;right:-340px;bottom:-440px;border-radius:50%;background:radial-gradient(circle,rgba(240,60,31,.38),rgba(240,60,31,.12) 36%,transparent 66%);filter:blur(6px);z-index:0}
+ .schero::after{content:"";position:absolute;inset:0;z-index:0;opacity:.045;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:76px 76px}
+ .schero .in{position:relative;z-index:2;max-width:820px}
+ .schero .ey{color:#F9B1A5}
+ .schero h1{color:#fff;font-size:clamp(2.3rem,3.4vw + 1rem,3.4rem);font-weight:700;line-height:1.14;letter-spacing:-.015em;margin-top:12px}
+ .schero h1 .g{color:#F9B1A5}
+ .schero .sub{color:#C9C7C5;font-size:19px;margin:20px 0 26px;max-width:640px}
+ .secnum{font-family:'Outfit';font-weight:800;color:var(--brand);font-size:14px;letter-spacing:.08em}
+ .swatches{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+ .sw{width:96px}.sw .c{height:64px;border-radius:10px;border:1px solid var(--line)}.sw .t{font-family:'Outfit';font-size:12px;color:var(--muted);margin-top:6px}
+ .brandgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;margin-top:34px;align-items:stretch}
+ .bcard{border:1px solid var(--line);border-radius:16px;padding:28px;background:#fff}
+ .bcard.dark{background:#0E0D0C;border:0;color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px}
+ .bcard.dark img{height:40px}
+ .fontsamp{font-family:'Outfit';font-weight:800;font-size:34px;color:var(--ink);letter-spacing:-.01em}
+ .fontsamp.th{font-family:'Noto Sans Thai';font-weight:700}
+ .pers{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+ .pers span{font-family:'Outfit';font-weight:700;font-size:13px;color:var(--brand);background:var(--brand-50);border:1px solid #F8D6CC;padding:6px 12px;border-radius:999px}
+ .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+ .gal img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+ .wide{width:100%;border-radius:14px;border:1px solid var(--line);margin-top:30px;display:block}
+ .frame{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--shadow-card)}
+ .frame .bar{height:34px;background:var(--subtle);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:6px;padding:0 12px}
+ .frame .bar i{width:10px;height:10px;border-radius:50%;background:#DAD9D7}
+ .frame .bar .u{margin-left:8px;font-size:12px;color:var(--muted);font-family:'Outfit'}
+ .frame .vp{height:430px;overflow:hidden;position:relative;background:#0E0D0C}
+ .frame iframe{width:1240px;height:1500px;border:0;transform:scale(.451);transform-origin:top left;pointer-events:none}
+ .webgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
+ .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+ .fstep{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff;position:relative}
+ .fstep .k{font-family:'Outfit';font-weight:800;color:var(--brand);font-size:13px}
+ .fstep h4{font-size:16px;font-weight:700;color:var(--ink);margin:8px 0 4px}
+ .fstep p{font-size:13.5px;color:var(--ink-2)}
+ .fstep::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:#CFCFCD;font-weight:700;z-index:2}
+ .flow .fstep:last-child::after{display:none}
+ @media(max-width:900px){.brandgrid,.webgrid{grid-template-columns:1fr}.gal{grid-template-columns:repeat(2,1fr)}.flow{grid-template-columns:1fr 1fr}.fstep::after{display:none}}
+</style></head><body>
+
+<nav class="nav scnav"><div class="wrap">
+ <a class="logo" href="#top"><img src="Statlix_LOGO_white.png" alt="STATLIX"></a>
+ <div class="navlinks"><a href="#brand">แบรนด์</a><a href="#content">คอนเทนต์</a><a href="#web">เว็บไซต์</a><a href="#community">คอมมูนิตี้</a></div>
+ <div class="navcta"><a class="btn btn-primary" href="index.html" target="_blank">ดูเว็บจริง</a></div>
+</div></nav>
+
+<header class="schero" id="top"><div class="wrap"><div class="in">
+ <div class="ey">สรุปงาน · มิถุนายน 2569</div>
+ <h1>แบรนด์ · คอนเทนต์ · <span class="g">เว็บไซต์ใหม่</span> ของ Statlix</h1>
+ <p class="sub">ระบบแบรนด์ ระบบเทมเพลตคอนเทนต์โซเชียล และเว็บไซต์ใหม่ 20 หน้า — ทุกอย่างใช้ระบบเดียวกัน และต่อยอดเข้าแผนคอมมูนิตี้เพื่อเก็บลีดได้ทันที</p>
+ <div class="cta"><a class="btn btn-primary btn-lg" href="index.html" target="_blank">ดูเว็บไซต์จริง </a><a class="btn btn-ghost btn-lg" href="lp.html" target="_blank" style="background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.2)">ดูหน้าโฆษณา</a></div>
+</div></div></header>
+
+<!-- 01 BRAND -->
+<section class="sec" id="brand"><div class="wrap">
+ <div class="secnum">01 · ระบบแบรนด์</div><h2 class="h2" style="margin-top:8px">อัตลักษณ์เดียว ใช้ได้ทุกที่</h2>
+ <p class="sub" style="margin-top:10px">ตาม CI Brand Guideline — สีหลักเดียว ฟอนต์ชุดเดียว โลโก้เดียว คุมโทนทั้งระบบ</p>
+ <div class="brandgrid">
+  <div class="bcard">
+   <div style="font-weight:700;color:var(--ink);margin-bottom:14px">สี</div>
+   <div class="swatches">
+    <div class="sw"><div class="c" style="background:#F03C1F"></div><div class="t">#F03C1F</div></div>
+    <div class="sw"><div class="c" style="background:#F3634C"></div><div class="t">#F3634C</div></div>
+    <div class="sw"><div class="c" style="background:#F68A79"></div><div class="t">#F68A79</div></div>
+    <div class="sw"><div class="c" style="background:#FCD8D2"></div><div class="t">#FCD8D2</div></div>
+    <div class="sw"><div class="c" style="background:#131210"></div><div class="t">#131210</div></div>
+    <div class="sw"><div class="c" style="background:#717170"></div><div class="t">#717170</div></div>
+   </div>
+   <div style="font-weight:700;color:var(--ink);margin:22px 0 10px">ฟอนต์</div>
+   <div class="fontsamp">Outfit — Aa Bb 123</div>
+   <div class="fontsamp th" style="margin-top:4px">Noto Sans Thai — ยิงแอด 123</div>
+   <div style="font-weight:700;color:var(--ink);margin:22px 0 8px">บุคลิกแบรนด์</div>
+   <div class="pers"><span>Smart</span><span>Simple</span><span>Reliable</span><span>Efficient</span><span>Growth-Driven</span></div>
+  </div>
+  <div class="bcard dark">
+   <img src="Statlix_LOGO_white.png" alt="STATLIX">
+   <div style="color:#A1A09F;font-size:14px;text-align:center">S-monogram + wordmark · ลุค dark-tech<br>(พื้นเข้ม + แสงส้มนุ่ม) สำหรับโมเมนต์พรีเมียม</div>
+  </div>
+ </div>
+</div></section>
+
+<!-- 02 CONTENT -->
+<section class="sec" id="content" style="background:var(--soft)"><div class="wrap">
+ <div class="secnum">02 · คอนเทนต์โซเชียล</div><h2 class="h2" style="margin-top:8px">เทมเพลตโพสต์ที่คุมโทนได้ทั้งระบบ</h2>
+ <p class="sub" style="margin-top:10px">ข้อความเดียว เลือกได้ 3 สไตล์ — Editorial (สะอาด) · Gradient (เด่น) · Dark-Tech (พรีเมียม) — ล็อกโลโก้/สี/ฟอนต์ไว้ทั้งหมด</p>
+ <img class="wide" src="sc/abc.png" alt="3 สไตล์: Editorial / Gradient / Dark-Tech">
+ <h3 style="font-size:19px;font-weight:700;color:var(--ink);margin:38px 0 4px">เสา 1 “ยิงแอดเองได้” — 7 มุม พร้อมโพสต์</h3>
+ <p style="font-size:14.5px;color:var(--ink-2)">ทุกชิ้นมีโค้ดตาม funnel (TOFU/MOFU/BOFU) → ตามผลและทำ A/B ได้ · ผลิตซ้ำเร็วผ่านระบบเทมเพลต</p>
+ <div class="gal">
+  <img src="sc/card1.png" alt="myth-bust"><img src="sc/card2.png" alt="how-to"><img src="sc/card3.png" alt="carousel"><img src="sc/card4.png" alt="pain-relief">
+  <img src="sc/card5.png" alt="budget"><img src="sc/card6.png" alt="blog"><img src="sc/card7.png" alt="proof"><img src="sc/darktech.png" alt="dark-tech">
+ </div>
+</div></section>
+
+<!-- 03 WEBSITE -->
+<section class="sec" id="web"><div class="wrap">
+ <div class="secnum">03 · เว็บไซต์</div><h2 class="h2" style="margin-top:8px">เว็บไซต์ใหม่ 20 หน้า — พร้อมใช้และออนไลน์แล้ว</h2>
+ <p class="sub" style="margin-top:10px">ดีไซน์ระบบเดียวกับคอนเทนต์ (dark-tech) · มีเครื่องมือคิดต้นทุนต่อแชทที่ใช้ได้จริง · หน้าเก็บลีด · หน้าโฆษณาแยก</p>
+ <div class="webgrid">
+  <div>
+   <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="u">statlix · หน้าแรก</span></div>
+    <div class="vp"><iframe src="index.html" loading="lazy" title="หน้าแรก"></iframe></div></div>
+   <div class="center" style="margin-top:12px"><a class="btn btn-ghost" href="index.html" target="_blank">เปิดหน้าแรก </a></div>
+  </div>
+  <div>
+   <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="u">statlix · หน้าโฆษณา /lp</span></div>
+    <div class="vp"><iframe src="lp.html" loading="lazy" title="หน้าโฆษณา"></iframe></div></div>
+   <div class="center" style="margin-top:12px"><a class="btn btn-ghost" href="lp.html" target="_blank">เปิดหน้าโฆษณา </a></div>
+  </div>
+ </div>
+ <div class="cards3" style="margin-top:34px">
+  <div class="card"><h3>20 หน้า ครบตามโครง</h3><p>หน้าหลัก · เครื่องมือฟรี · เก็บลีด · เนื้อหา · ความน่าเชื่อถือ · กฎหมาย (PDPA)</p></div>
+  <div class="card"><h3>เครื่องมือคิดต้นทุนต่อแชท</h3><p>กรอกงบ ดูคนทัก–ออเดอร์–ต้นทุนต่อแชททันที (ใช้ได้จริงบนเว็บ)</p></div>
+  <div class="card"><h3>โครงเชื่อมระบบวัดผล</h3><p>หน้า/CTA จัดตาม Tracking v.4 พร้อมต่อ lead capture + tracking ภายหลัง</p></div>
+ </div>
+</div></section>
+
+<!-- 04 COMMUNITY -->
+<section class="sec" id="community" style="background:var(--soft)"><div class="wrap">
+ <div class="secnum">04 · ต่อเข้าแผนคอมมูนิตี้</div><h2 class="h2" style="margin-top:8px">ทุกชิ้นต่อกันเป็น “เครื่องเก็บลีด”</h2>
+ <p class="sub" style="margin-top:10px">คอนเทนต์ดึงคน → คอมมูนิตี้สร้างความเชื่อ → เว็บ/ของฟรีเปลี่ยนเป็นลีด → เป้าหมาย 300 รายก่อนเปิดตัว</p>
+ <div class="flow">
+  <div class="fstep"><div class="k">DISCOVER</div><h4>คอนเทนต์โซเชียล</h4><p>โพสต์/รีลจากเทมเพลต ตาม 4 เสา ลงเพจ + Reels</p></div>
+  <div class="fstep"><div class="k">BOND</div><h4>กลุ่ม + LINE</h4><p>กลุ่ม Facebook + คอร์สฟรี 7 วัน + LINE OA</p></div>
+  <div class="fstep"><div class="k">CAPTURE</div><h4>เว็บ + ของฟรี</h4><p>เครื่องมือ/ชีต/คู่มือ + หน้าเก็บลีด</p></div>
+  <div class="fstep"><div class="k">LEAD ★</div><h4>300 รายแรก</h4><p>ลีดจริง (อีเมล/LINE) ก่อนเปิดตัว ก.ย.</p></div>
+ </div>
+ <div class="cards2" style="margin-top:30px">
+  <div class="card"><h3>4 เสาคอนเทนต์</h3><p>① ยิงแอดเองได้ ② แทนเอเจนซี่ ③ ยิงดีขึ้นด้วย AI ④ แบรนด์ Statlix — เทมเพลตรองรับครบทุกเสา</p></div>
+  <div class="card"><h3>ช่องทาง</h3><p>1 เพจ Facebook (เน้นให้ความรู้ 80% + แบรนด์ 20%) · 1 กลุ่มคอมมูนิตี้ · บล็อก SEO · Reels/LINE เป็นตัวขยาย</p></div>
+ </div>
+ <div class="card" style="margin-top:24px;background:#fff"><h3>เป้าหมายการผลิต: 1 โพสต์ + 1 บล็อก / วัน</h3><p>ใช้เทมเพลตกราฟิก (โพสต์) + โครงบล็อก SEO ที่วางไว้ + AI ช่วยร่าง → ผลิตได้สม่ำเสมอทุกวัน ป้อนเข้ากรวยด้านบน</p></div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="final">
+ <h2>ดูของจริงได้เลย</h2>
+ <p>เว็บไซต์และหน้าโฆษณาออนไลน์แล้ว · คอนเทนต์เทมเพลตพร้อมผลิตรายวัน</p>
+ <div class="cta" style="justify-content:center;margin-top:8px"><a class="btn btn-primary btn-lg" href="index.html" target="_blank">เว็บไซต์จริง</a><a class="btn btn-ghost btn-lg" href="lp.html" target="_blank">หน้าโฆษณา</a></div>
+</div></div></section>
+
+<footer class="lpfoot" style="background:#0E0D0C;color:#8C8A88;text-align:center;font-size:13px;padding:30px 0"><div class="wrap">
+ © 2569 Statlix · สรุปงาน แบรนด์ · คอนเทนต์ · เว็บไซต์
+</div></footer>
+</body></html>
