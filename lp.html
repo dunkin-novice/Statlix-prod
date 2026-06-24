@@ -1,141 +1,142 @@
 <!doctype html><html lang="th"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Statlix — โหลดชีตคิดต้นทุนต่อแชท ฟรี</title>
+<title>รับชุดเครื่องมือคิด “ต้นทุนต่อแชท” ฟรี — Statlix</title>
+<meta name="description" content="โหลดฟรี: เครื่องมือ + ชีตคิดต้นทุนต่อแชท + คู่มือยิงแอดทักแชท สำหรับคนขายไทย รู้ก่อนเสียเงินจริง ไม่ต้องผูกบัตร">
+<meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
- /* ads LP specifics — single goal, minimal leaks */
- .lpnav .wrap{justify-content:space-between}
- .lpform{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:var(--shadow-frame)}
- .lpform h3{font-size:20px;font-weight:700;color:var(--ink)}
- .lpform .micro{font-size:12.5px;color:var(--muted);margin-top:12px;display:flex;flex-wrap:wrap;gap:6px 14px}
- .lpform .micro span{display:inline-flex;align-items:center;gap:6px}
- .lpform .micro .ico{width:14px;height:14px;color:var(--brand)}
- .btn-line{background:#06C755;color:#fff;width:100%;justify-content:center;font-size:16px;padding:15px}
+ /* === ADS LP — single goal, dark-tech, minimal leaks === */
+ .lpnav{position:relative;background:#0E0D0C;border-bottom:0}
+ .lpnav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+ .lpnav .logo img{height:26px}
+ .lpnav .tagpill{font-size:12.5px;font-weight:600;color:#F9B1A5;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);padding:6px 13px;border-radius:999px}
+ .lphero{background:#0E0D0C;position:relative;overflow:hidden;padding:48px 0 64px}
+ .lphero::before{content:"";position:absolute;width:1100px;height:1100px;right:-340px;bottom:-420px;border-radius:50%;background:radial-gradient(circle,rgba(240,60,31,.40),rgba(240,60,31,.12) 36%,transparent 66%);filter:blur(6px);z-index:0}
+ .lphero::after{content:"";position:absolute;inset:0;z-index:0;opacity:.045;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:76px 76px}
+ .lpgrid{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center;position:relative;z-index:2}
+ .lphero .ey{color:#F9B1A5}
+ .lphero h1{color:#fff;font-size:clamp(2.1rem,3vw + 1rem,3rem);font-weight:700;line-height:1.16;letter-spacing:-.01em}
+ .lphero h1 .g{color:#F9B1A5}
+ .lphero .sub{color:#C9C7C5;font-size:18px;margin:18px 0 22px;max-width:520px}
+ .lptrust{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;color:#9A9A98;font-size:13.5px}
+ .lptrust b{color:#fff;font-weight:600}
+ .lptrust .chip{border:1px solid rgba(255,255,255,.16);color:#D0D0CF;background:transparent}
+ /* form card */
+ .lpform{background:#fff;border-radius:18px;padding:28px;box-shadow:0 30px 80px -28px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05)}
+ .lpform .kk{font-size:12.5px;font-weight:700;color:var(--brand);letter-spacing:.04em;text-transform:uppercase}
+ .lpform h3{font-size:21px;font-weight:700;color:var(--ink);margin:6px 0 4px;letter-spacing:-.01em}
+ .lpform .magnet{display:flex;gap:14px;align-items:center;margin:16px 0 18px;padding:14px;background:var(--subtle);border:1px solid var(--line);border-radius:12px}
+ .lpform .magnet img{width:60px;border-radius:6px;box-shadow:var(--shadow-card);flex:none}
+ .lpform .magnet ul{list-style:none;font-size:13.5px;color:var(--ink-2)}
+ .lpform .magnet li{display:flex;gap:7px;margin:4px 0}.lpform .magnet li .ico{width:15px;height:15px;color:var(--brand);flex:none;margin-top:2px}
+ .btn-line{background:#06C755;color:#fff;width:100%;justify-content:center;font-size:16px;padding:15px;font-weight:700}
  .btn-line:hover{background:#05b54e}
- .orline{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px;margin:16px 0}
+ .orline{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px;margin:14px 0}
  .orline::before,.orline::after{content:"";flex:1;height:1px;background:var(--line)}
  .emailrow{display:flex;gap:9px}
  .emailrow input{flex:1;min-width:0;border:1px solid var(--line);border-radius:8px;padding:13px 14px;font-size:15px;font-family:inherit;background:#fff}
  .emailrow input:focus{outline:0;border-color:var(--brand)}
- .magnet{display:flex;gap:14px;align-items:center;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
- .magnet .pv{flex:none;width:58px;height:74px;border-radius:8px;background:var(--dark);display:grid;place-items:center;color:#fff}
- .magnet .pv .ico{width:26px;height:26px;color:#FF9C84}
- .magnet small{font-size:13px;color:var(--ink-2)}.magnet b{color:var(--ink)}
+ .micro{font-size:12px;color:var(--muted);margin-top:12px;display:flex;flex-wrap:wrap;gap:6px 14px}
+ .micro span{display:inline-flex;align-items:center;gap:6px}.micro .ico{width:14px;height:14px;color:var(--brand)}
+ .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+ /* outcome funnel (native, fast) */
+ .lpfunnel{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+ .fcell{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;text-align:center}
+ .fcell .n{font-family:'Outfit';font-size:34px;font-weight:800;color:var(--brand);letter-spacing:-.02em;line-height:1}
+ .fcell .l{font-size:14px;color:var(--ink);font-weight:600;margin-top:8px}
+ .fcell .s{font-size:12.5px;color:var(--muted);margin-top:2px}
+ .farrow{text-align:center;color:var(--muted);font-size:12.5px;margin-top:12px}
+ /* fit / not-fit */
  .fit{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:34px}
  .fitcol{border:1px solid var(--line);border-radius:14px;padding:26px;background:#fff}
  .fitcol.no{background:var(--subtle)}
- .fitcol .h{display:flex;align-items:center;gap:9px;font-weight:600;font-size:16px;color:var(--ink);margin-bottom:14px}
- .fitcol .h .ico{width:20px;height:20px}
- .fitcol.yes .h .ico{color:var(--brand)}.fitcol.no .h .ico{color:var(--muted)}
- .fitcol li{list-style:none;font-size:14.5px;color:var(--ink-2);margin:10px 0;padding-left:2px}
- .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
- .pcell{border:1px solid var(--line);border-radius:14px;padding:24px;text-align:center;background:#fff}
- .pcell .n{font-family:'Outfit';font-size:38px;font-weight:700;color:var(--brand);letter-spacing:-.02em}
- .pcell .l{font-size:14px;color:var(--ink-2);margin-top:4px}.pcell .s{font-size:12.5px;color:var(--muted);margin-top:2px}
- .pflow{text-align:center;color:var(--muted);font-size:13px;margin-top:14px}
- @media(max-width:860px){.fit,.proof{grid-template-columns:1fr}}
+ .fitcol .h{display:flex;align-items:center;gap:9px;font-weight:700;font-size:16px;color:var(--ink);margin-bottom:14px}
+ .fitcol .h .ico{width:20px;height:20px}.fitcol.yes .h .ico{color:var(--brand)}.fitcol.no .h .ico{color:var(--muted)}
+ .fitcol ul{list-style:none}.fitcol li{font-size:14.5px;color:var(--ink-2);margin:10px 0}
+ .free3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+ .lpfoot{background:#0E0D0C;color:#8C8A88;text-align:center;font-size:13px;padding:30px 0}
+ .lpfoot a{color:#A1A09F}
+ @media(max-width:860px){.lpgrid,.lpfunnel,.fit,.free3{grid-template-columns:1fr}.lphero{padding:30px 0 44px}.lpgrid{gap:30px}}
 </style></head><body>
 
 <nav class="nav lpnav"><div class="wrap">
- <a class="logo" href="index.html"><img src="Statlix_LOGO_Usage-02.png" alt="STATLIX"></a>
- <a class="btn btn-line" style="width:auto;padding:11px 20px;font-size:14px" href="#get" data-ev="lead_captured" data-source="line_nav">แอด LINE รับชีตฟรี</a>
+ <a class="logo" href="index.html"><img src="Statlix_LOGO_white.png" alt="STATLIX"></a>
+ <span class="tagpill">ฟรี · ก่อนเปิดตัว ก.ย. 2569</span>
 </div></nav>
 
-<header class="hero"><div class="wrap hero-grid">
+<header class="lphero"><div class="wrap lpgrid">
  <div>
-  <div class="ey">ของฟรี สำหรับแม่ค้าออนไลน์</div>
-  <h1 style="margin-top:14px">ยิงแอดทักแชทให้คุ้ม<br>เริ่มจาก<span class="g">รู้ต้นทุนต่อแชท</span></h1>
-  <p class="sub" style="margin:22px 0 28px">โหลดชีตคิดต้นทุนต่อแชทฟรี + เช็กลิสต์ 5 จุดเวลายิงแล้วไม่มีคนทัก พร้อมคอร์สสั้น 7 วัน ส่งให้ทาง LINE หรืออีเมล — ใช้ได้เลย ไม่ต้องเก่งยิงแอด</p>
-  <div class="proof">
-   <div class="pcell"><div class="n">฿1,050</div><div class="l">งบ 7 วัน</div><div class="s">วันละ 150 บาท</div></div>
-   <div class="pcell"><div class="n">35–50</div><div class="l">คนทักแชท</div><div class="s">~฿20–30 ต่อแชท</div></div>
-   <div class="pcell"><div class="n">7–10</div><div class="l">ออเดอร์</div><div class="s">ปิดได้ราว 1 ใน 5</div></div>
+  <div class="ey">สำหรับคนขายของออนไลน์ไทย</div>
+  <h1>ยิงแอดทั้งเดือน… <span class="g">รู้ไหมว่าต้นทุนต่อแชทเท่าไหร่?</span></h1>
+  <p class="sub">โหลดฟรี — เครื่องมือ + ชีตคิด “ต้นทุนต่อแชท” และคู่มือยิงแอดทักแชท ฉบับมือใหม่ รู้ก่อนเสียเงินจริง ว่างบเท่านี้ได้คนทักกี่คน ปิดได้กี่ออเดอร์</p>
+  <div class="lptrust">
+   <span><b>300+</b> ร้านจองสิทธิ์แล้ว</span>
+   <span class="chips"><span class="chip">Messenger</span><span class="chip">Instagram</span><span class="chip">LINE</span></span>
   </div>
-  <div class="pflow">ตัวเลขตัวอย่างจากงบเริ่มต้น — ชีตจะช่วยคุณคิดของร้านตัวเอง</div>
  </div>
-
- <div id="get" class="lpform">
-  <h3>รับของฟรีทั้งชุด</h3>
-  <p style="font-size:14px;color:var(--ink-2);margin:6px 0 18px">ชีตคิดต้นทุน + เช็กลิสต์ + คอร์ส 7 วัน</p>
-  <a class="btn btn-line" href="#" data-ev="lead_captured" data-source="line">แอด LINE รับชีตฟรี</a>
-  <div class="orline">หรือ</div>
-  <form class="emailrow" onsubmit="return false" data-ev="lead_captured" data-source="email">
-   <input type="email" placeholder="กรอกอีเมลของคุณ" required>
-   <button class="btn btn-primary" type="submit">ส่งให้</button>
+ <div>
+  <form class="lpform" onsubmit="if(this.company.value){return false} location.href='thank-you.html';return false">
+   <div class="kk">โหลดฟรี · ใช้ได้ทันที</div>
+   <h3>รับชุดเครื่องมือคิดต้นทุนต่อแชท</h3>
+   <div class="magnet">
+    <img src="ebook_cover_final.png" alt="คู่มือยิงแอดทักแชท">
+    <ul>
+     <li><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> ชีต Google คิดต้นทุน/แชท พร้อมใช้</li>
+     <li><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> เครื่องมือคำนวณงบ–คนทัก–ออเดอร์</li>
+     <li><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> คู่มือยิงแอดทักแชท 28 หน้า</li>
+    </ul>
+   </div>
+   <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <a class="btn btn-line" href="thank-you.html"><svg class='ico' viewBox='0 0 24 24' style="width:18px;height:18px"><path d='M20 6 9 17l-5-5'/></svg> แอด LINE รับฟรีทันที</a>
+   <div class="orline">หรือรับทางอีเมล</div>
+   <div class="emailrow"><input type="email" name="email" required placeholder="กรอกอีเมลของคุณ"><button class="btn btn-primary" type="submit" style="padding:13px 18px">รับฟรี </button></div>
+   <div class="micro">
+    <span><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> ไม่ต้องผูกบัตร</span>
+    <span><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> ฟรี ไม่มีขายของ</span>
+    <span><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> ไม่สแปม ยกเลิกได้</span>
+   </div>
   </form>
-  <div class="micro">
-   <span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> ไม่ต้องผูกบัตร</span>
-   <span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> ไม่สแปม ยกเลิกได้</span>
-   <span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> ใช้ได้ทันที</span>
-  </div>
-  <div class="magnet">
-   <div class="pv"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
-   <small><b>ชีต Google + คู่มือ PDF</b><br>ก๊อปไปใช้กับร้านคุณได้เลย ไม่ต้องสมัครสมาชิก</small>
-  </div>
  </div>
 </div></header>
 
-<div class="trust"><div class="wrap">
- <div class="item"><b>2.7 ล้าน</b> แม่ค้าออนไลน์ไทยคือกลุ่มของเรา</div>
- <div class="item"><b>300+</b> ร้านโหลดของฟรีไปแล้ว</div>
- <div class="chips"><span class="chip">Messenger</span><span class="chip">Instagram</span><span class="chip">LINE</span></div>
-</div></div>
+<section class="sec sec-sm"><div class="wrap">
+ <div class="center"><div class="ey">ตัวอย่างจริง</div><h2 class="h2" style="margin-top:8px">งบวันละ 150 บาท ได้คนทักแค่ไหน?</h2></div>
+ <div class="lpfunnel">
+  <div class="fcell"><div class="n">฿1,050</div><div class="l">งบ 7 วัน</div><div class="s">วันละ 150 บาท</div></div>
+  <div class="fcell"><div class="n">35–50</div><div class="l">คนทักแชท</div><div class="s">ต้นทุน ~฿20–30/แชท</div></div>
+  <div class="fcell"><div class="n">7–10</div><div class="l">ออเดอร์</div><div class="s">ปิดได้ราว 1 ใน 5</div></div>
+ </div>
+ <div class="farrow">ตัวเลขประมาณการจากร้านเล็กทั่วไป — กรอกของร้านคุณเองได้ในเครื่องมือที่โหลดไป</div>
+</div></section>
+
+<section class="sec" style="background:var(--soft);padding-top:64px"><div class="wrap">
+ <div class="center"><div class="ey">ในชุดนี้มีอะไร</div><h2 class="h2" style="margin-top:8px">3 อย่าง โหลดไปใช้ได้เลย</h2></div>
+ <div class="free3">
+  <div class="card"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><rect x='3' y='3' width='18' height='18' rx='2'/><path d='M3 9h18M9 21V9'/></svg></div><h3>ชีตคิดต้นทุนต่อแชท</h3><p>เทมเพลต Google Sheet กรอกงบ–คนทัก–ออเดอร์ แล้วเห็นต้นทุนจริงทุกเดือน</p></div>
+  <div class="card"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><rect x='4' y='2' width='16' height='20' rx='2'/><path d='M8 6h8M8 10h8M8 14h5'/></svg></div><h3>เครื่องมือคำนวณ</h3><p>ใส่งบ ดูเลยว่าจะได้คนทักกี่คน ปิดได้กี่ออเดอร์ ต้นทุนต่อแชทถูกหรือแพง</p></div>
+  <div class="card"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg></div><h3>คู่มือ 28 หน้า</h3><p>ตั้งแต่เปิดแอดตัวแรก จนอ่านผลเป็น — เล่มเดียวจบ เขียนแบบไม่ขายฝัน</p></div>
+ </div>
+</div></section>
 
 <section class="sec"><div class="wrap">
- <div class="ey center">ในชุดมีอะไรบ้าง</div>
- <h2 class="h2 center" style="margin-top:10px">ทุกอย่างที่ต้องใช้ ตั้งแต่คิดต้นทุน จนอ่านผลแอดเป็น</h2>
- <div class="cards3" style="margin-top:40px">
-  <div class="card"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v5.17a2 2 0 0 0 .59 1.42l7.83 7.82a2 2 0 0 0 2.82 0l5.17-5.17a2 2 0 0 0 0-2.82L11.59 5.59A2 2 0 0 0 10.17 5H5a2 2 0 0 0-2 2Z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg></div><h3>ชีตคิดต้นทุนต่อแชท</h3><p>สูตร “ต้นทุนต่อแชท” และ “ต้นทุนต่อออเดอร์” ที่ก๊อปไปกรอกตัวเลขร้านคุณได้เลย</p></div>
-  <div class="card"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div><h3>ตัวอย่างจริงจากงบจริง</h3><p>งบวันละ 150 บาท ได้คนทักกี่คน ปิดได้กี่ออเดอร์ — เห็นภาพก่อนลงเงินจริง</p></div>
-  <div class="card"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><h3>เช็กลิสต์ 5 จุด</h3><p>ยิงแล้วไม่มีคนทัก แก้ตรงไหนก่อน — ไล่ทีละข้อ ไม่ต้องเดา</p></div>
- </div>
-</div></section>
-
-<section class="sec" style="background:var(--subtle);padding-top:0;padding-bottom:96px"><div class="wrap" style="padding-top:96px">
- <div class="ey center">บอกตามตรง</div>
- <h2 class="h2 center" style="margin-top:10px">เครื่องมือนี้เหมาะกับใคร — และยังไม่เหมาะกับใคร</h2>
+ <div class="center"><div class="ey">เช็กก่อนโหลด</div><h2 class="h2" style="margin-top:8px">ชุดนี้เหมาะกับใคร</h2></div>
  <div class="fit">
-  <div class="fitcol yes">
-   <div class="h"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> เหมาะ ถ้าคุณ…</div>
-   <ul>
-    <li>ขายผ่านการ <b>ทักแชท / DM</b> เป็นหลัก (Messenger, IG, LINE)</li>
-    <li>งบเริ่มต้น <b>หลักร้อยต่อวัน</b> อยากให้คุ้มที่สุด</li>
-    <li>อยาก <b>ยิงเอง คุมงบเอง</b> แต่ยังไม่รู้จะอ่านผลยังไง</li>
-   </ul>
-  </div>
-  <div class="fitcol no">
-   <div class="h"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg> ยังไม่เหมาะ ถ้าคุณ…</div>
-   <ul>
-    <li>ขายผ่าน <b>หน้าเว็บ/ตะกร้า</b> เป็นหลัก และวัดที่ ROAS อย่างเดียว</li>
-    <li>อยากให้ <b>คนอื่นทำให้ทั้งหมด</b> ไม่อยากแตะเอง</li>
-    <li>มองหา <b>สูตรรวยเร็ว</b> — อันนี้เป็นเครื่องมือคิดต้นทุน ไม่ใช่</li>
-   </ul>
-  </div>
+  <div class="fitcol yes"><div class="h"><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> เหมาะถ้าคุณ</div>
+   <ul><li>ขายของผ่านแชท (Messenger / IG / LINE)</li><li>เคยบูสต์โพสต์แต่ได้แค่ยอดไลก์</li><li>อยากยิงเอง คุมงบเอง ไม่จ้างเอเจนซี่</li><li>อยากรู้ว่างบที่จ่ายไป คุ้มหรือเปล่า</li></ul></div>
+  <div class="fitcol no"><div class="h"><svg class='ico' viewBox='0 0 24 24'><path d='M18 6 6 18M6 6l12 12'/></svg> ยังไม่เหมาะถ้า</div>
+   <ul><li>ไม่ได้ขายของออนไลน์</li><li>มองหาสูตรรวยเร็วแบบไม่ต้องทำอะไร</li><li>อยากให้คนอื่นทำแทนทุกอย่าง</li></ul></div>
  </div>
 </div></section>
-
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="community">
- <div>
-  <h2>หลังโหลดเสร็จ เข้ากลุ่มคนยิงแอดทักแชทด้วยกัน</h2>
-  <p>ถาม–ตอบเรื่องยิงแอดทักแชท แชร์ตัวเลขจริง + คอร์สสั้น 7 วันทาง LINE · ไม่ต้องเก่งมาก่อน</p>
- </div>
- <div class="crow">
-  <a class="btn btn-primary" href="#" data-ev="lead_captured" data-source="fb_group">เข้ากลุ่ม Facebook ฟรี</a>
-  <a class="btn btn-line" style="width:auto" href="#" data-ev="lead_captured" data-source="line">แอด LINE</a>
- </div>
-</div></div></section>
 
 <section class="sec" style="padding-top:0"><div class="wrap"><div class="final">
- <h2>พร้อมรู้ต้นทุนต่อแชทของร้านคุณแล้วหรือยัง?</h2>
- <p>โหลดชีต + เช็กลิสต์ + คอร์ส 7 วัน ฟรี ส่งให้ทาง LINE หรืออีเมล ใช้ได้ทันที</p>
- <a class="btn btn-line btn-lg" style="width:auto;display:inline-flex" href="#get" data-ev="lead_captured" data-source="line">แอด LINE รับชีตฟรี</a>
+ <h2>รู้ต้นทุนต่อแชทของร้านคุณ ใน 1 นาที</h2>
+ <p>โหลดชุดเครื่องมือฟรี ไม่ต้องผูกบัตร ไม่มีขายของ — เริ่มจากตัวเลขจริงของร้านคุณ</p>
+ <a class="btn btn-line" href="thank-you.html" style="max-width:300px;margin:0 auto"><svg class='ico' viewBox='0 0 24 24' style="width:18px;height:18px"><path d='M20 6 9 17l-5-5'/></svg> แอด LINE รับฟรีทันที</a>
 </div></div></section>
 
-<footer><div class="wrap">
- <div class="fcol" style="max-width:300px"><a class="logo" href="index.html"><img src="Statlix_LOGO_white.png" alt="STATLIX"></a><div style="margin-top:10px">ผู้ช่วยการตลาด AI สำหรับคนขายออนไลน์ไทย · ยิงแอดทักแชท ปิดการขาย</div></div>
- <div class="fcol"><b>ของฟรี</b><a href="#get">ชีตคิดต้นทุนต่อแชท</a><a href="#get">เช็กลิสต์ยิงแอด</a><a href="#get">คอร์สฟรี 7 วัน</a></div>
- <div class="fcol"><b>ติดต่อ</b><a href="#">LINE OA</a><a href="#">Facebook Group</a></div>
+<footer class="lpfoot"><div class="wrap">
+ © 2569 Statlix · ผู้ช่วยการตลาด AI สำหรับคนขายไทย · <a href="privacy.html">ความเป็นส่วนตัว</a> · <a href="index.html">หน้าหลัก</a>
 </div></footer>
 </body></html>
