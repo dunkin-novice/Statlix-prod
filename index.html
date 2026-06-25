@@ -2,13 +2,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Statlix — ยิงแอดให้คนทักแชท แล้วปิดการขาย</title>
-<meta name="description" content="Statlix ผู้ช่วยการตลาด AI สำหรับแม่ค้าออนไลน์ไทย — ยิงแอดให้คนทักแชทแล้วปิดการขายได้เอง คุมงบเอง โปร่งใส ถูกกว่าเอเจนซี่ เริ่มหลักร้อย">
+<meta name="description" content="ผู้ช่วยการตลาด AI สำหรับแม่ค้าออนไลน์ไทย — ยิงแอดให้คนทักแชทแล้วปิดการขายได้เอง คุมงบเอง ถูกกว่าเอเจนซี่ เริ่มหลักร้อย">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-html{scroll-behavior:smooth}
-body{margin:0}
+html{scroll-behavior:smooth}body{margin:0}
+.flx-menubtn{display:none}
+@media(max-width:880px){.flx-navlinks{display:none!important}.flx-menubtn{display:inline-flex!important}}
+@keyframes flx-blink{0%,100%{opacity:.2}50%{opacity:1}}
+
 *{box-sizing:border-box}
 ::selection{background:var(--orange);color:#fff}
 @keyframes flx-fadeup{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
@@ -21,36 +24,37 @@ body{margin:0}
 .flx-menubtn{display:none}
 @media(max-width:880px){.flx-navlinks{display:none!important}.flx-menubtn{display:inline-flex!important}}
 </style>
-</head><body>
+</head><body data-page="index">
 <div id="statlix"  style="--orange:#F03C1F;--radius:18px;--fh:'Outfit','Noto Sans Thai',sans-serif;--mono:'JetBrains Mono',monospace;--bg:#0F0E0D;--panel:#17151A;--panel2:#201D24;--cream:#F6F4F0;--tl:#19120E;--tlm:#6E6A64;--td:#F7F5F2;--tdm:#9C9893;--bdl:rgba(25,18,14,.10);--bdd:rgba(255,255,255,.11);background:var(--cream);color:var(--tl);font-family:var(--fh);line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility">
 
 <!-- ============ HEADER ============ -->
-<header data-header style="position:fixed;top:0;left:0;right:0;z-index:80;border-bottom:1px solid transparent;transition:background .3s,border-color .3s">
-  <div style="width:min(1180px,92vw);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;height:72px">
-    <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none">
-      <img src="Statlix_LOGO_white.png" alt="STATLIX" style="height:26px;display:block">
-    </a>
-    <nav class="flx-navlinks" style="display:flex;align-items:center;gap:34px">
-      <a href="#problem" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ปัญหา</a>
-      <a href="#how" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">วิธีใช้งาน</a>
-      <a href="#pillars" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">สิ่งที่ได้</a>
-      <a href="#tools" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ตัวช่วยฟรี</a>
-      <a href="#blog" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">บทความ</a>
-    </nav>
-    <div style="display:flex;align-items:center;gap:14px">
-      <a href="#waitlist" class="flx-navlinks" style="display:inline-flex;align-items:center;color:var(--td);text-decoration:none;font-size:15px;font-weight:600">เข้าสู่ระบบ</a>
-      <a href="#waitlist" style="display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:11px 20px;border-radius:calc(var(--radius)*.62);transition:transform .15s,filter .2s" data-hover="filter:brightness(1.08);transform:translateY(-1px)">ลองใช้ก่อนใคร</a>
-      <button data-menu-btn class="flx-menubtn" aria-label="menu" style="background:rgba(255,255,255,.08);border:1px solid var(--bdd);color:var(--td);width:42px;height:42px;border-radius:12px;cursor:pointer;align-items:center;justify-content:center;font-size:20px">≡</button>
+<div style="position:fixed;top:0;left:0;right:0;z-index:80;--orange:#F03C1F;--fh:'Outfit','Noto Sans Thai',sans-serif;--bg:#0F0E0D;--td:#F7F5F2;--tdm:#9C9893;--bdd:rgba(255,255,255,.11);--radius:18px;font-family:var(--fh)">
+  <div data-header style="border-bottom:1px solid transparent;transition:background .3s,border-color .3s">
+    <div style="width:min(1180px,92vw);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;height:72px">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+        <img src="Statlix_LOGO_white.png" alt="STATLIX" style="height:26px;display:block">
+      </a>
+      <nav class="flx-navlinks" style="display:flex;align-items:center;gap:30px">
+        <a data-nav="product" href="product.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ทำไม Statlix</a>
+        <a data-nav="pricing" href="pricing.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ราคา</a>
+        <a data-nav="tools" href="free-tools.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ตัวช่วยฟรี</a>
+        <a data-nav="blog" href="blog.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">บทความ</a>
+        <a data-nav="contact" href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ติดต่อ</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px">
+        <a href="early-access.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:11px 20px;border-radius:calc(var(--radius)*.62);transition:transform .15s,filter .2s" data-hover="filter:brightness(1.08);transform:translateY(-1px)">ลองใช้ก่อนใคร</a>
+        <button data-menu-btn class="flx-menubtn" aria-label="menu" style="background:rgba(255,255,255,.08);border:1px solid var(--bdd);color:var(--td);width:42px;height:42px;border-radius:12px;cursor:pointer;align-items:center;justify-content:center;font-size:20px">≡</button>
+      </div>
+    </div>
+    <div data-menu data-open="0" style="display:none;flex-direction:column;gap:2px;padding:8px 6vw 16px;background:rgba(15,14,13,.97);backdrop-filter:blur(14px);border-top:1px solid var(--bdd)">
+      <a href="product.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ทำไม Statlix</a>
+      <a href="pricing.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ราคา</a>
+      <a href="free-tools.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ตัวช่วยฟรี</a>
+      <a href="blog.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">บทความ</a>
+      <a href="contact.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ติดต่อ</a>
     </div>
   </div>
-  <div data-menu data-open="0" style="display:none;flex-direction:column;gap:4px;padding:10px 6vw 18px;background:rgba(15,14,13,.97);backdrop-filter:blur(14px);border-top:1px solid var(--bdd)">
-    <a href="#problem" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ปัญหา</a>
-    <a href="#how" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">วิธีใช้งาน</a>
-    <a href="#pillars" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">สิ่งที่ได้</a>
-    <a href="#tools" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ตัวช่วยฟรี</a>
-    <a href="#blog" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">บทความ</a>
-  </div>
-</header>
+</div>
 
 <!-- ============ HERO ============ -->
 <section id="top" style="position:relative;background:var(--bg);color:var(--td);padding:124px 0 clamp(56px,7vw,96px);overflow:hidden">
@@ -58,7 +62,7 @@ body{margin:0}
   <div style="position:absolute;inset:0;background-image:linear-gradient(var(--bdd) 1px,transparent 1px),linear-gradient(90deg,var(--bdd) 1px,transparent 1px);background-size:64px 64px;opacity:.35;mask-image:radial-gradient(circle at 50% 30%,#000,transparent 72%);pointer-events:none"></div>
   <div style="position:relative;width:min(1180px,92vw);margin-inline:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:clamp(40px,5vw,72px);align-items:center">
     <!-- left -->
-    <div style="animation:flx-fadeup .8s cubic-bezier(.2,.7,.2,1) both">
+    <div>
       <div style="display:inline-flex;align-items:center;gap:9px;background:color-mix(in srgb,var(--orange) 14%,transparent);border:1px solid color-mix(in srgb,var(--orange) 40%,transparent);color:#FFB9A8;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.01em">
         <span style="width:7px;height:7px;border-radius:50%;background:var(--orange);animation:flx-blink 1.6s infinite"></span>
         เปิดตัว กันยายน 2569 · เปิดให้ลองก่อนใคร
@@ -76,7 +80,7 @@ body{margin:0}
       </div>
     </div>
     <!-- right: ad -> chat mockup -->
-    <div style="position:relative;min-height:440px;animation:flx-fadeup .9s cubic-bezier(.2,.7,.2,1) .12s both">
+    <div style="position:relative;min-height:440px">
       <!-- ad card -->
       <div style="position:relative;z-index:1;width:min(330px,82%);background:#fff;color:var(--tl);border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -22px rgba(0,0,0,.6);transform:rotate(-3deg)">
         <div style="display:flex;align-items:center;gap:9px;padding:12px 14px">
@@ -429,16 +433,16 @@ body{margin:0}
 </section>
 
 <!-- ============ FOOTER ============ -->
-<footer style="background:#0A0908;color:var(--tdm);padding:clamp(48px,6vw,80px) 0 40px">
+<footer style="--orange:#F03C1F;--fh:'Outfit','Noto Sans Thai',sans-serif;--td:#F7F5F2;--tdm:#9C9893;--bdd:rgba(255,255,255,.11);background:#0A0908;color:var(--tdm);font-family:var(--fh);padding:clamp(48px,6vw,80px) 0 40px">
   <div style="width:min(1180px,92vw);margin-inline:auto">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:36px 24px;padding-bottom:40px;border-bottom:1px solid var(--bdd)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:36px 24px;padding-bottom:40px;border-bottom:1px solid var(--bdd)">
       <div style="grid-column:1/-1;max-width:300px">
-        <img src="Statlix_LOGO_white.png" style="height:26px;margin-bottom:16px">
+        <img src="Statlix_LOGO_white.png" alt="STATLIX" style="height:26px;margin-bottom:16px">
         <p style="font-size:14px;line-height:1.6;margin:0">ผู้ช่วยการตลาด AI สำหรับแม่ค้าออนไลน์ไทย — ยิงแอดให้คนทักแชท แล้วปิดการขาย</p>
       </div>
-      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">ผลิตภัณฑ์</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="#how" style="color:var(--tdm);text-decoration:none;font-size:14px">วิธีใช้งาน</a><a href="#pillars" style="color:var(--tdm);text-decoration:none;font-size:14px">สิ่งที่ได้</a><a href="#tools" style="color:var(--tdm);text-decoration:none;font-size:14px">เครื่องมือฟรี</a><a href="#waitlist" style="color:var(--tdm);text-decoration:none;font-size:14px">ลองใช้ก่อนใคร</a></div></div>
-      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">เรียนรู้</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="#blog" style="color:var(--tdm);text-decoration:none;font-size:14px">บทความ</a><a href="#" style="color:var(--tdm);text-decoration:none;font-size:14px">ชุมชนแม่ค้า</a><a href="#" style="color:var(--tdm);text-decoration:none;font-size:14px">คำถามที่พบบ่อย</a></div></div>
-      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">ติดต่อ</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="#" style="color:var(--tdm);text-decoration:none;font-size:14px">LINE Official</a><a href="#" style="color:var(--tdm);text-decoration:none;font-size:14px">Facebook</a><a href="#" style="color:var(--tdm);text-decoration:none;font-size:14px">อีเมล</a></div></div>
+      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">ผลิตภัณฑ์</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="product.html" style="color:var(--tdm);text-decoration:none;font-size:14px">ทำไม Statlix</a><a href="pricing.html" style="color:var(--tdm);text-decoration:none;font-size:14px">ราคา</a><a href="demo.html" style="color:var(--tdm);text-decoration:none;font-size:14px">ดูเดโม</a><a href="early-access.html" style="color:var(--tdm);text-decoration:none;font-size:14px">ลองใช้ก่อนใคร</a></div></div>
+      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">เรียนรู้</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="free-tools.html" style="color:var(--tdm);text-decoration:none;font-size:14px">เครื่องมือฟรี</a><a href="blog.html" style="color:var(--tdm);text-decoration:none;font-size:14px">บทความ</a><a href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:14px">คำถามที่พบบ่อย</a></div></div>
+      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">ติดต่อ</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:14px">LINE Official</a><a href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:14px">Facebook</a><a href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:14px">อีเมล</a></div></div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;font-size:13px">
       <span>© 2569 Statlix. สงวนลิขสิทธิ์.</span>
@@ -448,38 +452,5 @@ body{margin:0}
 </footer>
 
 </div>
-<script>
-(function(){
- var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- // hover (ported from Claude Design style-hover)
- document.querySelectorAll('[data-hover]').forEach(function(el){
-   var base=el.getAttribute('style')||''; var hov=el.getAttribute('data-hover');
-   el.addEventListener('mouseenter',function(){el.setAttribute('style',base+';'+hov);});
-   el.addEventListener('mouseleave',function(){el.setAttribute('style',base);});
- });
- // reveal-on-scroll
- var items=document.querySelectorAll('[data-reveal]');
- if(reduce||!('IntersectionObserver' in window)){items.forEach(function(el){el.style.opacity='1';el.style.transform='none';});}
- else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;var d=parseFloat(el.getAttribute('data-delay')||'0');el.style.transition='opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)';el.style.transitionDelay=d+'ms';el.style.opacity='1';el.style.transform='none';io.unobserve(el);}});},{threshold:.12,rootMargin:'0px 0px -7% 0px'});
-   items.forEach(function(el){io.observe(el);});
-   setTimeout(function(){items.forEach(function(el){el.style.opacity='1';el.style.transform='none';});},3200);}
- // count-up
- function animateCount(el,instant){var t=parseFloat(el.getAttribute('data-count'));var dec=parseInt(el.getAttribute('data-dec')||'0');var fmt=function(v){return v.toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec});};if(instant){el.textContent=fmt(t);return;}var dur=1500,start=performance.now();function step(now){var p=Math.min(1,(now-start)/dur);p=1-Math.pow(1-p,3);el.textContent=fmt(t*p);if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
- var counters=document.querySelectorAll('[data-count]');
- if(reduce||!('IntersectionObserver' in window)){counters.forEach(function(el){animateCount(el,true);});}
- else{var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animateCount(e.target);cio.unobserve(e.target);}});},{threshold:.4});counters.forEach(function(el){cio.observe(el);});}
- // header scroll state
- var header=document.querySelector('[data-header]');
- if(header){var onScroll=function(){if(window.scrollY>16){header.style.background='rgba(15,14,13,.82)';header.style.backdropFilter='blur(14px)';header.style.webkitBackdropFilter='blur(14px)';header.style.borderBottomColor='rgba(255,255,255,.09)';}else{header.style.background='transparent';header.style.backdropFilter='none';header.style.webkitBackdropFilter='none';header.style.borderBottomColor='transparent';}};window.addEventListener('scroll',onScroll,{passive:true});onScroll();}
- // mobile menu
- var btn=document.querySelector('[data-menu-btn]'),menu=document.querySelector('[data-menu]');
- if(btn&&menu){btn.addEventListener('click',function(){var open=menu.getAttribute('data-open')==='1';menu.setAttribute('data-open',open?'0':'1');menu.style.display=open?'none':'flex';});menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.setAttribute('data-open','0');menu.style.display='none';});});}
- // lead forms -> success + tracking hook
- window.dataLayer=window.dataLayer||[];
- document.querySelectorAll('[data-leadform]').forEach(function(f){f.addEventListener('submit',function(ev){ev.preventDefault();var b=f.querySelector('[data-formbody]'),d=f.querySelector('[data-done]');if(b)b.style.display='none';if(d)d.style.display='flex';window.dataLayer.push({event:'lead_captured',source:'homepage',ts:Date.now()});});});
- // hero chat sequence (looping)
- if(!reduce){playChat();}else{document.querySelectorAll('[data-bubble]').forEach(function(b){b.style.opacity='1';b.style.transform='none';});}
- function playChat(){var bubbles=Array.prototype.slice.call(document.querySelectorAll('[data-bubble]'));var typing=document.querySelector('[data-typing]');if(!bubbles.length)return;function reset(){bubbles.forEach(function(b){b.style.opacity='0';b.style.transform='translateY(8px)';});if(typing)typing.style.opacity='0';}function run(){reset();var i=0;function next(){if(i>=bubbles.length){if(typing)typing.style.opacity='0';setTimeout(run,4200);return;}var b=bubbles[i];var wait=parseInt(b.getAttribute('data-bubble'))||600;var isReply=b.getAttribute('data-me')==='1';if(typing&&i>0)typing.style.opacity=isReply?'1':'0';setTimeout(function(){if(typing)typing.style.opacity='0';b.style.opacity='1';b.style.transform='none';i++;setTimeout(next,550);},wait);}setTimeout(next,700);}run();}
-})();
-</script>
+<script src="sitewide.js"></script>
 </body></html>

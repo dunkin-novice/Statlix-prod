@@ -1,0 +1,162 @@
+<!doctype html><html lang="th"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ตัวช่วยฟรี & เครื่องคิดต้นทุนต่อแชท — Statlix</title>
+<meta name="description" content="เครื่องคิดต้นทุนต่อแชท + ชุดเครื่องมือฟรีสำหรับแม่ค้าออนไลน์ — กรอกงบ รู้เลยจะได้คนทักกี่คน">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}body{margin:0}
+.flx-menubtn{display:none}
+@media(max-width:880px){.flx-navlinks{display:none!important}.flx-menubtn{display:inline-flex!important}}
+@keyframes flx-blink{0%,100%{opacity:.2}50%{opacity:1}}
+
+*{box-sizing:border-box}
+::selection{background:var(--orange);color:#fff}
+@keyframes flx-glow{0%,100%{opacity:.5}50%{opacity:.85}}
+input[type=range]{accent-color:#F03C1F}
+</style>
+</head><body data-page="free-tools">
+<div  style="--orange:#F03C1F;--radius:18px;--fh:'Outfit','Noto Sans Thai',sans-serif;--mono:'JetBrains Mono',monospace;--bg:#0F0E0D;--panel:#17151A;--panel2:#201D24;--cream:#F6F4F0;--tl:#19120E;--tlm:#6E6A64;--td:#F7F5F2;--tdm:#9C9893;--bdl:rgba(25,18,14,.10);--bdd:rgba(255,255,255,.11);background:var(--cream);color:var(--tl);font-family:var(--fh);line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased">
+
+<div style="position:fixed;top:0;left:0;right:0;z-index:80;--orange:#F03C1F;--fh:'Outfit','Noto Sans Thai',sans-serif;--bg:#0F0E0D;--td:#F7F5F2;--tdm:#9C9893;--bdd:rgba(255,255,255,.11);--radius:18px;font-family:var(--fh)">
+  <div data-header style="border-bottom:1px solid transparent;transition:background .3s,border-color .3s">
+    <div style="width:min(1180px,92vw);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;height:72px">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+        <img src="Statlix_LOGO_white.png" alt="STATLIX" style="height:26px;display:block">
+      </a>
+      <nav class="flx-navlinks" style="display:flex;align-items:center;gap:30px">
+        <a data-nav="product" href="product.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ทำไม Statlix</a>
+        <a data-nav="pricing" href="pricing.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ราคา</a>
+        <a data-nav="tools" href="free-tools.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s;color:var(--orange);font-weight:600" data-hover="color:var(--td)">ตัวช่วยฟรี</a>
+        <a data-nav="blog" href="blog.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">บทความ</a>
+        <a data-nav="contact" href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ติดต่อ</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px">
+        <a href="early-access.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:11px 20px;border-radius:calc(var(--radius)*.62);transition:transform .15s,filter .2s" data-hover="filter:brightness(1.08);transform:translateY(-1px)">ลองใช้ก่อนใคร</a>
+        <button data-menu-btn class="flx-menubtn" aria-label="menu" style="background:rgba(255,255,255,.08);border:1px solid var(--bdd);color:var(--td);width:42px;height:42px;border-radius:12px;cursor:pointer;align-items:center;justify-content:center;font-size:20px">≡</button>
+      </div>
+    </div>
+    <div data-menu data-open="0" style="display:none;flex-direction:column;gap:2px;padding:8px 6vw 16px;background:rgba(15,14,13,.97);backdrop-filter:blur(14px);border-top:1px solid var(--bdd)">
+      <a href="product.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ทำไม Statlix</a>
+      <a href="pricing.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ราคา</a>
+      <a href="free-tools.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ตัวช่วยฟรี</a>
+      <a href="blog.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">บทความ</a>
+      <a href="contact.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ติดต่อ</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO + CALCULATOR -->
+<section style="position:relative;background:var(--bg);color:var(--td);padding:130px 0 clamp(60px,9vw,110px);overflow:hidden">
+  <div style="position:absolute;top:-12%;right:-6%;width:55%;height:120%;background:radial-gradient(circle,color-mix(in srgb,var(--orange) 20%,transparent),transparent 60%);filter:blur(28px);animation:flx-glow 7s ease-in-out infinite;pointer-events:none"></div>
+  <div style="position:relative;width:min(1180px,92vw);margin-inline:auto">
+    <div style="text-align:center;max-width:680px;margin-inline:auto">
+      <div style="display:inline-flex;align-items:center;gap:9px;background:color-mix(in srgb,var(--orange) 14%,transparent);border:1px solid color-mix(in srgb,var(--orange) 40%,transparent);color:#FFB9A8;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600">🎁 ตัวช่วยฟรี · ไม่มีค่าใช้จ่าย</div>
+      <h1 style="font-size:clamp(32px,5vw,58px);line-height:1.1;font-weight:800;letter-spacing:-.015em;margin:22px auto 0;max-width:18ch">ลองคำนวณก่อนยิงจริง <span style="color:var(--orange)">งบเท่านี้ ได้คนทักกี่คน?</span></h1>
+      <p style="font-size:clamp(16px,1.7vw,18px);color:var(--tdm);line-height:1.65;max-width:44ch;margin:18px auto 0">เลื่อนปรับตัวเลขด้านล่าง แล้วดูว่างบโฆษณาของคุณจะกลายเป็นคนทักและออเดอร์เท่าไหร่</p>
+    </div>
+    <!-- calculator -->
+    <div style="margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;align-items:stretch">
+      <!-- inputs -->
+      <div style="background:var(--panel);border:1px solid var(--bdd);border-radius:22px;padding:clamp(24px,3vw,36px)">
+        <h3 style="font-size:18px;font-weight:700;margin:0 0 24px;display:flex;align-items:center;gap:10px"><span style="width:30px;height:30px;border-radius:9px;background:color-mix(in srgb,var(--orange) 16%,transparent);display:flex;align-items:center;justify-content:center;font-size:15px">🎚️</span> กรอกตัวเลขของร้านคุณ</h3>
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><label style="font-size:15px;color:var(--td)">งบต่อวัน</label><span data-calcval="budget" style="font-family:var(--mono);font-size:16px;font-weight:600;color:var(--orange)">฿300</span></div><input type="range" data-calc="budget" min="50" max="3000" step="50" value="300" style="width:100%"></div>
+          <div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><label style="font-size:15px;color:var(--td)">ยิงกี่วัน</label><span data-calcval="days" style="font-family:var(--mono);font-size:16px;font-weight:600;color:var(--orange)">30 วัน</span></div><input type="range" data-calc="days" min="1" max="90" step="1" value="30" style="width:100%"></div>
+          <div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><label style="font-size:15px;color:var(--td)">ต้นทุนต่อแชทที่คาด</label><span data-calcval="cpc" style="font-family:var(--mono);font-size:16px;font-weight:600;color:var(--orange)">฿12</span></div><input type="range" data-calc="cpc" min="4" max="40" step="0.5" value="12" style="width:100%"></div>
+          <div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><label style="font-size:15px;color:var(--td)">อัตราปิดการขาย</label><span data-calcval="close" style="font-family:var(--mono);font-size:16px;font-weight:600;color:var(--orange)">25%</span></div><input type="range" data-calc="close" min="5" max="80" step="1" value="25" style="width:100%"></div>
+        </div>
+      </div>
+      <!-- outputs -->
+      <div style="background:linear-gradient(150deg,var(--panel2),var(--panel));border:1px solid var(--bdd);border-radius:22px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:13px;color:var(--tdm);font-weight:500">งบรวมทั้งหมด</div>
+        <div style="font-family:var(--mono);font-size:clamp(28px,4vw,40px);font-weight:700;margin:2px 0 22px">฿<span data-out="total">9,000</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div style="background:rgba(255,255,255,.04);border-radius:14px;padding:18px"><div style="font-size:13px;color:var(--tdm)">คนทักแชท</div><div style="font-family:var(--mono);font-size:30px;font-weight:700;color:var(--orange);line-height:1.1;margin-top:4px"><span data-out="chats">750</span></div><div style="font-size:12px;color:var(--tdm)">คน</div></div>
+          <div style="background:rgba(255,255,255,.04);border-radius:14px;padding:18px"><div style="font-size:13px;color:var(--tdm)">คาดปิดการขาย</div><div style="font-family:var(--mono);font-size:30px;font-weight:700;color:var(--orange);line-height:1.1;margin-top:4px"><span data-out="orders">188</span></div><div style="font-size:12px;color:var(--tdm)">ออเดอร์</div></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;background:color-mix(in srgb,var(--orange) 12%,transparent);border:1px solid color-mix(in srgb,var(--orange) 28%,transparent);border-radius:14px;padding:16px 18px">
+          <span style="font-size:14px;color:#FFC9BB">ต้นทุนเฉลี่ยต่อ 1 ออเดอร์</span>
+          <span style="font-family:var(--mono);font-size:22px;font-weight:700;color:var(--orange)">฿<span data-out="cpo">48</span></span>
+        </div>
+        <p style="font-size:12px;color:var(--tdm);margin:14px 0 0;line-height:1.5">* เป็นการประมาณการเพื่อวางแผน ตัวเลขจริงขึ้นกับสินค้า ราคา และการตอบแชทของแต่ละร้าน</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE RESOURCES -->
+<section style="background:var(--cream);padding:clamp(60px,9vw,120px) 0">
+  <div style="width:min(1180px,92vw);margin-inline:auto">
+    <div style="text-align:center;max-width:620px;margin-inline:auto" data-reveal style="opacity:0;transform:translateY(26px)">
+      <span style="font-family:var(--mono);font-size:13px;font-weight:500;color:var(--orange);letter-spacing:.06em;text-transform:uppercase">ของฟรี</span>
+      <h2 style="font-size:clamp(27px,4vw,44px);font-weight:800;letter-spacing:-.01em;line-height:1.14;margin:14px 0 0">ชุดเครื่องมือฟรี ที่เอาไปใช้ได้เลย</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;margin-top:44px">
+      <div data-reveal data-delay="0" style="opacity:0;transform:translateY(26px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column"><div style="width:54px;height:54px;border-radius:14px;background:color-mix(in srgb,var(--orange) 12%,transparent);display:flex;align-items:center;justify-content:center;font-size:26px">📊</div><h3 style="font-size:20px;font-weight:700;margin:16px 0 8px">ชีตวางแผนงบ (Google Sheet)</h3><p style="font-size:15px;color:var(--tlm);line-height:1.6;margin:0 0 20px;flex:1">เทมเพลตคำนวณงบ → คนทัก → ออเดอร์ ก๊อปไปใช้กับร้านคุณได้เลย</p><a href="#tools-form" style="text-align:center;background:var(--cream);color:var(--tl);text-decoration:none;font-weight:600;font-size:15px;padding:13px;border-radius:12px;border:1px solid var(--bdl)" data-hover="background:#fff">รับชีตฟรี</a></div>
+      <div data-reveal data-delay="90" style="opacity:0;transform:translateY(26px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column"><div style="width:54px;height:54px;border-radius:14px;background:color-mix(in srgb,var(--orange) 12%,transparent);display:flex;align-items:center;justify-content:center;font-size:26px">📘</div><h3 style="font-size:20px;font-weight:700;margin:16px 0 8px">คู่มือยิงแอดให้คนทัก (PDF)</h3><p style="font-size:15px;color:var(--tlm);line-height:1.6;margin:0 0 20px;flex:1">อ่านจบใน 20 นาที รู้วิธีตั้งแอดให้ได้คนทัก ไม่ใช่แค่ยอดไลก์</p><a href="#tools-form" style="text-align:center;background:var(--cream);color:var(--tl);text-decoration:none;font-weight:600;font-size:15px;padding:13px;border-radius:12px;border:1px solid var(--bdl)" data-hover="background:#fff">โหลดคู่มือ</a></div>
+      <div data-reveal data-delay="180" style="opacity:0;transform:translateY(26px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column"><div style="width:54px;height:54px;border-radius:14px;background:color-mix(in srgb,var(--orange) 12%,transparent);display:flex;align-items:center;justify-content:center;font-size:26px">🎓</div><h3 style="font-size:20px;font-weight:700;margin:16px 0 8px">คอร์สฟรี 7 วันทางอีเมล</h3><p style="font-size:15px;color:var(--tlm);line-height:1.6;margin:0 0 20px;flex:1">บทเรียนสั้น ๆ วันละตอน สอนยิงแอด + ตอบแชทให้ปิดการขาย</p><a href="#tools-form" style="text-align:center;background:var(--cream);color:var(--tl);text-decoration:none;font-weight:600;font-size:15px;padding:13px;border-radius:12px;border:1px solid var(--bdl)" data-hover="background:#fff">เริ่มเรียนฟรี</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="tools-form" style="background:var(--cream);padding:0 0 clamp(60px,9vw,120px)">
+  <div style="width:min(1180px,92vw);margin-inline:auto">
+    <div data-reveal style="opacity:0;transform:translateY(26px);background:linear-gradient(140deg,var(--panel),var(--bg));color:var(--td);border-radius:26px;padding:clamp(32px,5vw,56px);position:relative;overflow:hidden">
+      <div style="position:absolute;top:-30%;right:-6%;width:42%;height:150%;background:radial-gradient(circle,color-mix(in srgb,var(--orange) 22%,transparent),transparent 62%);filter:blur(22px);pointer-events:none"></div>
+      <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(28px,4vw,52px);align-items:center">
+        <div>
+          <h2 style="font-size:clamp(25px,3.4vw,38px);font-weight:800;letter-spacing:-.01em;line-height:1.16;margin:0">กรอกอีเมลหรือ LINE<br>รับชุดเครื่องมือทั้งหมดฟรี</h2>
+          <p style="font-size:15px;color:var(--tdm);line-height:1.6;margin:16px 0 0">ได้ทั้งชีต Google, คู่มือ PDF และคอร์สฟรี 7 วัน ส่งให้ทันที + ข่าวเปิดตัวก่อนใคร</p>
+        </div>
+        <form data-leadform style="background:rgba(255,255,255,.05);border:1px solid var(--bdd);border-radius:var(--radius);padding:26px">
+          <div data-formbody>
+            <input type="text" placeholder="ชื่อร้านของคุณ" style="width:100%;background:rgba(255,255,255,.06);border:1px solid var(--bdd);border-radius:11px;padding:13px 15px;color:var(--td);font:400 15px var(--fh);margin-bottom:11px;outline:none">
+            <input type="email" required placeholder="อีเมล หรือ LINE ID" style="width:100%;background:rgba(255,255,255,.06);border:1px solid var(--bdd);border-radius:11px;padding:13px 15px;color:var(--td);font:400 15px var(--fh);margin-bottom:15px;outline:none">
+            <button type="submit" style="width:100%;background:var(--orange);color:#fff;border:none;border-radius:11px;padding:15px;font:700 16px var(--fh);cursor:pointer" data-hover="filter:brightness(1.08)">รับชุดเครื่องมือฟรี →</button>
+            <p style="font-size:12px;color:var(--tdm);text-align:center;margin:13px 0 0">ไม่สแปม ยกเลิกรับข่าวได้ทุกเมื่อ</p>
+          </div>
+          <div data-done style="display:none;flex-direction:column;align-items:center;text-align:center;gap:12px;padding:18px 0">
+            <div style="width:58px;height:58px;border-radius:50%;background:color-mix(in srgb,var(--orange) 18%,transparent);display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--orange)">✓</div>
+            <h3 style="font-size:20px;font-weight:700;margin:0">ส่งให้แล้ว เช็กกล่องข้อความได้เลย!</h3>
+            <p style="font-size:14px;color:var(--tdm);margin:0">ขอบคุณที่สนใจ Statlix — เจอกันตอนเปิดตัว ก.ย. 2569 🧡</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--bg);color:var(--td);padding:clamp(56px,8vw,104px) 0;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 120%,color-mix(in srgb,var(--orange) 28%,transparent),transparent 58%);pointer-events:none"></div>
+  <div style="position:relative;width:min(680px,92vw);margin-inline:auto;text-align:center" data-reveal style="opacity:0;transform:translateY(26px)">
+    <h2 style="font-size:clamp(26px,4vw,44px);font-weight:800;letter-spacing:-.015em;line-height:1.14;margin:0">อยากให้ AI ยิงแอดให้จริง ๆ?</h2>
+    <p style="font-size:clamp(16px,1.7vw,18px);color:var(--tdm);line-height:1.6;margin:16px auto 26px;max-width:34ch">เครื่องมือฟรีช่วยวางแผน — แต่ Statlix ลงมือยิงให้คุณได้จริง ลองใช้ก่อนใครได้เลย</p>
+    <a href="early-access.html" style="display:inline-flex;align-items:center;gap:9px;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;font-size:17px;padding:16px 30px;border-radius:calc(var(--radius)*.66)" data-hover="filter:brightness(1.08)">ลองใช้ก่อนใคร →</a>
+  </div>
+</section>
+
+<footer style="--orange:#F03C1F;--fh:'Outfit','Noto Sans Thai',sans-serif;--td:#F7F5F2;--tdm:#9C9893;--bdd:rgba(255,255,255,.11);background:#0A0908;color:var(--tdm);font-family:var(--fh);padding:clamp(48px,6vw,80px) 0 40px">
+  <div style="width:min(1180px,92vw);margin-inline:auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:36px 24px;padding-bottom:40px;border-bottom:1px solid var(--bdd)">
+      <div style="grid-column:1/-1;max-width:300px">
+        <img src="Statlix_LOGO_white.png" alt="STATLIX" style="height:26px;margin-bottom:16px">
+        <p style="font-size:14px;line-height:1.6;margin:0">ผู้ช่วยการตลาด AI สำหรับแม่ค้าออนไลน์ไทย — ยิงแอดให้คนทักแชท แล้วปิดการขาย</p>
+      </div>
+      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">ผลิตภัณฑ์</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="product.html" style="color:var(--tdm);text-decoration:none;font-size:14px">ทำไม Statlix</a><a href="pricing.html" style="color:var(--tdm);text-decoration:none;font-size:14px">ราคา</a><a href="demo.html" style="color:var(--tdm);text-decoration:none;font-size:14px">ดูเดโม</a><a href="early-access.html" style="color:var(--tdm);text-decoration:none;font-size:14px">ลองใช้ก่อนใคร</a></div></div>
+      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">เรียนรู้</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="free-tools.html" style="color:var(--tdm);text-decoration:none;font-size:14px">เครื่องมือฟรี</a><a href="blog.html" style="color:var(--tdm);text-decoration:none;font-size:14px">บทความ</a><a href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:14px">คำถามที่พบบ่อย</a></div></div>
+      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">ติดต่อ</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:14px">LINE Official</a><a href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:14px">Facebook</a><a href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:14px">อีเมล</a></div></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;font-size:13px">
+      <span>© 2569 Statlix. สงวนลิขสิทธิ์.</span>
+      <div style="display:flex;gap:20px"><a href="#" style="color:var(--tdm);text-decoration:none">นโยบายความเป็นส่วนตัว</a><a href="#" style="color:var(--tdm);text-decoration:none">เงื่อนไขการใช้งาน</a></div>
+    </div>
+  </div>
+</footer>
+</div>
+<script src="sitewide.js"></script>
+</body></html>

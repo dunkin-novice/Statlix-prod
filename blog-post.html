@@ -1,72 +1,177 @@
 <!doctype html><html lang="th"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>แอดเฟสคืออะไร? เข้าใจใน 3 นาที | Statlix</title>
-<meta name="description" content="แอดเฟส (Facebook Ads) คืออะไร ทำงานยังไง ต่างจากบูสต์โพสต์ตรงไหน และทำไมแม่ค้าออนไลน์ต้องรู้ — อธิบายง่ายๆ ใน 3 นาที">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body>
-<nav class="nav"><div class="wrap">
- <a class="logo" href="index.html"><img src="Statlix_LOGO_Usage-02.png" alt="STATLIX"></a>
- <div class="navlinks"><a href="features.html">ทำไม Statlix</a><a href="pricing.html">ราคา</a><a href="resources.html">เครื่องมือฟรี</a><a href="blog.html" class="active">บล็อก</a></div>
- <div class="navcta"><a class="btn btn-ghost" href="contact.html">ติดต่อ</a><a class="btn btn-primary" href="early-access.html">ลองใช้ก่อนใคร</a></div>
-</div></nav>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>บูสต์โพสต์ vs ยิงแอดให้คนทัก ต่างกันยังไง? | Statlix</title>
+<meta name="description" content="เข้าใจความต่างของบูสต์โพสต์กับการยิงแอดให้คนทักแชท ก่อนเสียเงินผิดวิธี">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}body{margin:0}
+.flx-menubtn{display:none}
+@media(max-width:880px){.flx-navlinks{display:none!important}.flx-menubtn{display:inline-flex!important}}
+@keyframes flx-blink{0%,100%{opacity:.2}50%{opacity:1}}
 
-<article class="sec-sm"><div class="narrow">
- <div class="breadcrumb"><a href="index.html">หน้าแรก</a> › <a href="blog.html">บล็อก</a> › <a href="blog.html#p1">ยิงแอดเองได้</a> › แอดเฟสคืออะไร</div>
- <span class="pill" style="background:var(--blue50);color:var(--prim)">ยิงแอดเองได้ · มือใหม่</span>
- <h1 class="h1" style="font-size:38px;margin:14px 0 12px">แอดเฟสคืออะไร? เข้าใจใน 3 นาที สำหรับแม่ค้าออนไลน์</h1>
- <div class="meta" style="color:var(--grey);font-size:14px;border-bottom:1px solid var(--line);padding-bottom:18px">โดยทีม Statlix · อัปเดต มิ.ย. 2569 · อ่าน 3 นาที</div>
+*{box-sizing:border-box}
+::selection{background:var(--orange);color:#fff}
+html{scroll-behavior:smooth}
+</style>
+</head><body data-page="blog-post">
+<div  style="--orange:#F03C1F;--radius:18px;--fh:'Outfit','Noto Sans Thai',sans-serif;--mono:'JetBrains Mono',monospace;--bg:#0F0E0D;--panel:#17151A;--panel2:#201D24;--cream:#F6F4F0;--tl:#19120E;--tlm:#6E6A64;--td:#F7F5F2;--tdm:#9C9893;--bdl:rgba(25,18,14,.10);--bdd:rgba(255,255,255,.11);background:var(--cream);color:var(--tl);font-family:var(--fh);line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased">
 
- <div class="article">
-  <p>ถ้าคุณขายของออนไลน์แล้วเคยกด “บูสต์โพสต์” มาก่อน — คุณก็เคยใช้ระบบโฆษณาของ Facebook มาแล้วแบบไม่รู้ตัว แต่ “แอดเฟส” (Facebook Ads) ทำได้มากกว่าการบูสต์เยอะ บทความนี้สรุปให้เข้าใจง่ายๆ ใน 3 นาที</p>
+<div style="position:fixed;top:0;left:0;right:0;z-index:80;--orange:#F03C1F;--fh:'Outfit','Noto Sans Thai',sans-serif;--bg:#0F0E0D;--td:#F7F5F2;--tdm:#9C9893;--bdd:rgba(255,255,255,.11);--radius:18px;font-family:var(--fh)">
+  <div data-header style="border-bottom:1px solid transparent;transition:background .3s,border-color .3s">
+    <div style="width:min(1180px,92vw);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;height:72px">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+        <img src="Statlix_LOGO_white.png" alt="STATLIX" style="height:26px;display:block">
+      </a>
+      <nav class="flx-navlinks" style="display:flex;align-items:center;gap:30px">
+        <a data-nav="product" href="product.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ทำไม Statlix</a>
+        <a data-nav="pricing" href="pricing.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ราคา</a>
+        <a data-nav="tools" href="free-tools.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ตัวช่วยฟรี</a>
+        <a data-nav="blog" href="blog.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s;color:var(--orange);font-weight:600" data-hover="color:var(--td)">บทความ</a>
+        <a data-nav="contact" href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ติดต่อ</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px">
+        <a href="early-access.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:11px 20px;border-radius:calc(var(--radius)*.62);transition:transform .15s,filter .2s" data-hover="filter:brightness(1.08);transform:translateY(-1px)">ลองใช้ก่อนใคร</a>
+        <button data-menu-btn class="flx-menubtn" aria-label="menu" style="background:rgba(255,255,255,.08);border:1px solid var(--bdd);color:var(--td);width:42px;height:42px;border-radius:12px;cursor:pointer;align-items:center;justify-content:center;font-size:20px">≡</button>
+      </div>
+    </div>
+    <div data-menu data-open="0" style="display:none;flex-direction:column;gap:2px;padding:8px 6vw 16px;background:rgba(15,14,13,.97);backdrop-filter:blur(14px);border-top:1px solid var(--bdd)">
+      <a href="product.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ทำไม Statlix</a>
+      <a href="pricing.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ราคา</a>
+      <a href="free-tools.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ตัวช่วยฟรี</a>
+      <a href="blog.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">บทความ</a>
+      <a href="contact.html" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ติดต่อ</a>
+    </div>
+  </div>
+</div>
 
-  <div class="toc"><b>ในบทความนี้</b><ol>
-   <li><a href="#s1">แอดเฟสคืออะไร</a></li>
-   <li><a href="#s2">แอดเฟสทำงานยังไง</a></li>
-   <li><a href="#s3">บูสต์โพสต์ vs แอดเฟส ต่างกันยังไง</a></li>
-   <li><a href="#s4">เริ่มยิงแอดเฟสยังไงให้คนทักมาซื้อ</a></li>
-  </ol></div>
+<!-- ARTICLE HEADER -->
+<section style="background:var(--bg);color:var(--td);padding:120px 0 clamp(40px,6vw,68px)">
+  <div style="width:min(760px,92vw);margin-inline:auto">
+    <a href="blog.html" style="color:var(--tdm);text-decoration:none;font-size:14px;display:inline-flex;align-items:center;gap:7px" data-hover="color:var(--td)">← กลับไปหน้าบทความ</a>
+    <span style="display:inline-block;font-size:12px;color:var(--orange);font-weight:600;font-family:var(--mono);text-transform:uppercase;margin:24px 0 0">ยิงแอด</span>
+    <h1 style="font-size:clamp(28px,4.4vw,50px);line-height:1.14;font-weight:800;letter-spacing:-.015em;margin:12px 0 0">บูสต์โพสต์ vs ยิงแอดให้คนทัก ต่างกันยังไง?</h1>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:22px">
+      <div style="width:38px;height:38px;border-radius:50%;background:color-mix(in srgb,var(--orange) 18%,transparent);display:flex;align-items:center;justify-content:center"><img src="statlix-mark-orange.png" style="width:20px;height:20px"></div>
+      <span style="font-size:14px;color:var(--td);font-weight:600">ทีม Statlix</span>
+      <span style="color:var(--tdm)">·</span>
+      <span style="font-size:14px;color:var(--tdm)">12 มิ.ย. 2569</span>
+      <span style="color:var(--tdm)">·</span>
+      <span style="font-size:14px;color:var(--tdm)">อ่าน 5 นาที</span>
+    </div>
+  </div>
+</section>
 
-  <h2 id="s1">แอดเฟสคืออะไร</h2>
-  <p>แอดเฟส คือการลงโฆษณาบน Facebook/Instagram ผ่านระบบ Ads Manager ที่ให้คุณ <b>เลือกได้ว่าจะให้ใครเห็น</b> (กลุ่มเป้าหมาย) <b>อยากได้ผลลัพธ์แบบไหน</b> (เช่น ให้คนทักแชท) และ <b>ใช้งบเท่าไหร่</b> — ต่างจากการบูสต์ที่เลือกได้น้อยกว่ามาก</p>
+<!-- BODY -->
+<section style="background:var(--cream);padding:clamp(36px,5vw,60px) 0 clamp(50px,7vw,90px)">
+  <div style="width:min(760px,92vw);margin-inline:auto">
+    <!-- cover -->
+    <div data-reveal style="opacity:0;transform:translateY(26px);aspect-ratio:16/8;background:repeating-linear-gradient(45deg,#EFEAE3 0 12px,#F6F2EC 12px 24px);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;margin-bottom:36px"><span style="font-family:var(--mono);font-size:12px;color:#A89F92">[ article cover image ]</span></div>
+    <!-- TOC -->
+    <div style="background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:24px 26px;margin-bottom:38px">
+      <div style="font-size:13px;font-weight:700;color:var(--tlm);font-family:var(--mono);text-transform:uppercase;letter-spacing:.04em;margin-bottom:14px">สารบัญ</div>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <a href="#h1" style="color:var(--tl);text-decoration:none;font-size:15px;display:flex;gap:10px" data-hover="color:var(--orange)"><span style="color:var(--orange);font-family:var(--mono)">01</span> บูสต์โพสต์คืออะไร</a>
+        <a href="#h2" style="color:var(--tl);text-decoration:none;font-size:15px;display:flex;gap:10px" data-hover="color:var(--orange)"><span style="color:var(--orange);font-family:var(--mono)">02</span> ยิงแอดให้คนทักต่างกันยังไง</a>
+        <a href="#h3" style="color:var(--tl);text-decoration:none;font-size:15px;display:flex;gap:10px" data-hover="color:var(--orange)"><span style="color:var(--orange);font-family:var(--mono)">03</span> ทำไมบูสต์ถึงได้แค่ยอดไลก์</a>
+        <a href="#h4" style="color:var(--tl);text-decoration:none;font-size:15px;display:flex;gap:10px" data-hover="color:var(--orange)"><span style="color:var(--orange);font-family:var(--mono)">04</span> แล้วแม่ค้าควรทำยังไง</a>
+      </div>
+    </div>
+    <!-- content -->
+    <div style="font-size:17px;line-height:1.8;color:#33302C">
+      <p style="margin:0 0 22px">ถ้าคุณเคยกดปุ่ม “บูสต์โพสต์” สีน้ำเงินบน Facebook แล้วรู้สึกว่าเงินหายไปโดยที่ยอดขายไม่ขยับ คุณไม่ได้เป็นคนเดียว บทความนี้จะอธิบายความต่างระหว่าง “บูสต์โพสต์” กับ “ยิงแอดให้คนทักแชท” แบบเข้าใจง่าย เพื่อให้คุณไม่เสียงบไปฟรี ๆ อีก</p>
 
-  <h2 id="s2">แอดเฟสทำงานยังไง</h2>
-  <p>พูดง่ายๆ คือคุณบอก Facebook ว่า “อยากได้คนแบบนี้ มาทำสิ่งนี้ ด้วยงบเท่านี้” แล้วระบบจะเอาโฆษณาไปแสดงกับคนที่มีโอกาสสนใจมากที่สุด ยิ่งระบบเรียนรู้มากขึ้น ก็ยิ่งหาคนที่ใช่ได้แม่นขึ้น</p>
-  <ul>
-   <li><b>กลุ่มเป้าหมาย</b> — ใครจะเห็นโฆษณา (อายุ พื้นที่ ความสนใจ)</li>
-   <li><b>วัตถุประสงค์</b> — อยากได้อะไร เช่น “ข้อความ” (ให้คนทักแชท)</li>
-   <li><b>งบ + ระยะเวลา</b> — จ่ายเท่าไหร่ กี่วัน</li>
-  </ul>
+      <h2 id="h1" style="scroll-margin-top:96px;font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.01em;margin:40px 0 14px;color:var(--tl)">01 · บูสต์โพสต์คืออะไร</h2>
+      <p style="margin:0 0 22px">บูสต์โพสต์คือการจ่ายเงินให้ Facebook เอาโพสต์ที่มีอยู่แล้วไปแสดงให้คนเห็นมากขึ้น เป้าหมายเริ่มต้นของมันคือ “การมีส่วนร่วม” (Engagement) เช่น ยอดไลก์ ยอดคอมเมนต์ ยอดแชร์ — ซึ่งฟังดูดี แต่ไม่ได้แปลว่าจะมีคนทักมาซื้อ</p>
 
-  <div class="ctabox"><div><h3>ไม่อยากตั้งเองทีละขั้น?</h3><p>ให้ Statlix ตั้งกลุ่มเป้าหมาย + งบ + ยิงให้ ในคลิกเดียว เริ่มใน 5 นาที</p></div><a class="btn btn-primary" href="early-access.html">ลองใช้ก่อนใคร</a></div>
+      <h2 id="h2" style="scroll-margin-top:96px;font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.01em;margin:40px 0 14px;color:var(--tl)">02 · ยิงแอดให้คนทักต่างกันยังไง</h2>
+      <p style="margin:0 0 22px">การยิงแอดให้คนทักแชท (Click-to-Message Ads) ตั้งเป้าหมายไว้คนละแบบ — เป้าหมายคือ “ให้คนกดส่งข้อความเข้ามาคุย” ระบบจะไปหาคนที่มีแนวโน้มจะทักมากที่สุด แล้วแสดงแอดให้คนกลุ่มนั้น ผลลัพธ์ที่วัดจึงเป็น “จำนวนคนทัก” ไม่ใช่ยอดไลก์</p>
+      <blockquote style="margin:28px 0;padding:18px 24px;border-left:3px solid var(--orange);background:#fff;border-radius:0 12px 12px 0;font-size:17px;color:var(--tl)">“ยอดไลก์ทำให้รู้สึกดี แต่คนทักแชทคือคนที่พร้อมจ่ายเงิน”</blockquote>
 
-  <h2 id="s3">บูสต์โพสต์ vs แอดเฟส ต่างกันยังไง</h2>
-  <p>บูสต์โพสต์เน้น “เอาโพสต์ไปให้คนเห็นเยอะๆ” มักได้ยอดไลก์/รีช แต่แอดเฟสเลือกเป้าหมายเป็น “ข้อความ” ได้ ทำให้ <b>ได้คนทักมาคุยและซื้อจริง</b> ไม่ใช่แค่ไลก์ผ่านๆ</p>
+      <h2 id="h3" style="scroll-margin-top:96px;font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.01em;margin:40px 0 14px;color:var(--tl)">03 · ทำไมบูสต์ถึงได้แค่ยอดไลก์</h2>
+      <p style="margin:0 0 16px">เพราะคุณกำลังบอกระบบว่า “หาคนที่ชอบกดไลก์ให้หน่อย” ระบบก็ทำตามนั้นเป๊ะ — มันเก่งมากในการหาคนที่กดไลก์ง่าย ๆ ซึ่งส่วนใหญ่ไม่ใช่คนที่ตั้งใจจะซื้อ ผลคือ:</p>
+      <ul style="margin:0 0 22px;padding-left:22px">
+        <li style="margin-bottom:9px">ยอดไลก์เยอะ แต่กล่องแชทเงียบ</li>
+        <li style="margin-bottom:9px">ค่าโฆษณาต่อ 1 คนทัก แพงโดยไม่รู้ตัว</li>
+        <li style="margin-bottom:0">วัดผลกันที่ยอดขายจริงไม่ได้</li>
+      </ul>
 
-  <h2 id="s4">เริ่มยิงแอดเฟสยังไงให้คนทักมาซื้อ</h2>
-  <p>เริ่มจากโพสต์สินค้าที่ขายดีอยู่แล้ว ตั้งวัตถุประสงค์เป็น “ข้อความ” เลือกกลุ่มที่ใกล้คนซื้อ ตั้งงบวันละหลักร้อย แล้วดูผลว่าต้นทุนต่อแชทเท่าไหร่ ตัวไหนถูกก็เติมงบ ตัวไหนแพงก็หยุด</p>
-  <p>ถ้าไม่อยากทำเองทุกขั้น Statlix ช่วยตั้งค่าและปรับให้อัตโนมัติ พร้อมลดแชทผีให้เหลือแต่คนที่พร้อมซื้อ</p>
- </div>
+      <!-- MID-ARTICLE FORM -->
+      <div data-reveal style="opacity:0;transform:translateY(26px);background:var(--bg);color:var(--td);border-radius:20px;padding:clamp(26px,4vw,38px);margin:36px 0;position:relative;overflow:hidden">
+        <div style="position:absolute;top:-40%;right:-6%;width:46%;height:180%;background:radial-gradient(circle,color-mix(in srgb,var(--orange) 24%,transparent),transparent 60%);filter:blur(20px);pointer-events:none"></div>
+        <div style="position:relative">
+          <span style="display:inline-flex;align-items:center;gap:8px;background:color-mix(in srgb,var(--orange) 16%,transparent);color:#FFB9A8;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:600">🎁 ฟรี</span>
+          <h3 style="font-size:clamp(20px,2.6vw,26px);font-weight:800;line-height:1.25;margin:14px 0 8px">รับ ebook: “คู่มือยิงแอดให้คนทัก” ฟรี</h3>
+          <p style="font-size:15px;color:var(--tdm);line-height:1.6;margin:0 0 18px">สรุปวิธีตั้งแอดให้ได้คนทักจริง ๆ กรอกอีเมลรับเลย</p>
+          <form data-leadform style="display:flex;flex-wrap:wrap;gap:10px;max-width:440px">
+            <div data-formbody style="display:flex;flex-wrap:wrap;gap:10px;width:100%">
+              <input type="email" required placeholder="อีเมลของคุณ" style="flex:1;min-width:180px;background:rgba(255,255,255,.06);border:1px solid var(--bdd);border-radius:11px;padding:13px 15px;color:var(--td);font:400 15px var(--fh);outline:none">
+              <button type="submit" style="background:var(--orange);color:#fff;border:none;border-radius:11px;padding:13px 22px;font:700 15px var(--fh);cursor:pointer;white-space:nowrap" data-hover="filter:brightness(1.08)">รับ ebook ฟรี</button>
+            </div>
+            <div data-done style="display:none;align-items:center;gap:9px;font-size:15px;color:var(--td)"><span style="color:var(--orange);font-size:19px">✓</span> ส่งให้แล้ว เช็กอีเมลได้เลย 🧡</div>
+          </form>
+        </div>
+      </div>
 
- <h3 style="margin:40px 0 4px;font-size:18px">อ่านต่อในเสาเดียวกัน</h3>
- <div class="related">
-  <a href="blog-post.html">วิธีตั้งค่าโฆษณา Facebook ครั้งแรก ทำเองได้ </a>
-  <a href="blog-post.html">ยิงแอดครั้งแรกใน 5 นาที ทำเองได้ </a>
-  <a href="blog-post.html">ยิงแอดงบเท่าไหร่ดี? เริ่มหลักร้อยก็พอ </a>
- </div>
-</div></article>
+      <h2 id="h4" style="scroll-margin-top:96px;font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.01em;margin:40px 0 14px;color:var(--tl)">04 · แล้วแม่ค้าควรทำยังไง</h2>
+      <p style="margin:0 0 16px">ทางที่ดีกว่าคือเปลี่ยนเป้าหมายของแอดจาก “ยอดไลก์” เป็น “คนทักแชท” ตั้งแต่แรก แล้ววัดผลกันที่จำนวนคนทักและออเดอร์ ถ้าคุณยังตั้งเองไม่เป็น นี่คือสิ่งที่ Statlix ช่วยได้ — AI จะตั้งเป้าหมายให้ถูก ยิงให้ และช่วยคุณตอบแชทจนปิดการขาย</p>
+      <p style="margin:0 0 22px">สรุปง่าย ๆ: บูสต์โพสต์เหมาะกับการสร้างการรับรู้ แต่ถ้าเป้าหมายคือ “ยอดขาย” การยิงแอดให้คนทักแชทคือทางที่ตรงกว่ามาก</p>
+    </div>
 
-<section class="sec" style="padding-top:10px"><div class="wrap"><div class="final">
- <h2>อยากยิงแอดเฟสแบบมี AI ช่วย?</h2>
- <p>Statlix ตั้งค่า + ยิง + ปรับให้อัตโนมัติ จองสิทธิ์รุ่นแรกก่อนเปิดตัว ก.ย. 2569</p>
- <a class="btn btn-primary btn-lg" href="early-access.html">ลองใช้ก่อนใคร </a>
-</div></div></section>
+    <!-- share / cta inline -->
+    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:40px;padding-top:26px;border-top:1px solid var(--bdl)">
+      <span style="font-size:15px;color:var(--tlm)">บทความนี้มีประโยชน์ไหม? แชร์ให้เพื่อนแม่ค้า</span>
+      <a href="early-access.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:12px 22px;border-radius:12px" data-hover="filter:brightness(1.08)">ลองใช้ Statlix ก่อนใคร →</a>
+    </div>
+  </div>
+</section>
 
-<footer><div class="wrap">
- <div class="fcol" style="max-width:280px"><a class="logo" href="index.html"><img src="Statlix_LOGO_white.png" alt="STATLIX"></a><div style="margin-top:10px">ผู้ช่วยการตลาด AI สำหรับคนขายออนไลน์ไทย · ยิงแอดทักแชท ปิดการขาย</div></div>
- <div class="fcol"><b>ผลิตภัณฑ์</b><a href="features.html">ทำไม Statlix</a><a href="pricing.html">ราคา</a><a href="demo.html">ดูเดโม</a><a href="early-access.html">ลองใช้ก่อนใคร</a></div>
- <div class="fcol"><b>เครื่องมือฟรี</b><a href="tools-cost-per-message.html">คิดต้นทุนต่อแชท</a><a href="resources.html">ดาวน์โหลดฟรี</a><a href="course.html">คอร์สฟรี 7 วัน</a><a href="live.html">Live ถาม–ตอบ</a></div>
- <div class="fcol"><b>เรียนรู้</b><a href="blog.html">บล็อก</a><a href="about.html">เกี่ยวกับเรา</a><a href="customers.html">เคสลูกค้า</a><a href="contact.html">ติดต่อ</a></div>
- <div class="fcol"><b>ทางลัด</b><a href="#">เข้ากลุ่ม Facebook</a><a href="#">แอด LINE OA</a><a href="privacy.html">ความเป็นส่วนตัว</a><a href="terms.html">เงื่อนไขการใช้งาน</a></div>
-</div></footer>
+<!-- RELATED -->
+<section style="background:var(--bg);color:var(--td);padding:clamp(56px,8vw,100px) 0">
+  <div style="width:min(1180px,92vw);margin-inline:auto">
+    <h2 style="font-size:clamp(24px,3.2vw,34px);font-weight:800;letter-spacing:-.01em;margin:0 0 32px" data-reveal style="opacity:0;transform:translateY(26px)">บทความที่เกี่ยวข้อง</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+      <a data-reveal data-delay="0" href="blog-post.html" style="opacity:0;transform:translateY(26px);text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--bdd);border-radius:var(--radius);overflow:hidden;display:block;transition:transform .25s" data-hover="transform:translateY(-4px)"><div style="aspect-ratio:16/9;background:repeating-linear-gradient(45deg,#211e24 0 12px,#17151a 12px 24px);display:flex;align-items:center;justify-content:center"><span style="font-family:var(--mono);font-size:11px;color:#5a5560">[ cover ]</span></div><div style="padding:22px"><span style="font-size:12px;color:var(--orange);font-weight:600">ปิดการขาย</span><h3 style="font-size:18px;font-weight:700;line-height:1.4;margin:8px 0 0">5 ประโยคตอบแชท ที่ช่วยปิดการขายได้ไว</h3></div></a>
+      <a data-reveal data-delay="100" href="blog-post.html" style="opacity:0;transform:translateY(26px);text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--bdd);border-radius:var(--radius);overflow:hidden;display:block;transition:transform .25s" data-hover="transform:translateY(-4px)"><div style="aspect-ratio:16/9;background:repeating-linear-gradient(45deg,#211e24 0 12px,#17151a 12px 24px);display:flex;align-items:center;justify-content:center"><span style="font-family:var(--mono);font-size:11px;color:#5a5560">[ cover ]</span></div><div style="padding:22px"><span style="font-size:12px;color:var(--orange);font-weight:600">งบโฆษณา</span><h3 style="font-size:18px;font-weight:700;line-height:1.4;margin:8px 0 0">มีงบวันละ 100 บาท ยิงแอดได้ผลไหม?</h3></div></a>
+      <a data-reveal data-delay="200" href="blog-post.html" style="opacity:0;transform:translateY(26px);text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--bdd);border-radius:var(--radius);overflow:hidden;display:block;transition:transform .25s" data-hover="transform:translateY(-4px)"><div style="aspect-ratio:16/9;background:repeating-linear-gradient(45deg,#211e24 0 12px,#17151a 12px 24px);display:flex;align-items:center;justify-content:center"><span style="font-family:var(--mono);font-size:11px;color:#5a5560">[ cover ]</span></div><div style="padding:22px"><span style="font-size:12px;color:var(--orange);font-weight:600">มือใหม่</span><h3 style="font-size:18px;font-weight:700;line-height:1.4;margin:8px 0 0">เพิ่งเริ่มขายของออนไลน์ ควรยิงแอดเลยไหม?</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section style="background:var(--cream);padding:clamp(56px,8vw,100px) 0">
+  <div style="width:min(680px,92vw);margin-inline:auto;text-align:center" data-reveal style="opacity:0;transform:translateY(26px)">
+    <h2 style="font-size:clamp(24px,3.4vw,38px);font-weight:800;letter-spacing:-.015em;line-height:1.14;margin:0">อยากได้บทความแบบนี้ทุกสัปดาห์?</h2>
+    <p style="font-size:clamp(15px,1.7vw,17px);color:var(--tlm);line-height:1.6;margin:14px auto 26px;max-width:36ch">สมัครรับข่าว เคล็ดลับยิงแอด–ปิดการขาย ส่งตรงถึงอีเมลคุณ</p>
+    <form data-leadform style="max-width:460px;margin-inline:auto">
+      <div data-formbody style="display:flex;flex-wrap:wrap;gap:10px">
+        <input type="email" required placeholder="อีเมลของคุณ" style="flex:1;min-width:200px;background:#fff;border:1px solid var(--bdl);border-radius:calc(var(--radius)*.62);padding:15px 18px;color:var(--tl);font:400 16px var(--fh);outline:none">
+        <button type="submit" style="background:var(--orange);color:#fff;border:none;border-radius:calc(var(--radius)*.62);padding:15px 24px;font:700 16px var(--fh);cursor:pointer;white-space:nowrap" data-hover="filter:brightness(1.08)">สมัครรับข่าว</button>
+      </div>
+      <div data-done style="display:none;align-items:center;justify-content:center;gap:10px;background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:18px;font-size:15px;color:var(--tl)"><span style="color:var(--orange);font-size:20px">✓</span> สมัครเรียบร้อย ขอบคุณค่ะ 🧡</div>
+    </form>
+  </div>
+</section>
+
+<footer style="--orange:#F03C1F;--fh:'Outfit','Noto Sans Thai',sans-serif;--td:#F7F5F2;--tdm:#9C9893;--bdd:rgba(255,255,255,.11);background:#0A0908;color:var(--tdm);font-family:var(--fh);padding:clamp(48px,6vw,80px) 0 40px">
+  <div style="width:min(1180px,92vw);margin-inline:auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:36px 24px;padding-bottom:40px;border-bottom:1px solid var(--bdd)">
+      <div style="grid-column:1/-1;max-width:300px">
+        <img src="Statlix_LOGO_white.png" alt="STATLIX" style="height:26px;margin-bottom:16px">
+        <p style="font-size:14px;line-height:1.6;margin:0">ผู้ช่วยการตลาด AI สำหรับแม่ค้าออนไลน์ไทย — ยิงแอดให้คนทักแชท แล้วปิดการขาย</p>
+      </div>
+      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">ผลิตภัณฑ์</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="product.html" style="color:var(--tdm);text-decoration:none;font-size:14px">ทำไม Statlix</a><a href="pricing.html" style="color:var(--tdm);text-decoration:none;font-size:14px">ราคา</a><a href="demo.html" style="color:var(--tdm);text-decoration:none;font-size:14px">ดูเดโม</a><a href="early-access.html" style="color:var(--tdm);text-decoration:none;font-size:14px">ลองใช้ก่อนใคร</a></div></div>
+      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">เรียนรู้</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="free-tools.html" style="color:var(--tdm);text-decoration:none;font-size:14px">เครื่องมือฟรี</a><a href="blog.html" style="color:var(--tdm);text-decoration:none;font-size:14px">บทความ</a><a href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:14px">คำถามที่พบบ่อย</a></div></div>
+      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">ติดต่อ</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:14px">LINE Official</a><a href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:14px">Facebook</a><a href="contact.html" style="color:var(--tdm);text-decoration:none;font-size:14px">อีเมล</a></div></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;font-size:13px">
+      <span>© 2569 Statlix. สงวนลิขสิทธิ์.</span>
+      <div style="display:flex;gap:20px"><a href="#" style="color:var(--tdm);text-decoration:none">นโยบายความเป็นส่วนตัว</a><a href="#" style="color:var(--tdm);text-decoration:none">เงื่อนไขการใช้งาน</a></div>
+    </div>
+  </div>
+</footer>
+</div>
+<script src="sitewide.js"></script>
 </body></html>
