@@ -1,194 +1,485 @@
 <!doctype html><html lang="th"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Statlix — ยิงแอดให้คนทักแชท แล้วปิดการขาย</title>
-<meta name="description" content="Statlix ผู้ช่วยการตลาด AI สำหรับคนขายออนไลน์ไทย — ยิงแอดให้คนทักแชทแล้วปิดการขายได้เอง คุมงบเอง โปร่งใส ถูกกว่าเอเจนซี่ เริ่มหลักร้อย">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Statlix ผู้ช่วยการตลาด AI สำหรับแม่ค้าออนไลน์ไทย — ยิงแอดให้คนทักแชทแล้วปิดการขายได้เอง คุมงบเอง โปร่งใส ถูกกว่าเอเจนซี่ เริ่มหลักร้อย">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
- /* full-bleed centered hero (category-leader pattern), Statlix-recolored */
- .hero2{position:relative;min-height:640px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;border-bottom:1px solid #26231F;
-  background:radial-gradient(130% 125% at 50% -12%,#FF5630 0%,#F03C1F 24%,#C42E12 46%,#5A1E0E 74%,#0E0D0C 100%);}
- .hero2::before{content:"";position:absolute;inset:0;opacity:.06;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:80px 80px;}
- .hero2::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 95% at 50% 125%,rgba(14,13,12,.78),transparent 62%);}
- .hero2 .inner{position:relative;z-index:3;max-width:900px;padding:104px 28px;}
- .hero2 .ey{color:#FFE3DD;font-family:'Outfit',sans-serif;font-weight:700;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px;}
- .hero2 h1{color:#fff;font-size:clamp(2.6rem,5vw + 1rem,4.7rem);font-weight:700;line-height:1.06;letter-spacing:-.022em;text-wrap:balance;text-shadow:0 10px 54px rgba(0,0,0,.32);}
- .hero2 .sub{color:#FFE7E1;font-size:20px;line-height:1.5;margin:24px auto 34px;max-width:600px;}
- .hero2 .h2cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
- .hero2 .btn-white{background:#fff;color:#131210;}
- .hero2 .btn-white:hover{background:#F4F1EF;transform:translateY(-1px);}
- .hero2 .btn-outline{background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.55);}
- .hero2 .btn-outline:hover{background:rgba(255,255,255,.16);transform:translateY(-1px);}
- .hero2 .note2{margin-top:28px;color:#FFD9D0;font-size:14px;font-weight:500;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;}
- .hero2 .note2 b{color:#fff;}
- @media(max-width:600px){.hero2{min-height:520px}.hero2 .inner{padding:74px 22px}.hero2 h1{font-size:2.15rem;letter-spacing:-.012em}.hero2 .sub{font-size:17px}.hero2 .note2{gap:6px 14px;font-size:13px}}
+html{scroll-behavior:smooth}
+body{margin:0}
+*{box-sizing:border-box}
+::selection{background:var(--orange);color:#fff}
+@keyframes flx-fadeup{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes flx-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes flx-blink{0%,100%{opacity:.2}50%{opacity:1}}
+@keyframes flx-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes flx-pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--orange) 50%,transparent)}70%{box-shadow:0 0 0 16px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@keyframes flx-glow{0%,100%{opacity:.5}50%{opacity:.85}}
+.flx-mq{display:flex;width:max-content;animation:flx-marquee 30s linear infinite}
+.flx-menubtn{display:none}
+@media(max-width:880px){.flx-navlinks{display:none!important}.flx-menubtn{display:inline-flex!important}}
 </style>
 </head><body>
-<nav class="nav"><div class="wrap">
- <a class="logo" href="index.html"><img src="Statlix_LOGO_Usage-02.png" alt="STATLIX"></a>
- <div class="navlinks"><a href="features.html">ทำไม Statlix</a><a href="pricing.html">ราคา</a><a href="resources.html">เครื่องมือฟรี</a><a href="blog.html">บล็อก</a></div>
- <div class="navcta"><a class="btn btn-ghost" href="contact.html">ติดต่อ</a><a class="btn btn-primary" href="early-access.html">ลองใช้ก่อนใคร</a></div>
-</div></nav>
+<div id="statlix"  style="--orange:#F03C1F;--radius:18px;--fh:'Outfit','Noto Sans Thai',sans-serif;--mono:'JetBrains Mono',monospace;--bg:#0F0E0D;--panel:#17151A;--panel2:#201D24;--cream:#F6F4F0;--tl:#19120E;--tlm:#6E6A64;--td:#F7F5F2;--tdm:#9C9893;--bdl:rgba(25,18,14,.10);--bdd:rgba(255,255,255,.11);background:var(--cream);color:var(--tl);font-family:var(--fh);line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility">
 
-<!-- 1 HERO (full-bleed centered) -->
-<header class="hero2">
- <div class="inner">
-  <div class="ey">ผู้ช่วยการตลาด AI ของคนขายไทย</div>
-  <h1>ยิงแอดให้คนทักแชท<br>แล้วปิดการขาย</h1>
-  <p class="sub">เหมือนมีผู้เชี่ยวชาญช่วยดูแล — เบากว่าเอเจนซี่ 10 เท่า โปร่งใส คุมงบเอง ถามได้ 24/7 โดยไม่ต้องเก่งยิงแอด</p>
-  <div class="h2cta"><a class="btn btn-white btn-lg" href="early-access.html">ลองใช้ก่อนใคร</a><a class="btn btn-outline btn-lg" href="demo.html">ดูเดโม</a></div>
-  <div class="note2"><span>เปิดตัว <b>ก.ย. 2569</b></span><span>เริ่ม <b>หลักร้อย</b>/เดือน</span><span><b>ไม่ต้องผูกบัตร</b></span></div>
- </div>
+<!-- ============ HEADER ============ -->
+<header data-header style="position:fixed;top:0;left:0;right:0;z-index:80;border-bottom:1px solid transparent;transition:background .3s,border-color .3s">
+  <div style="width:min(1180px,92vw);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;height:72px">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+      <img src="Statlix_LOGO_white.png" alt="STATLIX" style="height:26px;display:block">
+    </a>
+    <nav class="flx-navlinks" style="display:flex;align-items:center;gap:34px">
+      <a href="#problem" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ปัญหา</a>
+      <a href="#how" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">วิธีใช้งาน</a>
+      <a href="#pillars" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">สิ่งที่ได้</a>
+      <a href="#tools" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">ตัวช่วยฟรี</a>
+      <a href="#blog" style="color:var(--tdm);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s" data-hover="color:var(--td)">บทความ</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:14px">
+      <a href="#waitlist" class="flx-navlinks" style="display:inline-flex;align-items:center;color:var(--td);text-decoration:none;font-size:15px;font-weight:600">เข้าสู่ระบบ</a>
+      <a href="#waitlist" style="display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:11px 20px;border-radius:calc(var(--radius)*.62);transition:transform .15s,filter .2s" data-hover="filter:brightness(1.08);transform:translateY(-1px)">ลองใช้ก่อนใคร</a>
+      <button data-menu-btn class="flx-menubtn" aria-label="menu" style="background:rgba(255,255,255,.08);border:1px solid var(--bdd);color:var(--td);width:42px;height:42px;border-radius:12px;cursor:pointer;align-items:center;justify-content:center;font-size:20px">≡</button>
+    </div>
+  </div>
+  <div data-menu data-open="0" style="display:none;flex-direction:column;gap:4px;padding:10px 6vw 18px;background:rgba(15,14,13,.97);backdrop-filter:blur(14px);border-top:1px solid var(--bdd)">
+    <a href="#problem" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ปัญหา</a>
+    <a href="#how" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">วิธีใช้งาน</a>
+    <a href="#pillars" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">สิ่งที่ได้</a>
+    <a href="#tools" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">ตัวช่วยฟรี</a>
+    <a href="#blog" style="color:var(--td);text-decoration:none;font-size:16px;font-weight:500;padding:11px 4px">บทความ</a>
+  </div>
 </header>
 
-<!-- 2 TRUST / PROOF BAR -->
-<div class="trust"><div class="wrap">
- <div class="item"><b>2.7 ล้าน</b> แม่ค้าออนไลน์ไทยคือกลุ่มของเรา</div>
- <div class="item"><b>300+</b> ร้านจองสิทธิ์ก่อนใครแล้ว</div>
- <div class="chips"><span class="chip">Messenger</span><span class="chip">Instagram</span><span class="chip">LINE</span></div>
-</div></div>
-
-<!-- 3 PROBLEM (agitate) -->
-<section class="sec" style="background:var(--soft)"><div class="wrap">
- <div class="ey">ปัญหาที่เจอทุกวัน</div><h2 class="h2" style="margin-top:10px">บูสต์โพสต์มานาน… ได้แต่ยอดไลก์?</h2>
- <div class="cards3" style="margin-top:38px">
-  <div class="card"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><path d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z'/></svg></div><h3>บูสต์แล้วไม่ได้คนซื้อ</h3><p>ได้ยอดไลก์ ยอด reach แต่ไม่มีใครทักมาซื้อจริง</p></div>
-  <div class="card"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><polyline points='22 17 13.5 8.5 8.5 13.5 2 7'/><polyline points='16 17 22 17 22 11'/></svg></div><h3>จ้างเอเจนซี่แพง + ไม่โปร่งใส</h3><p>จ่ายทุกเดือนแต่ไม่รู้ว่าเงินหายไปไหน คุมเองไม่ได้</p></div>
-  <div class="card"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10'/><path d='M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3'/><path d='M12 17h.01'/></svg></div><h3>อยากยิงเอง แต่กลัวยาก</h3><p>คำว่า “ยิงแอด” ดูซับซ้อน ไม่รู้จะเริ่มยังไง</p></div>
- </div>
-</div></section>
-
-<!-- 4 HOW IT WORKS -->
-<section class="sec"><div class="wrap">
- <div class="ey">วิธีใช้</div><h2 class="h2" style="margin-top:10px">ยิงแอดเองได้ใน 3 ขั้น — มี AI ช่วยทุกสเต็ป</h2>
- <div class="steps" style="margin-top:40px">
-  <div class="step"><div class="nm">1</div><h3>เลือกโพสต์/สินค้า</h3><p>เลือกสิ่งที่อยากขาย Statlix อ่านโพสต์แล้วร่างแอดให้อัตโนมัติ</p></div>
-  <div class="step"><div class="nm">2</div><h3>กดยิงด้วย AI</h3><p>AI ตั้งกลุ่มเป้าหมาย + งบให้เหมาะ เริ่มได้ใน 5 นาที</p></div>
-  <div class="step"><div class="nm">3</div><h3>คนทัก ปิดการขาย</h3><p>AI ปรับแอดให้ดีขึ้นเรื่อยๆ ลดแชทผี + ปรึกษาได้ 24/7</p></div>
- </div>
-</div></section>
-
-<!-- 5 FEATURE GRID (anchor — the 4 pillars) -->
-<section class="sec" style="background:var(--soft)"><div class="wrap">
- <div class="ey">ครบในที่เดียว</div><h2 class="h2" style="margin-top:10px">ครบตั้งแต่เริ่มยิง จนปิดการขาย</h2>
- <p class="sub" style="margin-top:10px">ไม่ใช่แค่เครื่องมือยิงแอด แต่ดูแลทั้งเส้นทาง — ตั้งแต่ยังไม่กล้ายิง จนปิดการขายในแชทได้เอง</p>
- <div class="plist" style="margin-top:30px">
-  <div class="pitem"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><path d='M3 7v5.17a2 2 0 0 0 .59 1.42l7.83 7.82a2 2 0 0 0 2.82 0l5.17-5.17a2 2 0 0 0 0-2.82L11.59 5.59A2 2 0 0 0 10.17 5H5a2 2 0 0 0-2 2Z'/><circle cx='7.5' cy='8.5' r='1.5'/></svg></div><h3>ยิงแอดเองได้</h3><p>ทำให้ “ยิงแอด” ไม่น่ากลัว เริ่มเองได้ทีละขั้น แม้ไม่เคยทำมาก่อน เริ่มหลักร้อย</p></div>
-  <div class="pitem"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><path d='M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z'/><circle cx='12' cy='12' r='3'/></svg></div><h3>แทนเอเจนซี่</h3><p>ถูกกว่าได้ถึง 10 เท่า โปร่งใส คุมงบเอง เห็นทุกบาท ไม่ต้องผูกกับใคร</p></div>
-  <div class="pitem"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><path d='M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8'/><circle cx='12' cy='12' r='3'/></svg></div><h3>ยิงดีขึ้นด้วย AI</h3><p>ไม่ใช่แค่ยิงเป็น แต่ยิงให้ได้คนทักที่พร้อมซื้อจริง + ลดแชทผี (คนทักแต่ไม่ซื้อ)</p></div>
-  <div class="pitem"><div class="ic"><svg class='ico' viewBox='0 0 24 24'><path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/></svg></div><h3>ดูแลถึงปิดการขาย</h3><p>มีสคริปต์ + เทคนิคช่วยเปลี่ยนคนทักให้เป็นคนซื้อ ปรึกษาได้ตลอด 24/7</p></div>
- </div>
- <div class="center" style="margin-top:30px"><a class="btn btn-ghost" href="features.html">ดูทั้งหมดว่าทำไมต้อง Statlix </a></div>
-</div></section>
-
-<!-- 6 AI DIFFERENTIATOR -->
-<section class="sec"><div class="wrap">
- <div class="ey">หัวใจของ Statlix</div><h2 class="h2" style="margin-top:10px">AI ที่ช่วยคุณทุกวัน ไม่ใช่แค่ตอนยิง</h2>
- <div class="lead" style="margin-top:32px;background:#fff">
-  <div>
-   <ul>
-    <li><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> เห็น <b>ต้นทุนต่อแชท</b> แบบเรียลไทม์ รู้ทันทีว่าแอดไหนคุ้ม</li>
-    <li><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> AI แนะนำเอง ว่า <b>ควรเติมงบตัวไหน หยุดตัวไหน</b></li>
-    <li><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> <b>กรองแชทผี</b> ส่งเฉพาะคนที่พร้อมซื้อมาให้คุณ</li>
-    <li><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> <b>ปรึกษา AI ได้ 24/7</b> เหมือนมีมือโปรนั่งข้างๆ</li>
-   </ul>
-   <div style="margin-top:22px"><a class="btn btn-primary" href="early-access.html">ลองใช้ก่อนใคร </a></div>
+<!-- ============ HERO ============ -->
+<section id="top" style="position:relative;background:var(--bg);color:var(--td);padding:124px 0 clamp(56px,7vw,96px);overflow:hidden">
+  <div style="position:absolute;top:-14%;right:-8%;width:60%;height:120%;background:radial-gradient(circle at 70% 30%,color-mix(in srgb,var(--orange) 26%,transparent),transparent 60%);filter:blur(20px);animation:flx-glow 7s ease-in-out infinite;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;background-image:linear-gradient(var(--bdd) 1px,transparent 1px),linear-gradient(90deg,var(--bdd) 1px,transparent 1px);background-size:64px 64px;opacity:.35;mask-image:radial-gradient(circle at 50% 30%,#000,transparent 72%);pointer-events:none"></div>
+  <div style="position:relative;width:min(1180px,92vw);margin-inline:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:clamp(40px,5vw,72px);align-items:center">
+    <!-- left -->
+    <div style="animation:flx-fadeup .8s cubic-bezier(.2,.7,.2,1) both">
+      <div style="display:inline-flex;align-items:center;gap:9px;background:color-mix(in srgb,var(--orange) 14%,transparent);border:1px solid color-mix(in srgb,var(--orange) 40%,transparent);color:#FFB9A8;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.01em">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--orange);animation:flx-blink 1.6s infinite"></span>
+        เปิดตัว กันยายน 2569 · เปิดให้ลองก่อนใคร
+      </div>
+      <h1 style="font-size:clamp(36px,5.6vw,66px);line-height:1.06;font-weight:800;letter-spacing:-.015em;margin:22px 0 0">ยิงแอดให้คน<br><span style="color:var(--orange)">ทักแชท</span> แล้วปิดการขาย</h1>
+      <p style="font-size:clamp(16px,1.7vw,19px);color:var(--tdm);line-height:1.65;max-width:30em;margin:22px 0 0">ให้ AI ช่วยคุณยิงแอดเองได้ ไม่ต้องเป็นผู้เชี่ยวชาญ ไม่ต้องจ้างเอเจนซี่ — เปลี่ยน “งบโฆษณา” ให้กลายเป็น “คนทักแชทจริง” แล้วปิดการขายได้จริง</p>
+      <div style="display:flex;flex-wrap:wrap;gap:13px;margin-top:32px">
+        <a href="#waitlist" style="display:inline-flex;align-items:center;gap:9px;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;font-size:17px;padding:16px 28px;border-radius:calc(var(--radius)*.66);animation:flx-pulse 2.6s infinite;transition:transform .15s,filter .2s" data-hover="filter:brightness(1.08);transform:translateY(-2px)">ลองใช้ก่อนใคร →</a>
+        <a href="#tools" style="display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.05);color:var(--td);text-decoration:none;font-weight:600;font-size:17px;padding:16px 26px;border-radius:calc(var(--radius)*.66);border:1px solid var(--bdd);transition:background .2s" data-hover="background:rgba(255,255,255,.1)">รับเครื่องมือฟรี</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:18px;margin-top:22px;color:var(--tdm);font-size:14px">
+        <span style="display:inline-flex;align-items:center;gap:7px"><span style="color:var(--orange)">✓</span> ไม่ต้องใช้บัตรเครดิต</span>
+        <span style="display:inline-flex;align-items:center;gap:7px"><span style="color:var(--orange)">✓</span> เริ่มได้ใน 5 นาที</span>
+        <span style="display:inline-flex;align-items:center;gap:7px"><span style="color:var(--orange)">✓</span> ภาษาไทย 100%</span>
+      </div>
+    </div>
+    <!-- right: ad -> chat mockup -->
+    <div style="position:relative;min-height:440px;animation:flx-fadeup .9s cubic-bezier(.2,.7,.2,1) .12s both">
+      <!-- ad card -->
+      <div style="position:relative;z-index:1;width:min(330px,82%);background:#fff;color:var(--tl);border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -22px rgba(0,0,0,.6);transform:rotate(-3deg)">
+        <div style="display:flex;align-items:center;gap:9px;padding:12px 14px">
+          <div style="width:34px;height:34px;border-radius:50%;background:color-mix(in srgb,var(--orange) 16%,#fff);display:flex;align-items:center;justify-content:center"><img src="statlix-mark-orange.png" style="width:20px;height:20px"></div>
+          <div style="line-height:1.2"><div style="font-weight:700;font-size:13px">ร้านของคุณ</div><div style="font-size:11px;color:var(--tlm)">ได้รับการสนับสนุน · Sponsored</div></div>
+        </div>
+        <div style="position:relative;aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#EFEAE3 0 11px,#F6F2EC 11px 22px);display:flex;align-items:center;justify-content:center">
+          <span style="font-family:var(--mono);font-size:11px;color:#A89F92;letter-spacing:.04em">[ product shot ]</span>
+        </div>
+        <div style="padding:13px 14px 15px">
+          <div style="font-size:13.5px;font-weight:600;line-height:1.45">เสื้อโอเวอร์ไซส์ผ้านุ่มใส่สบาย ตัวละ 590.- ส่งฟรี! 🧡 ทักแชทรับส่วนลดเลย</div>
+          <button style="margin-top:12px;width:100%;background:var(--orange);color:#fff;border:none;border-radius:11px;padding:11px;font:700 14px var(--fh);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px">ส่งข้อความ <span>›</span></button>
+        </div>
+      </div>
+      <!-- chat panel -->
+      <div style="position:absolute;right:0;bottom:0;z-index:2;width:min(290px,76%);background:#fff;color:var(--tl);border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);transform:rotate(2.5deg)">
+        <div style="display:flex;align-items:center;gap:8px;padding:11px 13px;background:linear-gradient(90deg,#06C755,#05a548);color:#fff">
+          <div style="width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700">ค</div>
+          <div style="font-weight:700;font-size:13px">คุณลูกค้า</div>
+          <div style="margin-left:auto;font-size:10px;background:rgba(255,255,255,.22);padding:3px 8px;border-radius:999px">LINE</div>
+        </div>
+        <div style="padding:13px;display:flex;flex-direction:column;gap:9px;background:#EAF3EC;min-height:188px">
+          <div data-bubble="500" style="opacity:0;transform:translateY(8px);transition:.4s;align-self:flex-start;background:#fff;padding:9px 12px;border-radius:14px 14px 14px 4px;font-size:13px;max-width:82%;box-shadow:0 1px 2px rgba(0,0,0,.06)">สนใจค่ะ ตัวนี้ราคาเท่าไหร่คะ?</div>
+          <div data-bubble="700" data-me="1" style="opacity:0;transform:translateY(8px);transition:.4s;align-self:flex-end;background:#DCF8C6;padding:9px 12px;border-radius:14px 14px 4px 14px;font-size:13px;max-width:82%">590 บาทค่ะ ส่งฟรีเลย 🧡 รับกี่ตัวดีคะ?</div>
+          <div data-bubble="800" style="opacity:0;transform:translateY(8px);transition:.4s;align-self:flex-start;background:#fff;padding:9px 12px;border-radius:14px 14px 14px 4px;font-size:13px;max-width:82%;box-shadow:0 1px 2px rgba(0,0,0,.06)">เอา 2 ตัวค่ะ โอนเลยนะคะ 🙏</div>
+          <div data-typing style="opacity:0;transition:.3s;align-self:flex-start;background:#fff;padding:10px 13px;border-radius:14px;display:flex;gap:4px;box-shadow:0 1px 2px rgba(0,0,0,.06)"><span style="width:6px;height:6px;border-radius:50%;background:#bbb;animation:flx-blink 1s infinite"></span><span style="width:6px;height:6px;border-radius:50%;background:#bbb;animation:flx-blink 1s .2s infinite"></span><span style="width:6px;height:6px;border-radius:50%;background:#bbb;animation:flx-blink 1s .4s infinite"></span></div>
+          <div data-bubble="600" style="opacity:0;transform:translateY(8px);transition:.4s;align-self:center;background:var(--orange);color:#fff;padding:6px 13px;border-radius:999px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px">✓ ปิดการขาย · 1,180.-</div>
+        </div>
+      </div>
+      <!-- floating metric chip -->
+      <div style="position:absolute;top:8px;right:2%;z-index:3;background:rgba(23,21,26,.9);backdrop-filter:blur(8px);border:1px solid var(--bdd);border-radius:14px;padding:11px 15px;animation:flx-float 5s ease-in-out infinite">
+        <div style="font-size:11px;color:var(--tdm);font-weight:500">ค่าต่อ 1 แชท</div>
+        <div style="font-family:var(--mono);font-size:20px;font-weight:600;color:var(--orange)">฿<span data-count="11.9" data-dec="2">11.90</span></div>
+      </div>
+    </div>
   </div>
-  <div class="mock" style="box-shadow:var(--shadow-frame)"><div class="bar"><i></i><i></i><i></i></div>
-   <div class="mcard"><div class="flow"><span>ยิงแอด</span><b class="arw"></b><span>ทักแชท</span><b class="arw"></b><span>ปิดการขาย</span></div>
-    <div class="stats"><div class="stat"><div class="n">38</div><div class="l">คนทักวันนี้</div></div><div class="stat"><div class="n">฿14</div><div class="l">ต้นทุน/แชท</div></div><div class="stat up"><div class="n">−52%</div><div class="l">แชทผีลดลง</div></div></div>
-    <div class="chatline"><span class="dot"></span> AI: “แอด B ต้นทุนต่อแชทถูกสุด — ย้ายงบจากแอด A มาดีไหมครับ?”</div></div>
+
+  <!-- trust strip -->
+  <div style="position:relative;width:min(1180px,92vw);margin:clamp(48px,6vw,76px) auto 0;border-top:1px solid var(--bdd);padding-top:30px">
+    <p style="text-align:center;color:var(--tdm);font-size:13px;font-weight:600;letter-spacing:.04em;margin:0 0 18px">เชื่อมต่อกับช่องทางที่แม่ค้าขายจริงทุกวัน</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 28px">
+      <span style="display:inline-flex;align-items:center;gap:9px;color:var(--td);font-weight:600;font-size:16px;opacity:.85"><span style="width:30px;height:30px;border-radius:8px;background:#1877F2;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-family:var(--fh)">f</span>Facebook</span>
+      <span style="display:inline-flex;align-items:center;gap:9px;color:var(--td);font-weight:600;font-size:16px;opacity:.85"><span style="width:30px;height:30px;border-radius:8px;background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800">◎</span>Instagram</span>
+      <span style="display:inline-flex;align-items:center;gap:9px;color:var(--td);font-weight:600;font-size:16px;opacity:.85"><span style="width:30px;height:30px;border-radius:8px;background:#0084FF;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800">✦</span>Messenger</span>
+      <span style="display:inline-flex;align-items:center;gap:9px;color:var(--td);font-weight:600;font-size:16px;opacity:.85"><span style="width:30px;height:30px;border-radius:8px;background:#06C755;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800">L</span>LINE</span>
+      <span style="display:inline-flex;align-items:center;gap:9px;color:var(--td);font-weight:600;font-size:16px;opacity:.85"><span style="width:30px;height:30px;border-radius:8px;background:#000;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800">♪</span>TikTok</span>
+    </div>
   </div>
- </div>
-</div></section>
+</section>
 
-<!-- 7 USE-CASES -->
-<section class="sec" style="background:var(--soft)"><div class="wrap">
- <div class="ey">ใครเหมาะกับ Statlix</div><h2 class="h2" style="margin-top:10px">เหมาะกับร้านที่ปิดการขายในแชท</h2>
- <div class="cards3" style="margin-top:36px">
-  <div class="card"><h3>ร้านเสื้อผ้า / แฟชั่น</h3><p>ของใหม่เข้าบ่อย ยิงให้คนถามไซซ์–สี แล้วปิดในแชท</p></div>
-  <div class="card"><h3>ครีม / อาหารเสริม</h3><p>ลูกค้าต้องถามก่อนซื้อ — กรองแชทผี ส่งเฉพาะคนพร้อมซื้อ</p></div>
-  <div class="card"><h3>อาหาร / ของกิน</h3><p>ยิงงบวันละหลักร้อย เน้นพื้นที่ใกล้ร้าน ได้คนทักสั่งจริง</p></div>
-  <div class="card"><h3>ของแฮนด์เมด / งานสั่งทำ</h3><p>คุยรายละเอียดเยอะ ใช้ AI ตอบรอบแรก แล้วคุณปิดเอง</p></div>
-  <div class="card"><h3>ร้านมือใหม่เพิ่งเปิด</h3><p>เริ่มจากศูนย์ ไม่เคยยิงแอด ให้ AI จับมือทำทีละสเต็ป</p></div>
-  <div class="card"><h3>ร้านที่เคยจ้างเอเจนซี่</h3><p>ย้ายมาคุมเอง เห็นทุกบาท ต้นทุนเบากว่าเดิมหลายเท่า</p></div>
- </div>
- <div class="center" style="margin-top:30px"><a class="btn btn-ghost" href="use-cases.html">ดูว่าเหมาะกับร้านคุณไหม </a></div>
-</div></section>
-
-<!-- 8 STATS BAND (proof numbers, dark) -->
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="final" style="text-align:left">
- <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px">
-  <div><h2 style="text-align:left">งบวันละ 150 บาท ได้คนทักแค่ไหน?</h2><p style="text-align:left;margin:8px 0 0;max-width:520px">ตัวอย่างประมาณการของร้านเล็ก — กรอกตัวเลขร้านคุณเองได้ในเครื่องมือฟรี</p></div>
-  <a class="btn btn-primary" href="tools-cost-per-message.html">ลองคิดต้นทุนต่อแชท </a>
- </div>
- <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px">
-  <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:24px"><div style="font-family:'Outfit';font-size:40px;font-weight:700;color:#FF9C84;letter-spacing:-.02em;line-height:1">1,050<span style="font-size:22px"> บาท</span></div><div style="color:#A1A09F;margin-top:6px;font-size:14px">งบ 7 วัน (วันละ 150)</div></div>
-  <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:24px"><div style="font-family:'Outfit';font-size:40px;font-weight:700;color:#FF9C84;letter-spacing:-.02em;line-height:1">35–50</div><div style="color:#A1A09F;margin-top:6px;font-size:14px">คนทักแชท (~฿20–30/แชท)</div></div>
-  <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:24px"><div style="font-family:'Outfit';font-size:40px;font-weight:700;color:#FF9C84;letter-spacing:-.02em;line-height:1">7–10</div><div style="color:#A1A09F;margin-top:6px;font-size:14px">ออเดอร์ (ปิดได้ราว 1 ใน 5)</div></div>
- </div>
-</div></div></section>
-
-<!-- 9 BLOG -->
-<section class="sec" style="padding-top:0"><div class="wrap">
- <div style="display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:12px">
-  <div><div class="ey">เรียนรู้</div><h2 class="h2" style="margin-top:10px">บทความล่าสุด</h2></div>
-  <a class="btn btn-ghost" href="blog.html">ดูบล็อกทั้งหมด </a></div>
- <div class="pgrid">
-  <a class="post" href="blog-post.html"><div class="thumb"><img src="thumb1.png" alt="แอดเฟสคืออะไร? เข้าใจใน 3 นาที"></div><div class="body"><div class="cat" style="color:var(--prim)">ยิงแอดเองได้</div><h3>แอดเฟสคืออะไร? เข้าใจใน 3 นาที</h3><div class="meta">อ่าน 3 นาที · มือใหม่</div></div></a>
-  <a class="post" href="blog.html"><div class="thumb"><img src="thumb2.png" alt="ยิงเอง vs จ้างเอเจนซี่ อันไหนคุ้มกว่า"></div><div class="body"><div class="cat" style="color:var(--teal)">แทนเอเจนซี่</div><h3>ยิงเอง vs จ้างเอเจนซี่ อันไหนคุ้มกว่า</h3><div class="meta">อ่าน 5 นาที</div></div></a>
-  <a class="post" href="blog.html"><div class="thumb"><img src="thumb3.png" alt="ลดแชทผี: ทักเยอะแต่ไม่ซื้อ แก้ยังไง"></div><div class="body"><div class="cat" style="color:var(--violet)">ยิงดีขึ้นด้วย AI</div><h3>ลดแชทผี: ทักเยอะแต่ไม่ซื้อ แก้ยังไง</h3><div class="meta">อ่าน 4 นาที</div></div></a>
- </div>
-</div></section>
-
-<!-- 10 LEAD MAGNET -->
-<section class="sec" style="background:var(--soft)"><div class="wrap">
- <div class="ey">ของฟรีก่อนเปิดตัว</div><h2 class="h2" style="margin-top:10px">โหลดคู่มือ + ชีตคิดต้นทุนต่อแชท ฟรี</h2>
- <div class="lead" style="margin-top:34px;background:#fff">
-  <div>
-   <ul>
-    <li><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> สูตรคิด “ต้นทุนต่อแชท” และ “ต้นทุนต่อออเดอร์” ที่ก๊อปไปใช้ได้เลย</li>
-    <li><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> ตัวอย่างจริง: งบวันละ 150 บาท ได้คนทักกี่คน ปิดได้กี่ออเดอร์</li>
-    <li><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> เช็กลิสต์ 5 จุด เวลายิงแล้วไม่มีคนทัก แก้ตรงไหนก่อน</li>
-    <li><svg class='ico' viewBox='0 0 24 24'><path d='M20 6 9 17l-5-5'/></svg> วิธีอ่านผลแอดว่าตัวไหนควรเติมงบ ตัวไหนควรหยุด</li>
-   </ul>
-   <div class="getrow">
-    <input type="email" placeholder="กรอกอีเมล รับชุดเครื่องมือ">
-    <a class="btn btn-primary" href="lp.html">รับฟรี </a>
-   </div>
-   <div style="font-size:12.5px;color:var(--grey);margin-top:8px">ไม่ต้องสมัครสมาชิก · ก๊อปชีตไปใช้ได้ทันที</div>
+<!-- ============ PROBLEM ============ -->
+<section id="problem" style="background:var(--cream);padding:clamp(64px,9vw,128px) 0">
+  <div style="width:min(1180px,92vw);margin-inline:auto">
+    <div style="max-width:760px" data-reveal style="opacity:0;transform:translateY(28px)">
+      <span style="display:inline-block;font-family:var(--mono);font-size:13px;font-weight:500;color:var(--orange);letter-spacing:.06em;text-transform:uppercase">ปัญหาที่แม่ค้าทุกคนเจอ</span>
+      <h2 style="font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.01em;line-height:1.12;margin:14px 0 0">บูสต์โพสต์ทีไร<br>ได้แต่ “ยอดไลก์” ไม่ใช่ “ยอดขาย”</h2>
+      <p style="font-size:clamp(16px,1.7vw,19px);color:var(--tlm);line-height:1.65;margin:20px 0 0">กดบูสต์ตามที่ Facebook แนะนำ เงินหมดไปเรื่อยๆ คนกดไลก์เยอะ แต่ไม่มีใครทักมาซื้อ — หรือจ้างเอเจนซี่แล้วก็ไม่รู้ว่าเขาทำอะไรกับงบของเรา</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:46px">
+      <div data-reveal data-delay="0" style="opacity:0;transform:translateY(28px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:26px">
+        <div style="font-size:30px;line-height:1">😮‍💨</div>
+        <h3 style="font-size:19px;font-weight:700;margin:14px 0 8px">“ไลก์เยอะ แต่ไม่มีคนทัก”</h3>
+        <p style="font-size:15px;color:var(--tlm);line-height:1.6;margin:0">บูสต์เอายอด Engagement ไม่ได้เอาคนที่อยากซื้อจริง ๆ เข้ามาคุย</p>
+      </div>
+      <div data-reveal data-delay="80" style="opacity:0;transform:translateY(28px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:26px">
+        <div style="font-size:30px;line-height:1">🕳️</div>
+        <h3 style="font-size:19px;font-weight:700;margin:14px 0 8px">“จ่ายเอเจนซี่ แต่มองไม่เห็น”</h3>
+        <p style="font-size:15px;color:var(--tlm);line-height:1.6;margin:0">จ่ายรายเดือน ไม่รู้งบไปไหน ไม่รู้ว่าได้ลูกค้าจริงกี่คน</p>
+      </div>
+      <div data-reveal data-delay="160" style="opacity:0;transform:translateY(28px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:26px">
+        <div style="font-size:30px;line-height:1">🤯</div>
+        <h3 style="font-size:19px;font-weight:700;margin:14px 0 8px">“อยากยิงเอง แต่ไม่เป็น”</h3>
+        <p style="font-size:15px;color:var(--tlm);line-height:1.6;margin:0">Ads Manager ซับซ้อน ตั้งกลุ่มเป้าหมายไม่ถูก กลัวยิงแล้วเสียเงินฟรี</p>
+      </div>
+    </div>
   </div>
-  <div style="display:grid;place-items:center">
-   <img class="ebookimg" src="ebook_cover_final.png" alt="คู่มือยิงแอดทักแชท สำหรับคนเริ่มต้น — 28 หน้า by Statlix">
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how" style="background:var(--bg);color:var(--td);padding:clamp(64px,9vw,128px) 0;position:relative;overflow:hidden">
+  <div style="position:absolute;bottom:-20%;left:-10%;width:50%;height:90%;background:radial-gradient(circle,color-mix(in srgb,var(--orange) 18%,transparent),transparent 62%);filter:blur(30px);pointer-events:none"></div>
+  <div style="position:relative;width:min(1180px,92vw);margin-inline:auto">
+    <div style="text-align:center;max-width:640px;margin-inline:auto" data-reveal style="opacity:0;transform:translateY(28px)">
+      <span style="font-family:var(--mono);font-size:13px;font-weight:500;color:var(--orange);letter-spacing:.06em;text-transform:uppercase">วิธีใช้งาน</span>
+      <h2 style="font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.01em;line-height:1.12;margin:14px 0 0">เริ่มยิงแอดเองได้ ใน 3 ขั้นตอน</h2>
+      <p style="font-size:clamp(16px,1.7vw,18px);color:var(--tdm);line-height:1.6;margin:16px 0 0">ไม่ต้องเก่งโฆษณา ไม่ต้องนั่งเรียน Ads Manager — ทำตามนี้พอ</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:54px">
+      <div data-reveal data-delay="0" style="opacity:0;transform:translateY(28px);background:var(--panel);border:1px solid var(--bdd);border-radius:var(--radius);padding:30px 26px;position:relative">
+        <div style="font-family:var(--mono);font-size:13px;color:var(--orange);font-weight:500">STEP 01</div>
+        <div style="width:54px;height:54px;border-radius:15px;background:color-mix(in srgb,var(--orange) 14%,transparent);display:flex;align-items:center;justify-content:center;font-size:26px;margin:16px 0 18px">🔗</div>
+        <h3 style="font-size:21px;font-weight:700;margin:0 0 8px">เชื่อมเพจ &amp; บอกเป้าหมาย</h3>
+        <p style="font-size:15px;color:var(--tdm);line-height:1.6;margin:0">เชื่อมเพจ Facebook/IG/LINE บอกว่าขายอะไร งบเท่าไหร่ อยากได้คนทักกี่คน</p>
+      </div>
+      <div data-reveal data-delay="100" style="opacity:0;transform:translateY(28px);background:var(--panel);border:1px solid var(--bdd);border-radius:var(--radius);padding:30px 26px">
+        <div style="font-family:var(--mono);font-size:13px;color:var(--orange);font-weight:500">STEP 02</div>
+        <div style="width:54px;height:54px;border-radius:15px;background:color-mix(in srgb,var(--orange) 14%,transparent);display:flex;align-items:center;justify-content:center;font-size:26px;margin:16px 0 18px">⚡</div>
+        <h3 style="font-size:21px;font-weight:700;margin:0 0 8px">AI สร้างแอด &amp; ยิงให้</h3>
+        <p style="font-size:15px;color:var(--tdm);line-height:1.6;margin:0">AI เขียนแคปชั่น เลือกกลุ่มคน ตั้งงบ และยิงให้อัตโนมัติ — เน้นคนที่ “พร้อมทัก”</p>
+      </div>
+      <div data-reveal data-delay="200" style="opacity:0;transform:translateY(28px);background:var(--panel);border:1px solid var(--bdd);border-radius:var(--radius);padding:30px 26px">
+        <div style="font-family:var(--mono);font-size:13px;color:var(--orange);font-weight:500">STEP 03</div>
+        <div style="width:54px;height:54px;border-radius:15px;background:color-mix(in srgb,var(--orange) 14%,transparent);display:flex;align-items:center;justify-content:center;font-size:26px;margin:16px 0 18px">💬</div>
+        <h3 style="font-size:21px;font-weight:700;margin:0 0 8px">คนทักเข้ามา — ปิดการขาย</h3>
+        <p style="font-size:15px;color:var(--tdm);line-height:1.6;margin:0">ลูกค้าทักเข้าแชท พร้อมคำแนะนำจาก AI ว่าควรตอบยังไงให้ปิดการขายได้</p>
+      </div>
+    </div>
   </div>
- </div>
-</div></section>
+</section>
 
-<!-- 11 COMMUNITY -->
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="community">
- <div>
-  <h2>เข้ากลุ่มคนขายที่ยิงแอดเอง</h2>
-  <p>ถาม–ตอบเรื่องยิงแอดทักแชท แชร์ตัวเลขจริง ไม่ต้องเก่งมาก่อน · เปิดเร็วๆ นี้</p>
- </div>
- <div class="crow">
-  <a class="btn btn-primary" href="#">เข้ากลุ่ม Facebook ฟรี</a>
-  <a class="btn btn-line" href="#">แอด LINE รับข่าว</a>
- </div>
-</div></div></section>
+<!-- ============ PILLARS ============ -->
+<section id="pillars" style="background:var(--cream);padding:clamp(64px,9vw,128px) 0">
+  <div style="width:min(1180px,92vw);margin-inline:auto">
+    <div style="max-width:640px" data-reveal style="opacity:0;transform:translateY(28px)">
+      <span style="font-family:var(--mono);font-size:13px;font-weight:500;color:var(--orange);letter-spacing:.06em;text-transform:uppercase">สิ่งที่คุณได้</span>
+      <h2 style="font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.01em;line-height:1.12;margin:14px 0 0">ทุกอย่างที่ต้องมี เพื่อยิงแอดให้ขายได้เอง</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px;margin-top:46px">
+      <div data-reveal data-delay="0" style="opacity:0;transform:translateY(28px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:28px;border-top:3px solid var(--orange)">
+        <div style="font-family:var(--mono);font-size:13px;color:var(--tlm)">01</div>
+        <h3 style="font-size:21px;font-weight:700;margin:10px 0 9px">ยิงเอง</h3>
+        <p style="font-size:15px;color:var(--tlm);line-height:1.62;margin:0">ควบคุมงบเอง เห็นทุกบาทที่จ่าย รู้ว่าเงินกลายเป็นคนทักกี่คน — ไม่ต้องพึ่งใคร</p>
+      </div>
+      <div data-reveal data-delay="90" style="opacity:0;transform:translateY(28px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:28px;border-top:3px solid var(--orange)">
+        <div style="font-family:var(--mono);font-size:13px;color:var(--tlm)">02</div>
+        <h3 style="font-size:21px;font-weight:700;margin:10px 0 9px">แทนเอเจนซี่</h3>
+        <p style="font-size:15px;color:var(--tlm);line-height:1.62;margin:0">ไม่ต้องจ่ายค่าเอเจนซี่รายเดือนหลักหมื่น ได้งานระดับมืออาชีพในราคาที่แม่ค้าจ่ายไหว</p>
+      </div>
+      <div data-reveal data-delay="180" style="opacity:0;transform:translateY(28px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:28px;border-top:3px solid var(--orange)">
+        <div style="font-family:var(--mono);font-size:13px;color:var(--tlm)">03</div>
+        <h3 style="font-size:21px;font-weight:700;margin:10px 0 9px">ยิงดีขึ้นด้วย AI</h3>
+        <p style="font-size:15px;color:var(--tlm);line-height:1.62;margin:0">AI เรียนรู้จากผลจริง ปรับแอดให้ “ค่าต่อแชท” ถูกลงเรื่อย ๆ ทุกวันที่ใช้</p>
+      </div>
+      <div data-reveal data-delay="270" style="opacity:0;transform:translateY(28px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:28px;border-top:3px solid var(--orange)">
+        <div style="font-family:var(--mono);font-size:13px;color:var(--tlm)">04</div>
+        <h3 style="font-size:21px;font-weight:700;margin:10px 0 9px">ดูแลถึงปิดการขาย</h3>
+        <p style="font-size:15px;color:var(--tlm);line-height:1.62;margin:0">ไม่ได้จบแค่คนทัก — มีคำแนะนำว่าตอบแชทยังไง เสนอยังไง ให้ลูกค้าตัดสินใจซื้อ</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- 12 FINAL CTA -->
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="final">
- <h2>พร้อมยิงแอดเองแบบมีมือโปรช่วย?</h2>
- <p>จองสิทธิ์ใช้ก่อนใครวันนี้ รับราคาพิเศษรุ่นแรก ก่อนเปิดตัว ก.ย. 2569</p>
- <a class="btn btn-primary btn-lg" href="early-access.html">ลองใช้ก่อนใคร </a>
-</div></div></section>
+<!-- ============ AI DIFFERENCE ============ -->
+<section style="background:var(--bg);color:var(--td);padding:clamp(64px,9vw,128px) 0;position:relative;overflow:hidden">
+  <div style="width:min(1180px,92vw);margin-inline:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:clamp(36px,5vw,64px);align-items:center">
+    <div data-reveal style="opacity:0;transform:translateY(28px)">
+      <span style="font-family:var(--mono);font-size:13px;font-weight:500;color:var(--orange);letter-spacing:.06em;text-transform:uppercase">ทำไมต้อง AI</span>
+      <h2 style="font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.01em;line-height:1.12;margin:14px 0 0">AI ที่เข้าใจ “แชทคือยอดขาย”</h2>
+      <p style="font-size:clamp(16px,1.7vw,18px);color:var(--tdm);line-height:1.65;margin:18px 0 28px">เราไม่ได้แค่ยิงแอดให้คนเห็น — เรายิงให้ได้ “คนที่พร้อมทักและพร้อมซื้อ” แล้ววัดผลกันที่ยอดขายจริง</p>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;gap:15px;align-items:flex-start">
+          <div style="flex:none;width:44px;height:44px;border-radius:12px;background:color-mix(in srgb,var(--orange) 16%,transparent);display:flex;align-items:center;justify-content:center;font-size:21px">📉</div>
+          <div><h3 style="font-size:18px;font-weight:700;margin:0 0 4px">ค่าต่อข้อความถูกลง</h3><p style="font-size:14.5px;color:var(--tdm);line-height:1.55;margin:0">AI หาคนที่ทักง่ายที่สุดให้ก่อน จ่ายน้อยลงต่อ 1 แชท</p></div>
+        </div>
+        <div style="display:flex;gap:15px;align-items:flex-start">
+          <div style="flex:none;width:44px;height:44px;border-radius:12px;background:color-mix(in srgb,var(--orange) 16%,transparent);display:flex;align-items:center;justify-content:center;font-size:21px">👻</div>
+          <div><h3 style="font-size:18px;font-weight:700;margin:0 0 4px">แชทหลอนน้อยลง</h3><p style="font-size:14.5px;color:var(--tdm);line-height:1.55;margin:0">คัดคนถามเล่น–ทักแล้วเงียบออก เหลือแต่คนที่ตั้งใจซื้อ</p></div>
+        </div>
+        <div style="display:flex;gap:15px;align-items:flex-start">
+          <div style="flex:none;width:44px;height:44px;border-radius:12px;background:color-mix(in srgb,var(--orange) 16%,transparent);display:flex;align-items:center;justify-content:center;font-size:21px">🕐</div>
+          <div><h3 style="font-size:18px;font-weight:700;margin:0 0 4px">คำแนะนำ 24/7</h3><p style="font-size:14.5px;color:var(--tdm);line-height:1.55;margin:0">มีผู้ช่วยคอยบอกว่าควรปรับแอด–ตอบแชทยังไง ตลอดทั้งวัน</p></div>
+        </div>
+      </div>
+    </div>
+    <!-- dashboard mockup -->
+    <div data-reveal data-delay="120" style="opacity:0;transform:translateY(28px);background:var(--panel);border:1px solid var(--bdd);border-radius:22px;padding:24px;box-shadow:0 30px 70px -30px rgba(0,0,0,.6)">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+        <div style="display:flex;align-items:center;gap:9px"><img src="statlix-mark-orange.png" style="width:22px;height:22px"><span style="font-weight:700;font-size:15px">ผลลัพธ์แคมเปญ</span></div>
+        <span style="font-size:11px;color:#7CE7A6;background:rgba(6,199,85,.14);padding:4px 10px;border-radius:999px;font-weight:600">● กำลังยิง</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div style="background:var(--panel2);border-radius:14px;padding:15px"><div style="font-size:12px;color:var(--tdm)">งบที่ใช้วันนี้</div><div style="font-family:var(--mono);font-size:24px;font-weight:600;margin-top:4px">฿<span data-count="1000" data-dec="0">1,000</span></div></div>
+        <div style="background:var(--panel2);border-radius:14px;padding:15px"><div style="font-size:12px;color:var(--tdm)">คนทักแชท</div><div style="font-family:var(--mono);font-size:24px;font-weight:600;margin-top:4px;color:var(--orange)"><span data-count="84" data-dec="0">84</span></div></div>
+      </div>
+      <div style="background:var(--panel2);border-radius:14px;padding:16px;margin-top:12px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:12px"><div><div style="font-size:12px;color:var(--tdm)">ค่าต่อ 1 แชท</div><div style="font-family:var(--mono);font-size:20px;font-weight:600">฿<span data-count="11.9" data-dec="2">11.90</span></div></div><div style="font-size:12px;color:#7CE7A6;font-weight:600">↓ 38% จากสัปดาห์ก่อน</div></div>
+        <div style="display:flex;align-items:flex-end;gap:6px;height:64px">
+          <div style="flex:1;background:rgba(255,255,255,.1);border-radius:5px 5px 0 0;height:42%"></div>
+          <div style="flex:1;background:rgba(255,255,255,.1);border-radius:5px 5px 0 0;height:58%"></div>
+          <div style="flex:1;background:rgba(255,255,255,.1);border-radius:5px 5px 0 0;height:50%"></div>
+          <div style="flex:1;background:rgba(255,255,255,.1);border-radius:5px 5px 0 0;height:72%"></div>
+          <div style="flex:1;background:color-mix(in srgb,var(--orange) 55%,transparent);border-radius:5px 5px 0 0;height:84%"></div>
+          <div style="flex:1;background:var(--orange);border-radius:5px 5px 0 0;height:100%"></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:12px;background:color-mix(in srgb,var(--orange) 12%,transparent);border:1px solid color-mix(in srgb,var(--orange) 30%,transparent);border-radius:12px;padding:12px 14px">
+        <span style="font-size:18px">💡</span><span style="font-size:13px;color:#FFC9BB;line-height:1.45">AI แนะนำ: เพิ่มงบช่วง 19:00–22:00 อีก 20% คนทักจะเยอะขึ้น</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-<footer><div class="wrap">
- <div class="fcol" style="max-width:280px"><a class="logo" href="index.html"><img src="Statlix_LOGO_white.png" alt="STATLIX"></a><div style="margin-top:10px">ผู้ช่วยการตลาด AI สำหรับคนขายออนไลน์ไทย · ยิงแอดทักแชท ปิดการขาย</div></div>
- <div class="fcol"><b>ผลิตภัณฑ์</b><a href="features.html">ทำไม Statlix</a><a href="pricing.html">ราคา</a><a href="demo.html">ดูเดโม</a><a href="early-access.html">ลองใช้ก่อนใคร</a></div>
- <div class="fcol"><b>เครื่องมือฟรี</b><a href="tools-cost-per-message.html">คิดต้นทุนต่อแชท</a><a href="resources.html">ดาวน์โหลดฟรี</a><a href="course.html">คอร์สฟรี 7 วัน</a><a href="live.html">Live ถาม–ตอบ</a></div>
- <div class="fcol"><b>เรียนรู้</b><a href="blog.html">บล็อก</a><a href="about.html">เกี่ยวกับเรา</a><a href="customers.html">เคสลูกค้า</a><a href="contact.html">ติดต่อ</a></div>
- <div class="fcol"><b>ทางลัด</b><a href="#">เข้ากลุ่ม Facebook</a><a href="#">แอด LINE OA</a><a href="privacy.html">ความเป็นส่วนตัว</a><a href="terms.html">เงื่อนไขการใช้งาน</a></div>
-</div></footer>
+<!-- ============ WHO IT'S FOR ============ -->
+<section style="background:var(--cream);padding:clamp(64px,9vw,128px) 0">
+  <div style="width:min(1180px,92vw);margin-inline:auto">
+    <div style="text-align:center;max-width:620px;margin-inline:auto" data-reveal style="opacity:0;transform:translateY(28px)">
+      <span style="font-family:var(--mono);font-size:13px;font-weight:500;color:var(--orange);letter-spacing:.06em;text-transform:uppercase">เหมาะกับใคร</span>
+      <h2 style="font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.01em;line-height:1.12;margin:14px 0 0">ทำเพื่อแม่ค้าออนไลน์ที่ขายผ่านแชท</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-top:46px">
+      <div data-reveal data-delay="0" style="opacity:0;transform:translateY(28px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:24px 20px;text-align:center"><div style="font-size:34px">👗</div><h3 style="font-size:16px;font-weight:700;margin:12px 0 5px">เสื้อผ้า &amp; แฟชั่น</h3><p style="font-size:13px;color:var(--tlm);margin:0;line-height:1.5">โพสต์เยอะ ตอบแชทไม่ทัน</p></div>
+      <div data-reveal data-delay="70" style="opacity:0;transform:translateY(28px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:24px 20px;text-align:center"><div style="font-size:34px">🍱</div><h3 style="font-size:16px;font-weight:700;margin:12px 0 5px">อาหาร &amp; ของกิน</h3><p style="font-size:13px;color:var(--tlm);margin:0;line-height:1.5">อยากได้ลูกค้าใกล้ร้าน</p></div>
+      <div data-reveal data-delay="140" style="opacity:0;transform:translateY(28px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:24px 20px;text-align:center"><div style="font-size:34px">💄</div><h3 style="font-size:16px;font-weight:700;margin:12px 0 5px">ความงาม &amp; สกินแคร์</h3><p style="font-size:13px;color:var(--tlm);margin:0;line-height:1.5">ต้องอธิบายก่อนปิดการขาย</p></div>
+      <div data-reveal data-delay="210" style="opacity:0;transform:translateY(28px);background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);padding:24px 20px;text-align:center"><div style="font-size:34px">🏠</div><h3 style="font-size:16px;font-weight:700;margin:12px 0 5px">ของใช้ในบ้าน</h3><p style="font-size:13px;color:var(--tlm);margin:0;line-height:1.5">สินค้าหลายแบบ หลายราคา</p></div>
+      <div data-reveal data-delay="280" style="opacity:0;transform:translateY(28px);background:var(--bg);color:var(--td);border-radius:var(--radius);padding:24px 20px;text-align:center"><div style="font-size:34px">🌱</div><h3 style="font-size:16px;font-weight:700;margin:12px 0 5px">มือใหม่เพิ่งเริ่ม</h3><p style="font-size:13px;color:var(--tdm);margin:0;line-height:1.5">ยังไม่เคยยิงแอดมาก่อน</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROOF NUMBERS ============ -->
+<section style="background:var(--bg);color:var(--td);padding:clamp(64px,9vw,128px) 0;position:relative;overflow:hidden">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70%;height:140%;background:radial-gradient(circle,color-mix(in srgb,var(--orange) 13%,transparent),transparent 60%);filter:blur(30px);pointer-events:none"></div>
+  <div style="position:relative;width:min(1180px,92vw);margin-inline:auto;text-align:center">
+    <div data-reveal style="opacity:0;transform:translateY(28px)">
+      <span style="font-family:var(--mono);font-size:13px;font-weight:500;color:var(--orange);letter-spacing:.06em;text-transform:uppercase">ตัวเลขที่เห็นได้จริง</span>
+      <h2 style="font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.01em;line-height:1.12;margin:14px 0 8px">งบ → คนทัก → ออเดอร์</h2>
+      <p style="font-size:15px;color:var(--tdm);margin:0">* ตัวอย่างผลลัพธ์จากการทดสอบจริง ตัวเลขจริงขึ้นกับสินค้าและงบของแต่ละร้าน</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;margin-top:50px">
+      <div data-reveal data-delay="0" style="opacity:0;transform:translateY(28px);background:var(--panel);border:1px solid var(--bdd);border-radius:var(--radius);padding:32px 40px;min-width:200px">
+        <div style="font-size:13px;color:var(--tdm);font-weight:500">งบโฆษณา</div>
+        <div style="font-family:var(--mono);font-size:clamp(34px,5vw,52px);font-weight:600;line-height:1.1">฿<span data-count="1000" data-dec="0">1,000</span></div>
+      </div>
+      <div style="font-size:32px;color:var(--orange);font-weight:300">→</div>
+      <div data-reveal data-delay="120" style="opacity:0;transform:translateY(28px);background:var(--panel);border:1px solid var(--bdd);border-radius:var(--radius);padding:32px 40px;min-width:200px">
+        <div style="font-size:13px;color:var(--tdm);font-weight:500">คนทักแชท</div>
+        <div style="font-family:var(--mono);font-size:clamp(34px,5vw,52px);font-weight:600;line-height:1.1;color:var(--orange)"><span data-count="84" data-dec="0">84</span> <span style="font-size:.5em">คน</span></div>
+      </div>
+      <div style="font-size:32px;color:var(--orange);font-weight:300">→</div>
+      <div data-reveal data-delay="240" style="opacity:0;transform:translateY(28px);background:var(--orange);color:#fff;border-radius:var(--radius);padding:32px 40px;min-width:200px">
+        <div style="font-size:13px;opacity:.85;font-weight:500">ปิดการขาย</div>
+        <div style="font-family:var(--mono);font-size:clamp(34px,5vw,52px);font-weight:600;line-height:1.1"><span data-count="23" data-dec="0">23</span> <span style="font-size:.5em">ออเดอร์</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOG ============ -->
+<section id="blog" style="background:var(--cream);padding:clamp(64px,9vw,128px) 0">
+  <div style="width:min(1180px,92vw);margin-inline:auto">
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between" data-reveal style="opacity:0;transform:translateY(28px)">
+      <div>
+        <span style="font-family:var(--mono);font-size:13px;font-weight:500;color:var(--orange);letter-spacing:.06em;text-transform:uppercase">บทความล่าสุด</span>
+        <h2 style="font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.01em;line-height:1.12;margin:14px 0 0">เคล็ดลับยิงแอด &amp; ปิดการขาย</h2>
+      </div>
+      <a href="#" style="color:var(--orange);text-decoration:none;font-weight:600;font-size:15px;white-space:nowrap">ดูทั้งหมด →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:42px">
+      <a href="#" data-reveal data-delay="0" style="opacity:0;transform:translateY(28px);text-decoration:none;color:inherit;background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);overflow:hidden;display:block;transition:transform .25s,box-shadow .25s" data-hover="transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(0,0,0,.3)">
+        <div style="aspect-ratio:16/9;background:repeating-linear-gradient(45deg,#EFEAE3 0 11px,#F6F2EC 11px 22px);display:flex;align-items:center;justify-content:center"><span style="font-family:var(--mono);font-size:11px;color:#A89F92">[ blog cover ]</span></div>
+        <div style="padding:22px"><span style="font-size:12px;color:var(--orange);font-weight:600">ยิงแอด</span><h3 style="font-size:18px;font-weight:700;line-height:1.4;margin:8px 0 8px">บูสต์โพสต์ vs ยิงแอดให้คนทัก ต่างกันยังไง?</h3><p style="font-size:14px;color:var(--tlm);line-height:1.55;margin:0">เข้าใจความต่างใน 3 นาที ก่อนจะเสียเงินบูสต์ผิดวิธี</p></div>
+      </a>
+      <a href="#" data-reveal data-delay="100" style="opacity:0;transform:translateY(28px);text-decoration:none;color:inherit;background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);overflow:hidden;display:block;transition:transform .25s,box-shadow .25s" data-hover="transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(0,0,0,.3)">
+        <div style="aspect-ratio:16/9;background:repeating-linear-gradient(45deg,#EFEAE3 0 11px,#F6F2EC 11px 22px);display:flex;align-items:center;justify-content:center"><span style="font-family:var(--mono);font-size:11px;color:#A89F92">[ blog cover ]</span></div>
+        <div style="padding:22px"><span style="font-size:12px;color:var(--orange);font-weight:600">ปิดการขาย</span><h3 style="font-size:18px;font-weight:700;line-height:1.4;margin:8px 0 8px">5 ประโยคตอบแชท ที่ช่วยปิดการขายได้ไว</h3><p style="font-size:14px;color:var(--tlm);line-height:1.55;margin:0">เทมเพลตที่เอาไปใช้ตอบลูกค้าได้เลยวันนี้</p></div>
+      </a>
+      <a href="#" data-reveal data-delay="200" style="opacity:0;transform:translateY(28px);text-decoration:none;color:inherit;background:#fff;border:1px solid var(--bdl);border-radius:var(--radius);overflow:hidden;display:block;transition:transform .25s,box-shadow .25s" data-hover="transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(0,0,0,.3)">
+        <div style="aspect-ratio:16/9;background:repeating-linear-gradient(45deg,#EFEAE3 0 11px,#F6F2EC 11px 22px);display:flex;align-items:center;justify-content:center"><span style="font-family:var(--mono);font-size:11px;color:#A89F92">[ blog cover ]</span></div>
+        <div style="padding:22px"><span style="font-size:12px;color:var(--orange);font-weight:600">งบโฆษณา</span><h3 style="font-size:18px;font-weight:700;line-height:1.4;margin:8px 0 8px">มีงบวันละ 100 บาท ยิงแอดได้ผลไหม?</h3><p style="font-size:14px;color:var(--tlm);line-height:1.55;margin:0">คำนวณให้ดูว่างบน้อยควรเริ่มยังไงให้คุ้ม</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FREE TOOLS / LEAD MAGNET ============ -->
+<section id="tools" style="background:var(--cream);padding:0 0 clamp(64px,9vw,128px)">
+  <div style="width:min(1180px,92vw);margin-inline:auto">
+    <div data-reveal style="opacity:0;transform:translateY(28px);background:linear-gradient(140deg,var(--panel),var(--bg));color:var(--td);border-radius:26px;padding:clamp(32px,5vw,60px);position:relative;overflow:hidden">
+      <div style="position:absolute;top:-30%;right:-6%;width:42%;height:150%;background:radial-gradient(circle,color-mix(in srgb,var(--orange) 24%,transparent),transparent 62%);filter:blur(20px);pointer-events:none"></div>
+      <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(32px,4vw,56px);align-items:center">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:8px;background:color-mix(in srgb,var(--orange) 16%,transparent);color:#FFB9A8;padding:6px 13px;border-radius:999px;font-size:13px;font-weight:600">🎁 ฟรี ไม่มีค่าใช้จ่าย</span>
+          <h2 style="font-size:clamp(26px,3.6vw,42px);font-weight:800;letter-spacing:-.01em;line-height:1.14;margin:18px 0 0">รับชุดเครื่องมือฟรี<br>สำหรับแม่ค้าออนไลน์</h2>
+          <div style="display:flex;flex-direction:column;gap:11px;margin:24px 0 0">
+            <div style="display:flex;gap:11px;align-items:center"><span style="color:var(--orange);font-size:17px">✓</span><span style="font-size:15px;color:var(--td)"><b>เครื่องคำนวณงบ → ยอดแชท</b> — กรอกงบ รู้เลยว่าจะได้คนทักกี่คน</span></div>
+            <div style="display:flex;gap:11px;align-items:center"><span style="color:var(--orange);font-size:17px">✓</span><span style="font-size:15px;color:var(--td)"><b>เช็กค่าต่อแชทของร้านคุณ</b> — รู้ว่าจ่ายแพงไปหรือเปล่า</span></div>
+            <div style="display:flex;gap:11px;align-items:center"><span style="color:var(--orange);font-size:17px">✓</span><span style="font-size:15px;color:var(--td)"><b>เทมเพลตแคปชั่นปิดการขาย</b> — 20 แบบ ก๊อปไปใช้ได้เลย</span></div>
+          </div>
+        </div>
+        <form data-leadform style="background:rgba(255,255,255,.05);border:1px solid var(--bdd);border-radius:var(--radius);padding:26px">
+          <div data-formbody>
+            <h3 style="font-size:19px;font-weight:700;margin:0 0 4px">กรอกอีเมลหรือ LINE เพื่อรับฟรี</h3>
+            <p style="font-size:13px;color:var(--tdm);margin:0 0 18px">เราจะส่งเครื่องมือให้ทันที + ข่าวเปิดตัวก่อนใคร</p>
+            <input type="text" placeholder="ชื่อร้านของคุณ" style="width:100%;background:rgba(255,255,255,.06);border:1px solid var(--bdd);border-radius:11px;padding:13px 15px;color:var(--td);font:400 15px var(--fh);margin-bottom:11px;outline:none">
+            <input type="email" required placeholder="อีเมล หรือ LINE ID" style="width:100%;background:rgba(255,255,255,.06);border:1px solid var(--bdd);border-radius:11px;padding:13px 15px;color:var(--td);font:400 15px var(--fh);margin-bottom:15px;outline:none">
+            <button type="submit" style="width:100%;background:var(--orange);color:#fff;border:none;border-radius:11px;padding:15px;font:700 16px var(--fh);cursor:pointer;transition:filter .2s" data-hover="filter:brightness(1.08)">รับเครื่องมือฟรี →</button>
+            <p style="font-size:12px;color:var(--tdm);text-align:center;margin:13px 0 0">ไม่สแปม ยกเลิกรับข่าวได้ทุกเมื่อ</p>
+          </div>
+          <div data-done style="display:none;flex-direction:column;align-items:center;text-align:center;gap:12px;padding:18px 0">
+            <div style="width:58px;height:58px;border-radius:50%;background:color-mix(in srgb,var(--orange) 18%,transparent);display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--orange)">✓</div>
+            <h3 style="font-size:20px;font-weight:700;margin:0">ส่งให้แล้ว เช็กกล่องข้อความได้เลย!</h3>
+            <p style="font-size:14px;color:var(--tdm);margin:0">ขอบคุณที่สนใจ Statlix — เจอกันตอนเปิดตัว ก.ย. 2569 🧡</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMUNITY ============ -->
+<section style="background:var(--bg);color:var(--td);padding:clamp(56px,8vw,110px) 0;border-top:1px solid var(--bdd)">
+  <div style="width:min(1180px,92vw);margin-inline:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px;align-items:center">
+    <div data-reveal style="opacity:0;transform:translateY(28px)">
+      <span style="font-family:var(--mono);font-size:13px;font-weight:500;color:var(--orange);letter-spacing:.06em;text-transform:uppercase">ชุมชน</span>
+      <h2 style="font-size:clamp(26px,3.6vw,42px);font-weight:800;letter-spacing:-.01em;line-height:1.14;margin:14px 0 0">มาเป็นเพื่อนกับแม่ค้าที่ยิงแอดเป็น</h2>
+      <p style="font-size:16px;color:var(--tdm);line-height:1.65;margin:16px 0 24px;max-width:32em">เข้ากลุ่มแลกเปลี่ยนเทคนิคยิงแอด ถาม-ตอบกับทีมงาน และรับเทมเพลตใหม่ ๆ ก่อนใคร</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a href="#" style="display:inline-flex;align-items:center;gap:9px;background:#06C755;color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:13px 22px;border-radius:calc(var(--radius)*.62)"><span style="font-weight:800">L</span> เข้ากลุ่ม LINE OpenChat</a>
+        <a href="#" style="display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.06);color:var(--td);text-decoration:none;font-weight:600;font-size:15px;padding:13px 22px;border-radius:calc(var(--radius)*.62);border:1px solid var(--bdd)"><span style="font-weight:800;color:#1877F2">f</span> กลุ่ม Facebook</a>
+      </div>
+    </div>
+    <div data-reveal data-delay="120" style="opacity:0;transform:translateY(28px);display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;gap:14px">
+        <div style="flex:1;background:var(--panel);border:1px solid var(--bdd);border-radius:var(--radius);padding:22px;text-align:center"><div style="font-family:var(--mono);font-size:30px;font-weight:600;color:var(--orange)"><span data-count="3200" data-dec="0">3,200</span>+</div><div style="font-size:13px;color:var(--tdm);margin-top:4px">แม่ค้าในชุมชน</div></div>
+        <div style="flex:1;background:var(--panel);border:1px solid var(--bdd);border-radius:var(--radius);padding:22px;text-align:center"><div style="font-family:var(--mono);font-size:30px;font-weight:600;color:var(--orange)"><span data-count="120" data-dec="0">120</span>+</div><div style="font-size:13px;color:var(--tdm);margin-top:4px">เทมเพลตแชร์ฟรี</div></div>
+      </div>
+      <div style="background:var(--panel);border:1px solid var(--bdd);border-radius:var(--radius);padding:20px 22px;display:flex;align-items:center;gap:14px">
+        <div style="display:flex">
+          <span style="width:36px;height:36px;border-radius:50%;background:#E8A; border:2px solid var(--bg);display:flex;align-items:center;justify-content:center;font-size:15px">👩</span>
+          <span style="width:36px;height:36px;border-radius:50%;background:#8AE;border:2px solid var(--bg);margin-left:-12px;display:flex;align-items:center;justify-content:center;font-size:15px">🧑</span>
+          <span style="width:36px;height:36px;border-radius:50%;background:#EA8;border:2px solid var(--bg);margin-left:-12px;display:flex;align-items:center;justify-content:center;font-size:15px">👩</span>
+          <span style="width:36px;height:36px;border-radius:50%;background:var(--orange);border:2px solid var(--bg);margin-left:-12px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff">+</span>
+        </div>
+        <span style="font-size:14px;color:var(--tdm);line-height:1.5">“ยิงเองครั้งแรกก็ได้คนทัก 30 คน จากงบ 300 บาท” — รีวิวจากสมาชิก</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section id="waitlist" style="background:var(--bg);color:var(--td);padding:clamp(64px,9vw,130px) 0;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 120%,color-mix(in srgb,var(--orange) 34%,transparent),transparent 58%);pointer-events:none"></div>
+  <div style="position:relative;width:min(720px,92vw);margin-inline:auto;text-align:center" data-reveal style="opacity:0;transform:translateY(28px)">
+    <img src="statlix-mark-orange.png" style="width:56px;height:56px;margin-bottom:22px">
+    <h2 style="font-size:clamp(30px,4.4vw,54px);font-weight:800;letter-spacing:-.015em;line-height:1.1;margin:0">เปลี่ยนงบโฆษณา<br>ให้กลายเป็นยอดขาย</h2>
+    <p style="font-size:clamp(16px,1.8vw,19px);color:var(--tdm);line-height:1.6;margin:18px auto 0;max-width:30em">เปิดให้ลองก่อนใคร ก.ย. 2569 — ลงชื่อไว้วันนี้ รับสิทธิ์ใช้ฟรีช่วงเปิดตัว + ชุดเครื่องมือฟรีทันที</p>
+    <form data-leadform style="margin:32px auto 0;max-width:480px">
+      <div data-formbody style="display:flex;flex-wrap:wrap;gap:10px">
+        <input type="email" required placeholder="อีเมล หรือ LINE ID ของคุณ" style="flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid var(--bdd);border-radius:calc(var(--radius)*.62);padding:16px 18px;color:var(--td);font:400 16px var(--fh);outline:none">
+        <button type="submit" style="background:var(--orange);color:#fff;border:none;border-radius:calc(var(--radius)*.62);padding:16px 26px;font:700 16px var(--fh);cursor:pointer;white-space:nowrap;transition:filter .2s,transform .15s" data-hover="filter:brightness(1.08);transform:translateY(-1px)">ลองใช้ก่อนใคร →</button>
+      </div>
+      <div data-done style="display:none;flex-direction:column;align-items:center;gap:10px;background:rgba(255,255,255,.05);border:1px solid var(--bdd);border-radius:var(--radius);padding:24px">
+        <div style="width:54px;height:54px;border-radius:50%;background:color-mix(in srgb,var(--orange) 18%,transparent);color:var(--orange);display:flex;align-items:center;justify-content:center;font-size:26px">✓</div>
+        <h3 style="font-size:20px;font-weight:700;margin:0">ลงชื่อเรียบร้อย! 🧡</h3>
+        <p style="font-size:14px;color:var(--tdm);margin:0;text-align:center">เราจะส่งข่าวเปิดตัวและสิทธิ์ใช้ฟรีไปให้ก่อนใคร</p>
+      </div>
+      <p style="font-size:13px;color:var(--tdm);margin:14px 0 0">ไม่มีค่าใช้จ่าย · ไม่ต้องใช้บัตรเครดิต · ยกเลิกได้ทุกเมื่อ</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer style="background:#0A0908;color:var(--tdm);padding:clamp(48px,6vw,80px) 0 40px">
+  <div style="width:min(1180px,92vw);margin-inline:auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:36px 24px;padding-bottom:40px;border-bottom:1px solid var(--bdd)">
+      <div style="grid-column:1/-1;max-width:300px">
+        <img src="Statlix_LOGO_white.png" style="height:26px;margin-bottom:16px">
+        <p style="font-size:14px;line-height:1.6;margin:0">ผู้ช่วยการตลาด AI สำหรับแม่ค้าออนไลน์ไทย — ยิงแอดให้คนทักแชท แล้วปิดการขาย</p>
+      </div>
+      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">ผลิตภัณฑ์</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="#how" style="color:var(--tdm);text-decoration:none;font-size:14px">วิธีใช้งาน</a><a href="#pillars" style="color:var(--tdm);text-decoration:none;font-size:14px">สิ่งที่ได้</a><a href="#tools" style="color:var(--tdm);text-decoration:none;font-size:14px">เครื่องมือฟรี</a><a href="#waitlist" style="color:var(--tdm);text-decoration:none;font-size:14px">ลองใช้ก่อนใคร</a></div></div>
+      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">เรียนรู้</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="#blog" style="color:var(--tdm);text-decoration:none;font-size:14px">บทความ</a><a href="#" style="color:var(--tdm);text-decoration:none;font-size:14px">ชุมชนแม่ค้า</a><a href="#" style="color:var(--tdm);text-decoration:none;font-size:14px">คำถามที่พบบ่อย</a></div></div>
+      <div><h4 style="color:var(--td);font-size:14px;font-weight:700;margin:0 0 14px">ติดต่อ</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="#" style="color:var(--tdm);text-decoration:none;font-size:14px">LINE Official</a><a href="#" style="color:var(--tdm);text-decoration:none;font-size:14px">Facebook</a><a href="#" style="color:var(--tdm);text-decoration:none;font-size:14px">อีเมล</a></div></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;font-size:13px">
+      <span>© 2569 Statlix. สงวนลิขสิทธิ์.</span>
+      <div style="display:flex;gap:20px"><a href="#" style="color:var(--tdm);text-decoration:none">นโยบายความเป็นส่วนตัว</a><a href="#" style="color:var(--tdm);text-decoration:none">เงื่อนไขการใช้งาน</a></div>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script>
+(function(){
+ var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ // hover (ported from Claude Design style-hover)
+ document.querySelectorAll('[data-hover]').forEach(function(el){
+   var base=el.getAttribute('style')||''; var hov=el.getAttribute('data-hover');
+   el.addEventListener('mouseenter',function(){el.setAttribute('style',base+';'+hov);});
+   el.addEventListener('mouseleave',function(){el.setAttribute('style',base);});
+ });
+ // reveal-on-scroll
+ var items=document.querySelectorAll('[data-reveal]');
+ if(reduce||!('IntersectionObserver' in window)){items.forEach(function(el){el.style.opacity='1';el.style.transform='none';});}
+ else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;var d=parseFloat(el.getAttribute('data-delay')||'0');el.style.transition='opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)';el.style.transitionDelay=d+'ms';el.style.opacity='1';el.style.transform='none';io.unobserve(el);}});},{threshold:.12,rootMargin:'0px 0px -7% 0px'});
+   items.forEach(function(el){io.observe(el);});
+   setTimeout(function(){items.forEach(function(el){el.style.opacity='1';el.style.transform='none';});},3200);}
+ // count-up
+ function animateCount(el,instant){var t=parseFloat(el.getAttribute('data-count'));var dec=parseInt(el.getAttribute('data-dec')||'0');var fmt=function(v){return v.toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec});};if(instant){el.textContent=fmt(t);return;}var dur=1500,start=performance.now();function step(now){var p=Math.min(1,(now-start)/dur);p=1-Math.pow(1-p,3);el.textContent=fmt(t*p);if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+ var counters=document.querySelectorAll('[data-count]');
+ if(reduce||!('IntersectionObserver' in window)){counters.forEach(function(el){animateCount(el,true);});}
+ else{var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animateCount(e.target);cio.unobserve(e.target);}});},{threshold:.4});counters.forEach(function(el){cio.observe(el);});}
+ // header scroll state
+ var header=document.querySelector('[data-header]');
+ if(header){var onScroll=function(){if(window.scrollY>16){header.style.background='rgba(15,14,13,.82)';header.style.backdropFilter='blur(14px)';header.style.webkitBackdropFilter='blur(14px)';header.style.borderBottomColor='rgba(255,255,255,.09)';}else{header.style.background='transparent';header.style.backdropFilter='none';header.style.webkitBackdropFilter='none';header.style.borderBottomColor='transparent';}};window.addEventListener('scroll',onScroll,{passive:true});onScroll();}
+ // mobile menu
+ var btn=document.querySelector('[data-menu-btn]'),menu=document.querySelector('[data-menu]');
+ if(btn&&menu){btn.addEventListener('click',function(){var open=menu.getAttribute('data-open')==='1';menu.setAttribute('data-open',open?'0':'1');menu.style.display=open?'none':'flex';});menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.setAttribute('data-open','0');menu.style.display='none';});});}
+ // lead forms -> success + tracking hook
+ window.dataLayer=window.dataLayer||[];
+ document.querySelectorAll('[data-leadform]').forEach(function(f){f.addEventListener('submit',function(ev){ev.preventDefault();var b=f.querySelector('[data-formbody]'),d=f.querySelector('[data-done]');if(b)b.style.display='none';if(d)d.style.display='flex';window.dataLayer.push({event:'lead_captured',source:'homepage',ts:Date.now()});});});
+ // hero chat sequence (looping)
+ if(!reduce){playChat();}else{document.querySelectorAll('[data-bubble]').forEach(function(b){b.style.opacity='1';b.style.transform='none';});}
+ function playChat(){var bubbles=Array.prototype.slice.call(document.querySelectorAll('[data-bubble]'));var typing=document.querySelector('[data-typing]');if(!bubbles.length)return;function reset(){bubbles.forEach(function(b){b.style.opacity='0';b.style.transform='translateY(8px)';});if(typing)typing.style.opacity='0';}function run(){reset();var i=0;function next(){if(i>=bubbles.length){if(typing)typing.style.opacity='0';setTimeout(run,4200);return;}var b=bubbles[i];var wait=parseInt(b.getAttribute('data-bubble'))||600;var isReply=b.getAttribute('data-me')==='1';if(typing&&i>0)typing.style.opacity=isReply?'1':'0';setTimeout(function(){if(typing)typing.style.opacity='0';b.style.opacity='1';b.style.transform='none';i++;setTimeout(next,550);},wait);}setTimeout(next,700);}run();}
+})();
+</script>
 </body></html>
