@@ -281,3 +281,27 @@ footer a{color:#9A9A98}footer a:hover{color:#fff}
  right:-200px;bottom:-300px;border-radius:50%;pointer-events:none;z-index:0;
  background:radial-gradient(circle,rgba(240,60,31,.32),transparent 64%)}
 .community>*,.final>*,.not>*{position:relative;z-index:1}
+
+/* === DESIGN POLISH — modern-SaaS craft on the Statlix brand === */
+.sec{padding:112px 0}
+.h2{font-size:clamp(2.05rem,2.6vw + .6rem,2.75rem);letter-spacing:-.018em}
+.card,.pitem,.post,.tier,.formcard,.lead,.toc,.ctabox,.step{border-radius:18px}
+.card,.pitem,.post{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover,.pitem:hover{transform:translateY(-3px);box-shadow:0 20px 46px -24px rgba(17,19,21,.22);border-color:#DFDCD8}
+.card h3,.pitem h3{font-size:19px;margin-top:18px}
+.card p,.pitem p{font-size:14.5px}
+/* soft tinted icon tiles (replaces the small flat squares) */
+.card .ic,.pitem .ic,.benefit .ic{width:56px;height:56px;border-radius:15px;background:linear-gradient(150deg,#FEEDE8,#FCD8D2);border:1px solid #F7CFC5;color:var(--brand)}
+.card .ic .ico,.pitem .ic .ico{width:27px;height:27px;stroke-width:1.85}
+/* numbered step badges — bigger, lifted */
+.step .nm{width:48px;height:48px;border-radius:14px;font-size:20px;box-shadow:0 10px 20px -8px rgba(19,18,16,.45)}
+.step{padding:30px}
+/* button micro-interactions */
+.btn{transition:transform .15s ease,box-shadow .15s ease,background .15s ease,border-color .15s ease}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 26px -10px rgba(240,60,31,.5)}
+.btn-ghost:hover{transform:translateY(-1px)}
+.btn-lg{border-radius:10px}
+/* eyebrow gets a subtle leading tick (more "designed") on light sections */
+.sec .ey{display:inline-flex;align-items:center;gap:9px}
+.sec .ey::before{content:"";width:18px;height:2px;border-radius:2px;background:var(--brand);display:inline-block}
+.hero .ey::before,.lphero .ey::before,.schero .ey::before{display:none}
