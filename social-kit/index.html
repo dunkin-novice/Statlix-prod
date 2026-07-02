@@ -67,6 +67,13 @@
   #stage.bg-white{background:#FFFFFF}
   #stage.bg-red{background:var(--red)}
   #stage.bg-black{background:var(--ink)}
+  #stage.bg-gradient{background:
+    linear-gradient(to top, rgba(19,18,16,.82), rgba(19,18,16,0) 40%),
+    radial-gradient(120% 120% at 20% 15%, #F3634C 0%, #F03C1F 55%)}
+  #stage.bg-darktech{background-color:#131210;background-image:
+    radial-gradient(62% 55% at 70% 52%, rgba(240,60,31,.26) 0%, rgba(240,60,31,0) 72%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0, rgba(255,255,255,.05) 1px, transparent 1px, transparent 96px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0, rgba(255,255,255,.05) 1px, transparent 1px, transparent 96px)}
   #stage .logo,#stage .block,#stage .cta,#stage .lockup{z-index:2}
   #stage .watermark{z-index:0}
   #stage .headline .ac{color:var(--red)}
@@ -112,6 +119,13 @@
   #stage.fmt-og .lockup{right:56px;bottom:56px;font-size:21px}
   #stage.fmt-og .lockup span{font-size:19px}
   #stage.fmt-og .watermark{right:-46px;bottom:-64px;width:440px}
+
+  /* ---- shot mode (?shot=1): bare stage for headless screenshot ---- */
+  body.shotmode{background:#fff}
+  .shotmode .wrap{display:block}
+  .shotmode .panel,.shotmode .pagebar,.shotmode .toolbar,.shotmode .hint{display:none}
+  .shotmode .canvas-area{padding:0}
+  .shotmode .stagebox{position:fixed;top:0;left:0;width:auto;aspect-ratio:auto;border-radius:0;box-shadow:none;overflow:visible}
 
   /* ---- deco layer (band / frame) ---- */
   #stage .deco{position:absolute;display:none;z-index:1}
@@ -203,6 +217,8 @@
         <button data-bg="white">White</button>
         <button data-bg="red">Red</button>
         <button data-bg="black">Black</button>
+        <button data-bg="gradient">Gradient</button>
+        <button data-bg="darktech">Darktech</button>
       </div>
     </fieldset>
 
@@ -426,7 +442,7 @@ function render(){
   h.innerHTML=accentParse(s.headline,s.accentColor);
 
   const sh=Q('.subhead');sh.style.display=s.subhead.trim()?'block':'none';sh.textContent=s.subhead;
-  sh.style.color=s.bg==='white'?'#8b8b8b':s.bg==='black'?'#b7b7b7':'rgba(255,255,255,.92)';
+  sh.style.color=s.bg==='white'?'#8b8b8b':(s.bg==='black'||s.bg==='darktech')?'#b7b7b7':'rgba(255,255,255,.92)';
 
   const chip=Q('.chip');chip.style.display=s.chip.trim()?'inline-block':'none';chip.textContent=s.chip;pillCSS(chip,s.chipStyle);
 
@@ -443,10 +459,12 @@ function render(){
   wmBox.style.display=(s.wmOn&&s.st!=='frame')?'block':'none';
   if(s.bg==='white'){wmImg.src=LOGOS.mark_red;wmBox.style.opacity=.12;}
   else if(s.bg==='black'){wmImg.src=LOGOS.mark_red;wmBox.style.opacity=.16;}
+  else if(s.bg==='darktech'){wmImg.src=LOGOS.mark_red;wmBox.style.opacity=.30;}
+  else if(s.bg==='gradient'){wmImg.src=LOGOS.mark_white;wmBox.style.opacity=.12;}
   else{wmImg.src=LOGOS.mark_black;wmBox.style.opacity=.07;}
 
   const deco=Q('.deco');
-  if(s.st==='band'){deco.style.background=(s.bg==='red'?C.ink:C.red);deco.style.border='none';Q('.lockup').style.color='#fff';}
+  if(s.st==='band'){deco.style.background=((s.bg==='red'||s.bg==='gradient')?C.ink:C.red);deco.style.border='none';Q('.lockup').style.color='#fff';}
   else if(s.st==='frame'){deco.style.background='transparent';deco.style.border='3px solid '+onColor;}
 
   fit();
@@ -489,7 +507,7 @@ el('segSt').querySelectorAll('button').forEach(b=>b.onclick=()=>{
   el('segSt').querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');saveCurrent();render();});
 
 /* ---------- preview scaling ---------- */
-function fit(){const box=el('stagebox');el('scaler').style.transform='scale('+(box.clientWidth/stage.offsetWidth)+')';}
+function fit(){if(document.body.classList.contains('shotmode')){el('scaler').style.transform='none';return;}const box=el('stagebox');el('scaler').style.transform='scale('+(box.clientWidth/stage.offsetWidth)+')';}
 window.addEventListener('resize',fit);
 
 /* ---------- export ---------- */
@@ -529,6 +547,7 @@ window.setState=o=>{saveCurrent();Object.assign(pages[current],o);write(pages[cu
   if(qp.has('cta'))s.ctaOn=qp.get('cta')!=='0';
   if(qp.has('arrow'))s.ctaArrow=qp.get('arrow')!=='0';
   if(qp.has('wm'))s.wmOn=qp.get('wm')!=='0';
+  if(qp.get('shot')==='1')document.body.classList.add('shotmode');
   if(qp.get('fmt')==='og'){format='og';
     document.querySelectorAll('#segFmt button').forEach(x=>x.classList.toggle('on',x.dataset.fmt==='og'));
     if(!qp.has('hSize'))s.hSize=Math.round(s.hSize*OG_FACTOR);}
